@@ -1,0 +1,26 @@
+.navbar-brand {
+  font-weight: 700;
+  background: -webkit-linear-gradient(45deg, rgb(0, 192, 253), rgb(231, 15, 170));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav {
+  min-width: 350px;
+  max-width: 610px;
+}
+
+.nav-item {
+  font-family: "DM Sans";
+  font-weight: 500;
+  color: #666666;
+}
+
+.navbar-socials-container {
+  width: 130px;
+}
+
+.navbar-socials-icon {
+  width: 29px;
+  height: 29px;
+}/*# sourceMappingURL=Navbar.css.map */
