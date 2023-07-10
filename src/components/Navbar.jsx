@@ -5,8 +5,8 @@ import "../styles/Navbar/Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-md">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-md pt-sm-5">
+      <div className="inner-navbar container-fluid px-3 px-sm-5 px-xl-0">
         <p className="navbar-brand m-0">{`{Truten}`}</p>
         <div className="collapse navbar-collapse justify-content-end">
           <ul className="navbar-nav justify-content-between">

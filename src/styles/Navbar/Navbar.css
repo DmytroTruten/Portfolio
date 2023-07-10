@@ -1,13 +1,13 @@
 .navbar-brand {
   font-weight: 700;
   background: -webkit-linear-gradient(45deg, rgb(0, 192, 253), rgb(231, 15, 170));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .navbar-nav {
-  min-width: 350px;
-  max-width: 610px;
+  width: clamp(350px, 50%, 610px);
 }
 
 .nav-item {
@@ -23,4 +23,10 @@
 .navbar-socials-icon {
   width: 29px;
   height: 29px;
+}
+
+@media (min-width: 1200px) {
+  .inner-navbar {
+    margin: 0px 177px !important;
+  }
 }/*# sourceMappingURL=Navbar.css.map */
