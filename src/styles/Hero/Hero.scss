@@ -1,0 +1,31 @@
+.hero-img-wrapper {
+  width: clamp(0px, 100%, 350px);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 192, 253, 1),
+    rgba(231, 15, 170, 1)
+  );
+  border-radius: 50%;
+  padding: 5px;
+}
+.hero-img {
+  width: clamp(0px, 100%, 350px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-clip: padding-box;
+}
+
+.hero-h1 {
+  font-weight: 700;
+  color: #42446e;
+  &.hero-name {
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(0, 192, 253, 1),
+      rgba(231, 15, 170, 1)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
