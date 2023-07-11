@@ -14,10 +14,11 @@
   font-family: "DM Sans";
   font-weight: 500;
   color: #666666;
+  cursor: pointer;
 }
 
 .navbar-socials-container {
-  width: 130px;
+  width: 130px !important;
 }
 
 .navbar-socials-icon {
