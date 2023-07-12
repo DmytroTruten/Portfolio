@@ -10,8 +10,8 @@ import "../styles/Navbar/Navbar.css";
 
 function NavBar() {
   return (
-    <Navbar expand="lg" className="pt-lg-5">
-      <Container className="px-3 px-sm-0">
+    <Navbar expand="lg" className="pt-lg-4 pb-0">
+      <Container className="navbar-inner-container">
         <Navbar.Brand className="mx-0">{`{Truten}`}</Navbar.Brand>
         <NavbarToggle />
         <Navbar.Collapse className="justify-content-end">

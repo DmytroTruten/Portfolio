@@ -24,10 +24,4 @@
 .navbar-socials-icon {
   width: 29px;
   height: 29px;
-}
-
-@media (min-width: 1200px) {
-  .inner-navbar {
-    margin: 0px 177px !important;
-  }
 }/*# sourceMappingURL=Navbar.css.map */
