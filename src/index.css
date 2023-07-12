@@ -4,8 +4,7 @@
 body, html {
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
 }
 
 h1,
@@ -15,4 +14,9 @@ h4,
 h5,
 p {
   font-family: "Poppins";
+}
+
+h1, h2 {
+  font-weight: 700;
+  color: #42446e;
 }

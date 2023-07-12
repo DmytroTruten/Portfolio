@@ -16,10 +16,6 @@
      object-fit: cover;
 }
 
-.hero-h1 {
-  font-weight: 700;
-  color: #42446e;
-}
 .hero-h1.hero-name {
   background: -webkit-linear-gradient(0deg, rgb(0, 192, 253), rgb(231, 15, 170));
   background-clip: text;
