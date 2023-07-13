@@ -1,0 +1,28 @@
+.card {
+  border-radius: 20px !important;
+  // max-width: 370px;
+}
+
+.card-title {
+  font-size: 28px !important;
+}
+
+.card-footer-icon {
+  width: 20px;
+}
+
+.card-text {
+  font-weight: 300;
+}
+
+.card-text-tech-stack {
+  color: #42446e;
+  span {
+    font-weight: 400;
+  }
+}
+
+.card-link {
+  color: #000000;
+  font-weight: 500;
+}
