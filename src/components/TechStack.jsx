@@ -23,9 +23,9 @@ function TechStack() {
           <h2 className="text-center">Tech Stack</h2>
         </Col>
         <Col xs={12}>
-          <h3 className="text-center">
+          <h4 className="text-center">
             Technologies I&apos;ve been working with recently
-          </h3>
+          </h4>
         </Col>
       </Row>
       <Row className="mt-3 mt-lg-5">

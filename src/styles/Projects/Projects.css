@@ -1,5 +1,15 @@
 .card {
   border-radius: 20px !important;
+  box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+  border: none !important;
+}
+
+.card-img-top {
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  max-height: 152px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card-title {
