@@ -53,41 +53,41 @@ function Projects() {
           <h4 className="text-center">Things I&apos;ve built so far</h4>
         </Col>
       </Row>
-      <Row xs={1} sm={2} md={3} className="g-5 pt-5">
-        {[
-          interiorThumbnail,
-          weatherThumbnail,
-          agencyThumbnail,
-          reactChatThumbnail,
-        ].map((thumbnail, index) => (
-          <Col key={index}>
-            <Card>
-              <Card.Img variant="top" src={thumbnail} />
-              <Card.Body>
-                <Card.Title>{cardTitleArray[index]}</Card.Title>
-                <Card.Text>{cardTextArray[index]}</Card.Text>
-                <Card.Text className="card-text-tech-stack">
-                  <span>Tech Stack:</span> {techStackArray[index]}
-                </Card.Text>
-                <Row>
-                  <Col>
-                    <Image className="card-footer-icon" src={chainIcon} />
-                    <Card.Link target={"blank"} href={projectPreviewLinks[index]} className="ps-2">
-                      Live Preview
-                    </Card.Link>
-                  </Col>
-                  <Col>
-                    <Image className="card-footer-icon" src={githubIcon} />
-                    <Card.Link target={"blank"} href={projectCodeLinks[index]} className="ps-2">
-                      View Code
-                    </Card.Link>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+        <Row xs={1} sm={2} lg={3} className="g-5 pt-5">
+          {[
+            interiorThumbnail,
+            weatherThumbnail,
+            agencyThumbnail,
+            reactChatThumbnail,
+          ].map((thumbnail, index) => (
+            <Col key={index}>
+              <Card>
+                <Card.Img variant="top" src={thumbnail} />
+                <Card.Body>
+                  <Card.Title>{cardTitleArray[index]}</Card.Title>
+                  <Card.Text>{cardTextArray[index]}</Card.Text>
+                  <Card.Text className="card-text-tech-stack">
+                    <span>Tech Stack:</span> {techStackArray[index]}
+                  </Card.Text>
+                  <Row>
+                    <Col>
+                      <Image className="card-footer-icon" src={chainIcon} />
+                      <Card.Link target={"blank"} href={projectPreviewLinks[index]} className="ps-2">
+                        Live Preview
+                      </Card.Link>
+                    </Col>
+                    <Col>
+                      <Image className="card-footer-icon" src={githubIcon} />
+                      <Card.Link target={"blank"} href={projectCodeLinks[index]} className="ps-2">
+                        View Code
+                      </Card.Link>
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
     </Container>
   );
 }

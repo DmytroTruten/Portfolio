@@ -1,0 +1,20 @@
+.footer-brand {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #42446e;
+}
+
+.footer-divider {
+  display: block;
+  height: 2px;
+  background-color: rgba(#666, 0.3);
+}
+
+.footer-contacts {
+  display: inline-block;
+}
+
+.footer-contacts, .footer-nav-item {
+  color: #42446e !important;
+}
