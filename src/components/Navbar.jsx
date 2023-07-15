@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -11,6 +10,9 @@ import linkedInIcon from "../assets/icons/linkedin-icon.svg";
 import "../styles/Navbar/Navbar.css";
 
 function NavBar() {
+  const scrollIntoComponent = (element) => {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
     <Navbar expand="lg" className="pt-lg-4 pb-0">
       <Container>
@@ -25,10 +27,38 @@ function NavBar() {
 
           <Offcanvas.Body className="justify-content-end">
             <Nav className="offcanvas-body-nav justify-content-between">
-              <Nav.Item className="my-2 my-lg-0">Home</Nav.Item>
-              <Nav.Item className="my-2 my-lg-0">About</Nav.Item>
-              <Nav.Item className="my-2 my-lg-0">Tech Stack</Nav.Item>
-              <Nav.Item className="my-2 my-lg-0">Projects</Nav.Item>
+              <Nav.Item
+                className="my-2 my-lg-0"
+                onClick={() => {
+                  scrollIntoComponent(document.querySelector(".home"));
+                }}
+              >
+                Home
+              </Nav.Item>
+              <Nav.Item
+                className="my-2 my-lg-0"
+                onClick={() => {
+                  scrollIntoComponent(document.querySelector(".about"));
+                }}
+              >
+                About
+              </Nav.Item>
+              <Nav.Item
+                className="my-2 my-lg-0"
+                onClick={() => {
+                  scrollIntoComponent(document.querySelector(".tech-stack"));
+                }}
+              >
+                Tech Stack
+              </Nav.Item>
+              <Nav.Item
+                className="my-2 my-lg-0"
+                onClick={() => {
+                  scrollIntoComponent(document.querySelector(".projects"));
+                }}
+              >
+                Projects
+              </Nav.Item>
               <Nav.Item className="my-2 my-lg-0">Contact</Nav.Item>
             </Nav>
             <Container className="navbar-socials-container d-flex justify-content-between my-3 my-lg-0 ms-lg-5 me-lg-0 px-0">

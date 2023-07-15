@@ -7,7 +7,7 @@ import "../styles/Hero/Hero.css";
 
 function Hero() {
   return (
-    <Container className="pt-4 pt-sm-5">
+    <Container className="home pt-4 pt-sm-5">
       <Row>
         <Col
           className="hero-img-col d-flex"
