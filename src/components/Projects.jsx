@@ -26,7 +26,7 @@ function Projects() {
     "HTML, SCSS, JavaScript, JQuery, Bootstrap",
     "React.js, SCSS, Moment.js, React-Bootstrap",
     "React.js, SCSS, Bootstrap",
-    "React.js, SCSS, Firebase, Moment.js",
+    "React.js, Redux, SCSS, Firebase, Moment.js",
   ];
 
   const projectPreviewLinks = [
