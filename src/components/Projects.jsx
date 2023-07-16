@@ -53,14 +53,14 @@ function Projects() {
           <h4 className="text-center">Things I&apos;ve built so far</h4>
         </Col>
       </Row>
-        <Row xs={1} sm={2} lg={3} className="g-5 pt-5">
+        <Row xs={1} sm={2} lg={3} className="pt-5">
           {[
             interiorThumbnail,
             weatherThumbnail,
             agencyThumbnail,
             reactChatThumbnail,
           ].map((thumbnail, index) => (
-            <Col key={index}>
+            <Col key={index} className="py-2">
               <Card>
                 <Card.Img variant="top" src={thumbnail} />
                 <Card.Body>
