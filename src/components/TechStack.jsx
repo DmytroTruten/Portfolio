@@ -18,7 +18,7 @@ import "../styles/TechStack/TechStack.css";
 function TechStack() {
   return (
     <Container className="tech-stack pt-5">
-      <Row>
+      <Row className="pt-4">
         <Col xs={12}>
           <h2 className="text-center">Tech Stack</h2>
         </Col>

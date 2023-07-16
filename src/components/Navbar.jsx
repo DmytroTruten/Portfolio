@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -11,32 +10,27 @@ import linkedInIcon from "../assets/icons/linkedin-icon.svg";
 import "../styles/Navbar/Navbar.css";
 
 function NavBar() {
-  const [show, setShow] = useState(false);
 
   const handleNavItemClick = (element) => {
     element.scrollIntoView({ behavior: "smooth", block: "start" });
-    setShow(false);
   };
 
   return (
-    <Navbar expand="lg" className="pt-lg-4 pb-0">
+    <Navbar expand="lg" className="py-lg-2" fixed="top" bg="light">
       <Container>
         <Navbar.Brand className="mx-0">{`{Truten}`}</Navbar.Brand>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"
-          onClick={() => setShow(true)}
         />
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-lg"
           aria-labelledby="offcanvasNavbarLabel-expand-lg"
           placement="end"
-          show={show}
-          onHide={() => setShow(false)}
         >
           <Offcanvas.Header closeButton className="justify-content-end" />
 
           <Offcanvas.Body className="justify-content-end">
-            <Nav className="offcanvas-body-nav justify-content-between">
+            <Nav className="offcanvas-body-nav justify-content-between align-items-center">
               <Nav.Item
                 className="my-2 my-lg-0"
                 onClick={() => {

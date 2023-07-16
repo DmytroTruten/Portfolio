@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 function About() {
   return (
     <Container className="about pt-5">
-      <Row>
+      <Row className="pt-4">
         <Col xs={12}>
           <h1>About</h1>
         </Col>

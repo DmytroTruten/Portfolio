@@ -8,7 +8,7 @@ import "../styles/Hero/Hero.css";
 function Hero() {
   return (
     <Container className="home pt-4 pt-sm-5">
-      <Row>
+      <Row className="pt-5">
         <Col
           className="hero-img-col d-flex"
           xs={{ span: 12, order: "first" }}

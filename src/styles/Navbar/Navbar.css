@@ -16,6 +16,9 @@
   font-weight: 500;
   color: #666666;
   cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .navbar-socials-container {
