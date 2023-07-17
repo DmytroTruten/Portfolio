@@ -1,9 +1,9 @@
 import { Container, Row, Col, Nav, Image } from "react-bootstrap";
 import githubIcon from "../assets/icons/blue-github-icon.svg";
-import twitterIcon from "../assets/icons/blue-twitter-icon.svg";
 import linkedInIcon from "../assets/icons/blue-linkedin-icon.svg";
 import "../styles/Footer/Footer.css";
 import { useState, useEffect } from "react";
+
 function Footer() {
   const [windowWidth, setWindowWidth] = useState(getWindowWidth());
 
@@ -37,22 +37,18 @@ function Footer() {
                 </p>
               </>
             )}
-            <div className="navbar-socials-container d-flex justify-content-between px-0 mb-3 mx-md-0 my-md-0">
-              <Nav.Link href="#">
+            <div className="navbar-socials-container d-flex justify-content-evenly px-0 mb-3 mx-md-0 my-md-0">
+              <Nav.Link target="_blank" href="https://github.com/DmytroTruten">
                 <Image
                   className="navbar-socials-icon"
                   src={githubIcon}
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link href="#">
-                <Image
-                  className="navbar-socials-icon"
-                  src={twitterIcon}
-                  alt=""
-                />
-              </Nav.Link>
-              <Nav.Link href="#">
+              <Nav.Link
+                target="_blank"
+                href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
+              >
                 <Image
                   className="navbar-socials-icon"
                   src={linkedInIcon}

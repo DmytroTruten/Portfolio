@@ -7,7 +7,6 @@
     rgba(0, 192, 253, 1),
     rgba(231, 15, 170, 1)
   );
-  border-radius: 50%;
   padding: 5px;
 }
 
@@ -17,17 +16,16 @@
   object-fit: cover;
 }
 
-.hero-h1 {
-  &.hero-name {
-    background: -webkit-linear-gradient(
-      0deg,
-      rgba(0, 192, 253, 1),
-      rgba(231, 15, 170, 1)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+.hero-name {
+  height: min-content;
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(0, 192, 253, 1),
+    rgba(231, 15, 170, 1)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 0px ) {

@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Image } from "react-bootstrap";
 import trutenImg from "../assets/trutenImg.jpg";
+import TypeIt from "typeit-react";
 import "../styles/Hero/Hero.css";
 
 function Hero() {
@@ -15,7 +16,7 @@ function Hero() {
           sm={{ span: 6, order: "last" }}
         >
           <div className="hero-img-wrapper">
-            <Image className="hero-img" src={trutenImg} roundedCircle />
+            <Image className="hero-img" src={trutenImg} />
           </div>
         </Col>
         <Col
@@ -25,16 +26,34 @@ function Hero() {
         >
           <Row className="mx-0">
             <Col xs={{ span: 12 }} className=" hero-h1-col px-0">
-              <h1 className="hero-h1">Hi,</h1>
-            </Col>
-            <Col xs={{ span: 12 }} className=" hero-h1-col px-0">
-              <h1 className="hero-h1">My name is</h1>
-            </Col>
-            <Col xs={{ span: 12 }} className=" hero-h1-col px-0">
-              <h1 className="hero-h1 hero-name">Dmytro Truten</h1>
-            </Col>
-            <Col xs={{ span: 12 }} className=" hero-h1-col px-0">
-              <h1 className="hero-h1">I build things for web</h1>
+              <h1 className="hero-h1">
+                <TypeIt
+                  getBeforeInit={(instance) => {
+                    instance
+                      .type("Hi<", { delay: 250 })
+                      .delete(1)
+                      .type(",", { delay: 250 })
+                      .break()
+                      .type("My name is", { delay: 250 })
+                      .break()
+                      .type("Dmytro", { delay: 500 })
+                      .delete(6, { delay: 250 })
+                      .type("<span class='hero-name'>{Dmytro Truten}</span>", {
+                        delay: 250,
+                      })
+                      .break()
+                      .type("Ibuild", { delay: 250 })
+                      .move(-5)
+                      .type(" ", { delay: 250 })
+                      .move(null, { to: "END", instant: true })
+                      .type(" things for wegb", { delay: 250 })
+                      .move(-1)
+                      .delete(1)
+                      .move(1);
+                    return instance;
+                  }}
+                ></TypeIt>
+              </h1>
             </Col>
           </Row>
         </Col>
