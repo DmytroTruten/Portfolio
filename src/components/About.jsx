@@ -1,8 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
+import "../styles/About/About.css";
 
 function About() {
   return (
-    <Container className="about pt-5">
+    <Container className="about-section pt-5">
       <Row className="pt-4">
         <Col xs={12}>
           <h1>About</h1>

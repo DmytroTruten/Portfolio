@@ -5,3 +5,16 @@
 .tech-stack-icon {
   width: clamp(0px, 100%, 100px);
 }
+
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .tech-stack-section {
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .tech-stack-section {
+    min-height: 100vh;
+  }
+}

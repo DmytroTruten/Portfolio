@@ -37,7 +37,7 @@ function Footer() {
                 </p>
               </>
             )}
-            <div className="navbar-socials-container d-flex justify-content-evenly px-0 mb-3 mx-md-0 my-md-0">
+            <div className="navbar-socials-container d-flex justify-content-end px-0 mb-3 mx-md-0 my-md-0">
               <Nav.Link target="_blank" href="https://github.com/DmytroTruten">
                 <Image
                   className="navbar-socials-icon"
@@ -46,6 +46,7 @@ function Footer() {
                 />
               </Nav.Link>
               <Nav.Link
+              className="ms-3"
                 target="_blank"
                 href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
               >

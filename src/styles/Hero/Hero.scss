@@ -75,3 +75,15 @@
     justify-content: end;
   }
 }
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+}

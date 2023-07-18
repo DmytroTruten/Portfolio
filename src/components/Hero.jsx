@@ -10,10 +10,9 @@ import { useRef } from "react";
 function Hero() {
   const heroImgWrapperRef = useRef(null);
   const heroImgRef = useRef(null);
-  const lastLineRef = useRef(null);
 
   return (
-    <Container className="home pt-4 pt-sm-5">
+    <Container className="hero-section pt-4 pt-sm-5">
       <Row className="pt-5">
         <Col
           className="hero-img-col d-flex"
@@ -71,7 +70,7 @@ function Hero() {
                     .type(
                       "<code class='hero-code last-line'><span class='code-function-name'>imageReveal<span class='code-parenthesis'>()<span class='semicolon'>;</span></span></span></code>",
                       {
-                        delay: 500,
+                        delay: 250,
                       }
                     )
                     .exec(() => {
@@ -83,7 +82,7 @@ function Hero() {
                     .type(
                       "<code class='hero-code last-line'><span class='code-property'>padding:</span> <span class='property-value'>4px<span class='semicolon'>;</span></span></code>",
                       {
-                        delay: 500,
+                        delay: 250,
                       }
                     )
                     .exec(() => {
@@ -95,7 +94,7 @@ function Hero() {
                     .type(
                       "<code class='hero-code last-line'><span class='code-property'>border-radius:</span> <span class='property-value'>50%<span class='semicolon'>;</span></span></code>",
                       {
-                        delay: 500,
+                        delay: 250,
                       }
                     )
                     .exec(() => {
@@ -110,7 +109,7 @@ function Hero() {
                     .type(
                       "<code class='hero-code last-line'><span class='property-value'>25%<span class='semicolon'>;</span></span></code>",
                       {
-                        delay: 500,
+                        delay: 250,
                       }
                     )
                     .move(null, { to: "END", instant: true })

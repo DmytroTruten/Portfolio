@@ -44,7 +44,7 @@ function Projects() {
   ];
 
   return (
-    <Container className="projects pt-5">
+    <Container className="projects-section pt-5">
       <Row className="pt-4">
         <Col xs={12}>
           <h2 className="text-center">Projects</h2>

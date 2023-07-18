@@ -64,7 +64,7 @@ function NavBar() {
               </Nav.Item>
               <Nav.Item className="my-2 my-lg-0">Contact</Nav.Item>
             </Nav>
-            <Container className="navbar-socials-container d-flex justify-content-evenly my-3 my-lg-0 ms-lg-5 me-lg-0 px-0">
+            <Container className="navbar-socials-container d-flex justify-content-end my-3 my-lg-0 ms-lg-5 me-lg-0 px-0">
               <Nav.Link target="_blank" href="https://github.com/DmytroTruten">
                 <Image
                   className="navbar-socials-icon"
@@ -72,7 +72,7 @@ function NavBar() {
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link target="_blank" href="https://www.linkedin.com/in/dmytro-truten-950b2826a/">
+              <Nav.Link className="ms-3" target="_blank" href="https://www.linkedin.com/in/dmytro-truten-950b2826a/">
                 <Image
                   className="navbar-socials-icon"
                   src={linkedInIcon}

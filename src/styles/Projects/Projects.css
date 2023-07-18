@@ -34,4 +34,15 @@
 .card-link {
   color: #000000;
   font-weight: 500;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .projects-section {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 992px) {
+  .projects-section {
+    min-height: 100vh;
+  }
 }/*# sourceMappingURL=Projects.css.map */
