@@ -15,7 +15,7 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg" className="py-lg-2" fixed="top" bg="light">
+    <Navbar expand="lg" className="py-lg-2" fixed="top">
       <Container>
         <Navbar.Brand className="mx-0">{`{Truten}`}</Navbar.Brand>
         <NavbarToggle
@@ -33,7 +33,7 @@ function NavBar() {
               <Nav.Item
                 className="my-2 my-lg-0"
                 onClick={() => {
-                  handleNavItemClick(document.querySelector(".home"));
+                  handleNavItemClick(document.querySelector(".hero-section"));
                 }}
               >
                 Home
@@ -41,7 +41,7 @@ function NavBar() {
               <Nav.Item
                 className="my-2 my-lg-0"
                 onClick={() => {
-                  handleNavItemClick(document.querySelector(".about"));
+                  handleNavItemClick(document.querySelector(".about-section"));
                 }}
               >
                 About
@@ -49,7 +49,7 @@ function NavBar() {
               <Nav.Item
                 className="my-2 my-lg-0"
                 onClick={() => {
-                  handleNavItemClick(document.querySelector(".tech-stack"));
+                  handleNavItemClick(document.querySelector(".tech-stack-section"));
                 }}
               >
                 Tech Stack
@@ -57,7 +57,7 @@ function NavBar() {
               <Nav.Item
                 className="my-2 my-lg-0"
                 onClick={() => {
-                  handleNavItemClick(document.querySelector(".projects"));
+                  handleNavItemClick(document.querySelector(".projects-section"));
                 }}
               >
                 Projects

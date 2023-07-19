@@ -1,3 +1,16 @@
+.about-header-container {
+  transition: all .5s ease-in-out;
+  width: min-content;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 12px;
+  &.align-left {
+    left: 0%;
+    transform: initial;
+  }
+}
+
 @media (min-width: 0px) and (max-width: 575px) {
   .about-section {
     min-height: 100vh;

@@ -38,14 +38,15 @@
 
 .hero-code {
   font-family: "Fira Code";
-  .code-property, .semicolon {
-    color: gray;
+  .code-property,
+  .semicolon {
+    color: #abb2bf;
   }
   .property-value {
-    color: rgb(214, 139, 0);
+    color: #d19a66;
   }
   .code-function-name {
-    color: #00a2d3;
+    color: #61afef;
   }
   .code-parenthesis {
     color: #de7be6;
