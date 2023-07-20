@@ -2,11 +2,12 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
+import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import githubIcon from "../assets/icons/github-icon.svg";
-import linkedInIcon from "../assets/icons/linkedin-icon.svg";
 import menuIcon from "../assets/icons/menuIcon.svg";
+import lightModeIcon from "../assets/icons/lightModeIcon.svg";
+import closeIcon from "../assets/icons/closeIcon.svg";
 import "../styles/Navbar/Navbar.css";
 
 function NavBar() {
@@ -15,7 +16,7 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg" className="p-3 py-lg-2" fixed="top">
+    <Navbar expand="lg" className="p-3">
       <Container className="px-0">
         <Navbar.Brand className="mx-0 py-0">{`<Truten />`}</Navbar.Brand>
         <NavbarToggle
@@ -27,12 +28,17 @@ function NavBar() {
           aria-labelledby="offcanvasNavbarLabel-expand-lg"
           placement="end"
         >
-          <Offcanvas.Header closeButton className="justify-content-end" />
+          <Offcanvas.Header>
+            <Offcanvas.Title>{`<Truten />`}</Offcanvas.Title>
+            <div className="close-btn">
+              <Image src={closeIcon} />
+            </div>
+          </Offcanvas.Header>
 
-          <Offcanvas.Body className="justify-content-end">
-            <Nav className="offcanvas-body-nav justify-content-between align-items-center">
+          <Offcanvas.Body className="p-0">
+            <Nav className="p-3">
               <Nav.Item
-                className="my-2 my-lg-0"
+                className="d-flex mb-3"
                 onClick={() => {
                   handleNavItemClick(document.querySelector(".hero-section"));
                 }}
@@ -40,7 +46,7 @@ function NavBar() {
                 Home
               </Nav.Item>
               <Nav.Item
-                className="my-2 my-lg-0"
+                className="d-flex mb-3"
                 onClick={() => {
                   handleNavItemClick(document.querySelector(".about-section"));
                 }}
@@ -48,7 +54,7 @@ function NavBar() {
                 About
               </Nav.Item>
               <Nav.Item
-                className="my-2 my-lg-0"
+                className="d-flex mb-3"
                 onClick={() => {
                   handleNavItemClick(
                     document.querySelector(".tech-stack-section")
@@ -58,7 +64,7 @@ function NavBar() {
                 Tech Stack
               </Nav.Item>
               <Nav.Item
-                className="my-2 my-lg-0"
+                className="d-flex mb-3"
                 onClick={() => {
                   handleNavItemClick(
                     document.querySelector(".projects-section")
@@ -67,27 +73,16 @@ function NavBar() {
               >
                 Projects
               </Nav.Item>
-              <Nav.Item className="my-2 my-lg-0">Contact</Nav.Item>
+              <Nav.Item className="d-flex">Contact</Nav.Item>
             </Nav>
-            <Container className="navbar-socials-container d-flex justify-content-end my-3 my-lg-0 ms-lg-5 me-lg-0 px-0">
-              <Nav.Link target="_blank" href="https://github.com/DmytroTruten">
-                <Image
-                  className="navbar-socials-icon"
-                  src={githubIcon}
-                  alt=""
-                />
-              </Nav.Link>
-              <Nav.Link
-                className="ms-3"
-                target="_blank"
-                href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
-              >
-                <Image
-                  className="navbar-socials-icon"
-                  src={linkedInIcon}
-                  alt=""
-                />
-              </Nav.Link>
+            <Container className="navbar-action-container p-3">
+              <Container className="d-flex justify-content-between align-items-center px-0">
+                <p className="switch-theme-text m-0">Switch theme</p>
+                <div className="switch-theme-btn">
+                  <Image src={lightModeIcon} />
+                </div>
+              </Container>
+              <Button className="download-cv-btn mt-3 px-3">Download CV</Button>
             </Container>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

@@ -15,35 +15,44 @@
   border: none !important;
 }
 
-.navbar-nav {
-  width: clamp(350px, 50%, 610px);
+.close-btn {
+  padding: 6px;
 }
 
 .nav-item {
-  font-family: "DM Sans";
+  font-size: 16px;
   font-weight: 500;
-  color: #666666;
-  cursor: pointer;
+  line-height: 24px;
+}
+
+.offcanvas-title {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 32px !important;
+  letter-spacing: -0.48px !important;
+  color: #111827 !important;
+}
+
+.switch-theme-text {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
 }
 
-.navbar-socials-container {
-  width: 130px !important;
+.switch-theme-btn {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 6px;
 }
 
-.navbar-socials-icon {
-  width: 29px;
-  height: 29px;
-}
-
-@media (min-width: 0px) and (max-width: 991px) {
-  .offcanvas-body-nav {
-    width: 100%;
-  }
-  .offcanvas-body-nav .nav-item {
-    text-align: center;
-    font-size: calc(1.375rem + 1.5vw);
-  }
+.download-cv-btn {
+  width: 100%;
+  background-color: #111827 !important;
+  border-radius: 12px !important;
+  border: none !important;
 }/*# sourceMappingURL=Navbar.css.map */
