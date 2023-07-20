@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Fira+Code&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 #root,
 body,
@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 p {
-  font-family: "Poppins";
+  font-family: "Inter";
 }
 
 h1,

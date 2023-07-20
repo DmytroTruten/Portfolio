@@ -6,20 +6,21 @@ import Image from "react-bootstrap/Image";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import githubIcon from "../assets/icons/github-icon.svg";
 import linkedInIcon from "../assets/icons/linkedin-icon.svg";
+import menuIcon from "../assets/icons/menuIcon.svg";
 import "../styles/Navbar/Navbar.css";
 
 function NavBar() {
-
   const handleNavItemClick = (element) => {
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <Navbar expand="lg" className="py-lg-2" fixed="top">
-      <Container>
-        <Navbar.Brand className="mx-0">{`{Truten}`}</Navbar.Brand>
+    <Navbar expand="lg" className="p-3 py-lg-2" fixed="top">
+      <Container className="px-0">
+        <Navbar.Brand className="mx-0 py-0">{`<Truten />`}</Navbar.Brand>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"
+          children={<Image src={menuIcon} />}
         />
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-lg"
@@ -49,7 +50,9 @@ function NavBar() {
               <Nav.Item
                 className="my-2 my-lg-0"
                 onClick={() => {
-                  handleNavItemClick(document.querySelector(".tech-stack-section"));
+                  handleNavItemClick(
+                    document.querySelector(".tech-stack-section")
+                  );
                 }}
               >
                 Tech Stack
@@ -57,7 +60,9 @@ function NavBar() {
               <Nav.Item
                 className="my-2 my-lg-0"
                 onClick={() => {
-                  handleNavItemClick(document.querySelector(".projects-section"));
+                  handleNavItemClick(
+                    document.querySelector(".projects-section")
+                  );
                 }}
               >
                 Projects
@@ -72,7 +77,11 @@ function NavBar() {
                   alt=""
                 />
               </Nav.Link>
-              <Nav.Link className="ms-3" target="_blank" href="https://www.linkedin.com/in/dmytro-truten-950b2826a/">
+              <Nav.Link
+                className="ms-3"
+                target="_blank"
+                href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
+              >
                 <Image
                   className="navbar-socials-icon"
                   src={linkedInIcon}
