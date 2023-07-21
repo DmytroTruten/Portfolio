@@ -2,6 +2,11 @@
 
 .navbar {
   background-color: #fff;
+  padding: 16px !important;
+}
+
+.navbar-inner-container {
+  padding: 0px !important;
 }
 
 .navbar-brand {
@@ -25,6 +30,8 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  color: $gray-600;
+  cursor: pointer;
 }
 
 .offcanvas-title {
@@ -44,8 +51,10 @@
 }
 
 .switch-theme-btn {
-  height: min-content;
+  height: min-content !important;
   padding: 6px;
+  cursor: pointer;
+  height: 36px !important;
 }
 
 .download-cv-btn {
@@ -53,4 +62,27 @@
   background-color: $gray-900 !important;
   border-radius: 12px !important;
   border: none !important;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding: 16px 80px !important;
+  }
+
+  .navbar-nav {
+    flex: 1;
+  }
+
+  .navbar-inner-container {
+    padding: 0px 32px !important;
+  }
+
+  .switch-theme-container,
+  .navbar-action-container {
+    flex: 0;
+  }
+
+  .switch-theme-text {
+    display: none;
+  }
 }

@@ -16,8 +16,8 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg" className="p-3">
-      <Container className="px-0">
+    <Navbar expand="lg">
+      <Container className="navbar-inner-container">
         <Navbar.Brand className="mx-0 py-0">{`<Truten />`}</Navbar.Brand>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"
@@ -36,9 +36,9 @@ function NavBar() {
           </Offcanvas.Header>
 
           <Offcanvas.Body className="p-0">
-            <Nav className="p-3">
+            <Nav className="d-flex justify-content-lg-end p-3 p-lg-0">
               <Nav.Item
-                className="d-flex mb-3"
+                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(document.querySelector(".hero-section"));
                 }}
@@ -46,7 +46,7 @@ function NavBar() {
                 Home
               </Nav.Item>
               <Nav.Item
-                className="d-flex mb-3"
+                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(document.querySelector(".about-section"));
                 }}
@@ -54,7 +54,7 @@ function NavBar() {
                 About
               </Nav.Item>
               <Nav.Item
-                className="d-flex mb-3"
+                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(
                     document.querySelector(".tech-stack-section")
@@ -64,7 +64,7 @@ function NavBar() {
                 Tech Stack
               </Nav.Item>
               <Nav.Item
-                className="d-flex mb-3"
+                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(
                     document.querySelector(".projects-section")
@@ -73,16 +73,20 @@ function NavBar() {
               >
                 Projects
               </Nav.Item>
-              <Nav.Item className="d-flex">Contact</Nav.Item>
+              <Nav.Item className="me-lg-4 d-flex align-items-center">
+                Contact
+              </Nav.Item>
             </Nav>
-            <Container className="navbar-action-container p-3">
-              <Container className="d-flex justify-content-between align-items-center px-0">
+            <Container className="navbar-action-container d-flex flex-column flex-lg-row justify-content-lg-end p-3 p-lg-0">
+              <Container className="switch-theme-container d-flex justify-content-between justify-content-lg-end align-items-center px-0 mx-lg-0 me-lg-3 ms-lg-4">
                 <p className="switch-theme-text m-0">Switch theme</p>
                 <div className="switch-theme-btn">
                   <Image src={lightModeIcon} />
                 </div>
               </Container>
-              <Button className="download-cv-btn mt-3 px-3">Download CV</Button>
+              <Button className="download-cv-btn mt-3 mt-lg-0 px-3 text-nowrap">
+                Download CV
+              </Button>
             </Container>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
