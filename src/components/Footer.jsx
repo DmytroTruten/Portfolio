@@ -1,5 +1,4 @@
 import { Container, Row, Col, Nav, Image } from "react-bootstrap";
-import githubIcon from "../assets/icons/blue-github-icon.svg";
 import linkedInIcon from "../assets/icons/blue-linkedin-icon.svg";
 import "../styles/Footer/Footer.css";
 import { useState, useEffect } from "react";
@@ -41,7 +40,6 @@ function Footer() {
               <Nav.Link target="_blank" href="https://github.com/DmytroTruten">
                 <Image
                   className="navbar-socials-icon"
-                  src={githubIcon}
                   alt=""
                 />
               </Nav.Link>

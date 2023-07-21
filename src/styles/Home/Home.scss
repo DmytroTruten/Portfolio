@@ -1,0 +1,46 @@
+@import "../variables";
+
+.home-section {
+  padding: 64px 16px;
+}
+
+.home-col {
+  position: relative;
+}
+
+.home-img {
+  width: 240px;
+  height: 280px;
+  object-fit: cover;
+  border: 8px solid $white;
+}
+
+.home-img-background {
+  width: 280px;
+  height: 280px;
+  background-color: $gray-200;
+  position: absolute;
+  z-index: -1;
+  border: 8px solid $white;
+  top: 20px;
+}
+
+.home-content-col {
+  margin-top: 66px !important;
+}
+
+.dot-emerald-container {
+  width: 24px;
+  height: 24px;
+}
+
+.dot-emerald {
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  background-color: $emerald;
+}
+
+.github-icon, .linkedin-icon, .figma-icon {
+  padding: 6px;
+}

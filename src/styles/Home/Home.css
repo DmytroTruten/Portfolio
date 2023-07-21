@@ -1,0 +1,45 @@
+.home-section {
+  padding: 64px 16px;
+}
+
+.home-col {
+  position: relative;
+}
+
+.home-img {
+  width: 240px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 8px solid #ffffff;
+}
+
+.home-img-background {
+  width: 280px;
+  height: 280px;
+  background-color: #e5e7eb;
+  position: absolute;
+  z-index: -1;
+  border: 8px solid #ffffff;
+  top: 20px;
+}
+
+.home-content-col {
+  margin-top: 66px !important;
+}
+
+.dot-emerald-container {
+  width: 24px;
+  height: 24px;
+}
+
+.dot-emerald {
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  background-color: #10b981;
+}
+
+.github-icon, .linkedin-icon, .figma-icon {
+  padding: 6px;
+}/*# sourceMappingURL=Home.css.map */
