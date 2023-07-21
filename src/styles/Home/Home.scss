@@ -1,11 +1,21 @@
 @import "../variables";
 
 .home-section {
-  padding: 64px 16px;
+  padding: 64px 16px !important;
 }
 
 .home-col {
   position: relative;
+}
+
+.home-row {
+  width: 100%;
+}
+
+.home-content-h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 40px;
 }
 
 .home-img {
@@ -41,6 +51,43 @@
   background-color: $emerald;
 }
 
-.github-icon, .linkedin-icon, .figma-icon {
+.github-icon,
+.linkedin-icon,
+.figma-icon {
   padding: 6px;
+}
+
+@media (min-width: 768px) {
+  .home-img {
+    width: 280px;
+    height: 320px;
+    margin: 0px 40px 40px 0px;
+  }
+
+  .home-img-background {
+    width: 280px;
+    height: 320px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border: 8px solid $white;
+    top: initial;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-section {
+    padding: 96px 80px !important;
+  }
+
+  .home-row {
+    padding: 0px 32px !important;
+  }
+
+  .home-content-h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: -1.2px;
+  }
 }

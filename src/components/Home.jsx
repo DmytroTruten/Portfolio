@@ -8,21 +8,23 @@ import "../styles/Home/Home.css";
 
 function Home() {
   return (
-    <Container className="home-section">
-      <Row className="">
-        <Col className="home-col d-flex justify-content-center" xs={12}>
+    <Container className="home-section px-sm-0">
+      <Row className="home-row d-flex flex-column flex-md-row-reverse mx-0">
+        <Col
+          className="home-col d-flex justify-content-center justify-content-md-end align-items-md-end px-0"
+        >
           <Image src={trutenImg} className="home-img" />
           <div className="home-img-background"></div>
         </Col>
-        <Col className="home-content-col">
-          <h1>Hi, I'm Dmytro</h1>
+        <Col className="home-content-col mt-md-0 px-0">
+          <h1 className="home-content-h1">Hi, I'm Dmytro</h1>
           <p className="mb-0">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
             officia iusto reprehenderit praesentium optio, velit necessitatibus
             commodi sapiente mollitia nihil? A ad porro doloremque harum quia,
             voluptates numquam accusamus reprehenderit!
           </p>
-          <div className="my-5">
+          <div className="my-5 my-md-4">
             <div className="home-location d-flex mb-2">
               <Image src={locationIcon} className="me-2" />
               <p className="mb-0">Kyiv, Ukraine</p>
@@ -35,9 +37,9 @@ function Home() {
             </div>
           </div>
           <div className="d-flex">
-            <Image className="github-icon" src={githubIcon}/>
-            <Image className="linkedin-icon mx-1" src={linkedinIcon}/>
-            <Image className="figma-icon" src={figmaIcon}/>
+            <Image className="github-icon" src={githubIcon} />
+            <Image className="linkedin-icon mx-1" src={linkedinIcon} />
+            <Image className="figma-icon" src={figmaIcon} />
           </div>
         </Col>
       </Row>
