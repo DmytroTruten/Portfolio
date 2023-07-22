@@ -1,0 +1,71 @@
+@mixin typography($element, $device, $font-weight...) {
+  @if $element == heading-h1 {
+    @if $device == mobile {
+      font-size: 36px;
+      line-height: 40px;
+      font-weight: 600;
+    } @else if $device == tablet {
+      font-size: 48px;
+      line-height: 48px;
+      font-weight: 700;
+      letter-spacing: -0.96px;
+    } @else if $device == desktop {
+      font-size: 60px;
+      line-height: 72px;
+      font-weight: 700;
+      letter-spacing: -1.2px;
+    }
+  } @else if $element == heading-h2 {
+    font-weight: 600;
+    @if $device == mobile or $device == tablet {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.36px;
+    } @else if $device == desktop {
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: -0.72px;
+    }
+  } @else if $element == heading-h3 {
+    font-weight: $font-weight;
+    @if $device == mobile or $device == tablet {
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.48px;
+    } @else if $device == desktop {
+      font-size: 30px;
+      line-height: 36px;
+      letter-spacing: -0.6px;
+    }
+  } @else if $element == subtitle {
+    font-weight: $font-weight;
+    @if $device == mobile or $device == tablet {
+      font-size: 18px;
+      line-height: 28px;
+    } @else if $device == desktop {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  } @else if $element == body1 {
+    font-weight: $font-weight;
+    @if $device == mobile or $device == tablet {
+      font-size: 16px;
+      line-height: 24px;
+    } @else if $device == desktop {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  } @else if $element == body2 {
+    @if $device == all {
+      font-weight: $font-weight;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  } @else if $element == body3 {
+    @if $device == all {
+      font-weight: $font-weight;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
