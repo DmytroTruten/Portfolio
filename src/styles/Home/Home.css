@@ -51,6 +51,17 @@
 .figma-icon {
   padding: 6px;
   cursor: pointer;
+  border-radius: 8px;
+}
+.github-icon:hover,
+.linkedin-icon:hover,
+.figma-icon:hover {
+  background-color: #f3f4f6;
+}
+.github-icon:active,
+.linkedin-icon:active,
+.figma-icon:active {
+  background-color: #e5e7eb;
 }
 
 .home-content-text,

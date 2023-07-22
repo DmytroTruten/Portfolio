@@ -51,6 +51,13 @@
 .figma-icon {
   padding: 6px;
   cursor: pointer;
+  border-radius: 8px;
+  &:hover {
+    background-color: $gray-100;
+  }
+  &:active {
+    background-color: $gray-200;
+  }
 }
 
 .home-content-text,
