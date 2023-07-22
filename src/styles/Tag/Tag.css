@@ -1,0 +1,12 @@
+.tag {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  padding: 4px 20px;
+  border-radius: 12px;
+  background-color: #e5e7eb;
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}/*# sourceMappingURL=Tag.css.map */

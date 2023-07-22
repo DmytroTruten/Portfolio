@@ -1,41 +1,50 @@
-import { Container, Row, Col } from "react-bootstrap";
-import TypeIt from "typeit-react";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import Tag from "../components/Tag";
+import trutenImg from "../assets/trutenImg.jpg";
 import "../styles/About/About.css";
 
 function About() {
   return (
-    <Container className="about-section pt-5">
-      <Row className="pt-4">
-        <Col xs={12}>
-          <TypeIt
-            className="about-header-container mb-0"
-            as="h1"
-            options={{ waitUntilVisible: true }}
-            getAfterInit={(instance) => {
-              instance.type("<span class='about-header'>About</span>", {
-                delay: 500,
-              });
-              return instance;
-            }}
-          />
+    <Container fluid="sm" className="about-section px-sm-0">
+      <Row className="about-tag-row  mb-4 mb-md-5 mx-0 p-lg-0">
+        <Col className="d-flex justify-content-center px-0">
+          <Tag children={"About me"} />
         </Col>
-        <Col>
-          <p>
-            I have a strong passion for creating efficient and visually
-            appealing web interfaces. With my experience, I specialize in
-            developing dynamic and responsive websites using the latest frontend
-            technologies. Over the past year, I have worked on several projects
-            where I utilized HTML, CSS, and JavaScript to create attractive and
-            user-friendly interfaces. I pay meticulous attention to detail and
-            strive to deliver maximum functionality. I focus on providing a
-            user-friendly interface that is both appealing and functional. Apart
-            from working on projects, I am constantly seeking to enhance my
-            skills. I stay updated with the latest frontend trends and
-            technologies, allowing me to improve the quality of my work and
-            achieve impressive results. I am always ready to take on new
-            challenges and collaborate with teams to achieve common goals. I am
-            open to new projects and opportunities that will help me grow and
-            expand my knowledge in frontend development.
+      </Row>
+      <Row className="about-content-row d-flex flex-column flex-md-row mx-0 p-lg-0">
+        <Col className="about-img-col d-flex align-items-center align-items-md-start flex-column flex-md-row px-0">
+          <Image src={trutenImg} className="about-img" />
+          <div className="about-img-background"></div>
+        </Col>
+        <Col className="about-text-col">
+          <h1 className="about-content-h1 mb-4">
+            Curious about me? Here you have it:
+          </h1>
+          <p className="about-content-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores
+            doloremque repellendus ipsa nam delectus suscipit saepe porro veniam
+            quis. Rerum officia incidunt magni optio dignissimos eligendi
+            distinctio possimus laborum itaque!
+          </p>
+          <p className="about-content-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            atque harum eius. Asperiores, tempora eligendi ullam aperiam quos
+            saepe, deleniti omnis dolor sed cumque alias voluptatibus illum
+            cupiditate? Ad, architecto! Perspiciatis error dolor earum ea
+            molestias eos. Ab quis unde fugit. Enim delectus quidem obcaecati
+            optio deserunt. Odio quas debitis labore, soluta, placeat id dolore
+            obcaecati magni deleniti ut in?
+          </p>
+          <p className="about-content-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores
+            doloremque repellendus ipsa nam delectus suscipit saepe porro veniam
+            quis.
+          </p>
+          <p className="about-content-text mb-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit enim,
+            accusantium perferendis eum, facere laboriosam aperiam commodi
+            eveniet distinctio fuga assumenda corrupti, dolorum omnis sed sint
+            eos culpa dolores consequuntur?
           </p>
         </Col>
       </Row>

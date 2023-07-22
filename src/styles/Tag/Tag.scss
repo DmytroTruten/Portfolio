@@ -1,0 +1,11 @@
+@import "../variables";
+@import "../mixins";
+
+.tag {
+  width: fit-content !important;
+  padding: 4px 20px;
+  border-radius: 12px;
+  background-color: $gray-200;
+  color: $gray-600;
+  @include typography(body3, all, 500)
+}

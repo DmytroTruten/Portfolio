@@ -1,12 +1,65 @@
+@import "../variables";
+@import "../mixins";
 
-@media (min-width: 0px) and (max-width: 575px) {
-  .about-section {
-    min-height: 100vh;
+.about-section {
+  padding: 64px 16px !important;
+}
+
+.about-img {
+  width: 280px;
+  height: 360px;
+  border: 8px solid $white;
+  object-fit: cover;
+}
+
+.about-img-background {
+  width: 320px;
+  height: 360px;
+  background-color: $gray-200;
+  position: absolute;
+  z-index: -1;
+  border: 8px solid $white;
+  top: 20px;
+}
+
+.about-img-col {
+  position: relative;
+}
+
+.about-content-h1 {
+  margin-top: 66px !important;
+  @include typography(heading-h3, mobile, 600)
+}
+
+.about-content-text {
+  @include typography(body2, all, 400)
+}
+
+@media (min-width: 768px) {
+  .about-content-h1 {
+    margin-top: 0px !important;
+    @include typography(heading-h3, tablet, 600)
+  }
+
+  .about-img {
+    margin-left: 40px;
+  }
+
+  .about-img-background {
+    width: 280px;
+    height: 360px;
+    top: 40px;
   }
 }
 
 @media (min-width: 992px) {
-  .about-section {
-    min-height: 100vh;
+  .about-content-h1 {
+    margin-top: 0px !important;
+    @include typography(heading-h3, desktop, 600)
+  }
+
+  .about-img, .about-img-background {
+    width: 400px;
+    height: 480px;
   }
 }

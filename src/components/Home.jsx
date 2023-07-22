@@ -10,7 +10,7 @@ function Home() {
   return (
     <Container fluid="sm" className="home-section px-sm-0">
       <Row className="home-row d-flex flex-column flex-md-row-reverse mx-0 p-lg-0">
-        <Col className="home-col d-flex justify-content-center justify-content-md-end align-items-md-end px-0">
+        <Col className="home-img-col d-flex justify-content-center justify-content-md-end align-items-md-end px-0">
           <Image src={trutenImg} className="home-img" />
           <div className="home-img-background"></div>
         </Col>
