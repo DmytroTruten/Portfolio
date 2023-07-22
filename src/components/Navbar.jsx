@@ -16,8 +16,8 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg">
-      <Container className="navbar-inner-container">
+    <Navbar expand="lg" className="p-3 px-lg-0">
+      <Container className="navbar-inner-container p-0">
         <Navbar.Brand className="mx-0 py-0">{`<Truten />`}</Navbar.Brand>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"

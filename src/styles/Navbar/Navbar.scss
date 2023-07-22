@@ -2,11 +2,6 @@
 
 .navbar {
   background-color: #fff;
-  padding: 16px !important;
-}
-
-.navbar-inner-container {
-  padding: 0px !important;
 }
 
 .navbar-brand {
@@ -58,23 +53,14 @@
 }
 
 .download-cv-btn {
-  width: 100%;
   background-color: $gray-900 !important;
   border-radius: 12px !important;
   border: none !important;
 }
 
 @media (min-width: 992px) {
-  .navbar {
-    padding: 16px 80px !important;
-  }
-
   .navbar-nav {
     flex: 1;
-  }
-
-  .navbar-inner-container {
-    padding: 0px 32px !important;
   }
 
   .switch-theme-container,
