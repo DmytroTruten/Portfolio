@@ -9,12 +9,6 @@
   color: #4b5563;
 }
 
-.tech-stack-col {
-  width: -webkit-min-content !important;
-  width: -moz-min-content !important;
-  width: min-content !important;
-}
-
 .tech-stack-icon {
   width: 64px;
   height: 64px;
@@ -25,4 +19,17 @@
   font-size: 16px;
   line-height: 24px;
   color: #4b5563;
+}
+
+@media (min-width: 992px) {
+  .tech-stack-subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .tech-stack-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
 }/*# sourceMappingURL=TechStack.css.map */

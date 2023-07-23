@@ -16,7 +16,7 @@ function About() {
           <Image src={trutenImg} className="about-img" />
           <div className="about-img-background"></div>
         </Col>
-        <Col className="about-text-col">
+        <Col className="about-text-col px-0">
           <h1 className="about-content-h1 mb-4">
             Curious about me? Here you have it:
           </h1>

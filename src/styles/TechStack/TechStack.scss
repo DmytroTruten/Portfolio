@@ -10,10 +10,6 @@
   color: $gray-600;
 }
 
-.tech-stack-col {
-  width: min-content !important;
-}
-
 .tech-stack-icon {
   width: 64px;
   height: 64px;
@@ -22,4 +18,13 @@
 .tech-stack-text {
   @include typography(body1, mobile, 400);
   color: $gray-600;
+}
+
+@media (min-width: 992px) {
+  .tech-stack-subtitle {
+    @include typography(subtitle, desktop, 400);
+  }
+  .tech-stack-text {
+    @include typography(body1, desktop, 400);
+  }
 }
