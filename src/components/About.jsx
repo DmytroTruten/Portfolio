@@ -6,7 +6,7 @@ import "../styles/About/About.css";
 function About() {
   return (
     <Container fluid="sm" className="about-section px-sm-0">
-      <Row className="about-tag-row  mb-4 mb-md-5 mx-0 p-lg-0">
+      <Row className="about-tag-row mb-4 mb-md-5 mx-0 p-lg-0">
         <Col className="d-flex justify-content-center px-0">
           <Tag children={"About me"} />
         </Col>

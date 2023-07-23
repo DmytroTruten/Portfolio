@@ -1,18 +1,28 @@
-.tech-stack-h3 {
+.tech-stack-section {
+  padding: 64px 16px !important;
+}
+
+.tech-stack-subtitle {
   font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4b5563;
+}
+
+.tech-stack-col {
+  width: -webkit-min-content !important;
+  width: -moz-min-content !important;
+  width: min-content !important;
 }
 
 .tech-stack-icon {
-  width: clamp(0px, 100%, 100px);
+  width: 64px;
+  height: 64px;
 }
 
-@media (min-width: 0px) and (max-width: 575px) {
-  .tech-stack-section {
-    min-height: 100vh;
-  }
-}
-@media (min-width: 992px) {
-  .tech-stack-section {
-    min-height: 100vh;
-  }
+.tech-stack-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4b5563;
 }/*# sourceMappingURL=TechStack.css.map */

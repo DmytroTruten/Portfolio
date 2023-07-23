@@ -1,20 +1,25 @@
-.tech-stack-h3 {
-  font-weight: 400;
+@import "../mixins";
+@import "../variables";
+
+.tech-stack-section {
+  padding: 64px 16px !important;
+}
+
+.tech-stack-subtitle {
+  @include typography(subtitle, mobile, 400);
+  color: $gray-600;
+}
+
+.tech-stack-col {
+  width: min-content !important;
 }
 
 .tech-stack-icon {
-  width: clamp(0px, 100%, 100px);
+  width: 64px;
+  height: 64px;
 }
 
-
-@media (min-width: 0px) and (max-width: 575px) {
-  .tech-stack-section {
-    min-height: 100vh;
-  }
-}
-
-@media (min-width: 992px) {
-  .tech-stack-section {
-    min-height: 100vh;
-  }
+.tech-stack-text {
+  @include typography(body1, mobile, 400);
+  color: $gray-600;
 }

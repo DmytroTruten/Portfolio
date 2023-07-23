@@ -1,8 +1,9 @@
 import { Row, Col, Container, Image } from "react-bootstrap";
+import Tag from "../components/Tag";
 import htmlIcon from "../assets/icons/html-icon.svg";
 import cssIcon from "../assets/icons/css-icon.svg";
 import jsIcon from "../assets/icons/js-icon.svg";
-import reactIcon from "../assets/icons/react-icon.svg";
+import reactIcon from "../assets/icons/reactIcon.svg";
 import reduxIcon from "../assets/icons/redux-icon.svg";
 import bootstrapIcon from "../assets/icons/bootstrap-icon.svg";
 import sassIcon from "../assets/icons/sass-icon.svg";
@@ -17,61 +18,85 @@ import "../styles/TechStack/TechStack.css";
 
 function TechStack() {
   return (
-    <Container className="tech-stack-section pt-5">
-      <Row className="pt-4">
-        <Col xs={12}>
-          <h2 className="text-center">Tech Stack</h2>
+    <Container fluid="sm" className="tech-stack-section">
+      <Row className="tech-stack-tag-row d-flex flex-column mx-0 p-lg-0">
+        <Col className="d-flex justify-content-center mb-3 px-0">
+          <Tag children={"Tech Stack"} />
         </Col>
-        <Col xs={12}>
-          <h4 className="text-center">
-            Technologies I&apos;ve been working with recently
-          </h4>
-        </Col>
-      </Row>
-      <Row className="mt-3 mt-lg-5">
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={htmlIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={cssIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={jsIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={reactIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={reduxIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={bootstrapIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={sassIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={gitIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={vscodeIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={githubIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={jqueryIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={4} md={3} lg={2}>
-          <Image className="tech-stack-icon" src={mochajsIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={6} md={6} lg={6}>
-          <Image className="tech-stack-icon" src={viteIcon}/>
-        </Col>
-        <Col className="d-flex justify-content-center py-2" xs={6} sm={6} md={6} lg={6}>
-          <Image className="tech-stack-icon" src={reactBootstrapIcon}/>
+        <Col className="px-0">
+          <p className="tech-stack-subtitle  text-center mb-4">
+            Tools, skills and technologies I&apos;ve been working with recently
+          </p>
         </Col>
       </Row>
+      <Container fluid="sm">
+        <Row className="mb-3">
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={htmlIcon} />
+            <p className="tech-stack-text mb-0">HTML</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={cssIcon} />
+            <p className="tech-stack-text mb-0">CSS</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={jsIcon} />
+            <p className="tech-stack-text mb-0">JavaScript</p>
+          </Col>
+        </Row>
+        <Row className="mb-3">
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={reactIcon} />
+            <p className="tech-stack-text mb-0">React</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={reduxIcon} />
+            <p className="tech-stack-text mb-0">Redux</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={bootstrapIcon} />
+            <p className="tech-stack-text mb-0">Bootstrap</p>
+          </Col>
+        </Row>
+        <Row className="mb-3">
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={sassIcon} />
+            <p className="tech-stack-text mb-0">Sass/SCSS</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={gitIcon} />
+            <p className="tech-stack-text mb-0">Git</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={vscodeIcon} />
+            <p className="tech-stack-text mb-0">VS Code</p>
+          </Col>
+        </Row>
+        <Row className="mb-3">
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={githubIcon} />
+            <p className="tech-stack-text mb-0">GitHub</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={jqueryIcon} />
+            <p className="tech-stack-text mb-0">JQuery</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={mochajsIcon} />
+            <p className="tech-stack-text mb-0">Mocha</p>
+          </Col>
+        </Row>
+        <Row className="mb-3">
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={viteIcon} />
+            <p className="tech-stack-text mb-0">Vite</p>
+          </Col>
+          <Col className="tech-stack-col d-flex align-items-center flex-column px-0">
+            <Image className="tech-stack-icon mb-2" src={reactBootstrapIcon} />
+            <p className="tech-stack-text mb-0">React Bootstrap</p>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 }
