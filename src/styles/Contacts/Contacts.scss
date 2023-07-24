@@ -1,0 +1,27 @@
+@import "../mixins";
+@import "../variables";
+
+.contacts-section {
+  padding: 64px 16px !important;
+}
+
+.contacts-email-col,
+.contacts-phone-col {
+  max-width: min-content !important;
+}
+
+.contacts-subtitle {
+  @include typography(subtitle, desktop, 400);
+  color: $gray-600;
+}
+
+.contacts-email,
+.contacts-phone {
+  @include typography(heading-h2, mobile, 600);
+  color: $gray-900;
+}
+
+.contacts-body2 {
+  @include typography(body2, all, 400);
+  color: $gray-600;
+}

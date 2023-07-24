@@ -1,0 +1,33 @@
+.contacts-section {
+  padding: 64px 16px !important;
+}
+
+.contacts-email-col,
+.contacts-phone-col {
+  max-width: -webkit-min-content !important;
+  max-width: -moz-min-content !important;
+  max-width: min-content !important;
+}
+
+.contacts-subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #4b5563;
+}
+
+.contacts-email,
+.contacts-phone {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.36px;
+  color: #111827;
+}
+
+.contacts-body2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4b5563;
+}/*# sourceMappingURL=Contacts.css.map */
