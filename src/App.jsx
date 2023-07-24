@@ -2,7 +2,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-// import Projects from "./components/Projects";
+import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Home />
       <About />
       <TechStack />
-      {/* <Projects /> */}
+      <Projects />
       <Footer />
     </>
   );

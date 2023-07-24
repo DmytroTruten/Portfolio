@@ -1,48 +1,7 @@
-.card {
-  border-radius: 20px !important;
-  box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
-  border: none !important;
+.projects-section {
+  padding: 64px 16px !important;
 }
 
-.card-img-top {
-  border-top-left-radius: 20px !important;
-  border-top-right-radius: 20px !important;
-  max-height: 152px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.card-title {
-  font-size: 28px !important;
-}
-
-.card-footer-icon {
-  width: 20px;
-}
-
-.card-text {
-  font-weight: 300;
-}
-
-.card-text-tech-stack {
-  color: #42446e;
-}
-.card-text-tech-stack span {
-  font-weight: 400;
-}
-
-.card-link {
-  color: #000000;
-  font-weight: 500;
-}
-
-@media (min-width: 0px) and (max-width: 575px) {
-  .projects-section {
-    min-height: 100vh;
-  }
-}
-@media (min-width: 992px) {
-  .projects-section {
-    min-height: 100vh;
-  }
+.projects-img-col {
+  padding: 32px !important;
 }/*# sourceMappingURL=Projects.css.map */

@@ -1,39 +1,31 @@
+import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
+import Tag from "../components/Tag";
 import agencyThumbnail from "../assets/thumbnails/agency-thumbnail.jpg";
 import weatherThumbnail from "../assets/thumbnails/weather-thumbnail.jpg";
 import interiorThumbnail from "../assets/thumbnails/interior-thumbnail.jpg";
 import reactChatThumbnail from "../assets/thumbnails/react-chat-thumbnail.jpg";
-import chainIcon from "../assets/icons/chain-icon.svg";
-import githubIcon from "../assets/icons/github-tech-stack-icon.svg";
 import "../styles/Projects/Projects.css";
 
 function Projects() {
-  const cardTitleArray = [
+  const projectsTitleArray = [
     "Interior Design Studio",
     "Weather App",
     "Creative Agency",
     "React Chat",
   ];
-  const cardTextArray = [
+  const projectsTextArray = [
     "Landing page of an imaginary company that provides services in: interior design, decorative services, space planning and project management.",
     "Simple app that allows users to search for weather information by city name. It uses the OpenWeather API to retrieve weather data, displays the current weather conditions.",
     "The Creative Agency is a landing page of an imaginary company that offers a creative strategy to achieve business goals, create engaging content for your brand.",
     "Real-time chat application, allows users to communicate instantly, without the need to refresh the page. This creates an interactive experience with the app.",
   ];
 
-  const techStackArray = [
-    "HTML, SCSS, JavaScript, JQuery, Bootstrap",
-    "React.js, SCSS, Moment.js, React-Bootstrap",
-    "React.js, SCSS, Bootstrap",
-    "React.js, Redux, SCSS, Firebase, Moment.js",
-  ];
-
-  const projectPreviewLinks = [
-    "https://dmytrotruten.github.io/Interior-Design-Studio/",
-    "https://dmytrotruten.github.io/Weather-App/",
-    "https://dmytrotruten.github.io/Creative-Agency/",
-    "https://dmytrotruten.github.io/React-Chat/",
+  const technologiesArray = [
+    ["HTML", "SCSS", "JavaScript", "JQuery", "Bootstrap"],
+    ["React.js", "SCSS", "Moment.js", "React-Bootstrap"],
+    ["React.js", "SCSS", "Bootstrap"],
+    ["React.js", "Redux", "SCSS", "Firebase", "Moment.js"],
   ];
 
   const projectCodeLinks = [
@@ -44,52 +36,44 @@ function Projects() {
   ];
 
   return (
-    <Container className="projects-section pt-5">
-      <Row className="pt-4">
-        <Col xs={12}>
-          <h2 className="text-center">Projects</h2>
+    <Container fluid="sm" className="projects-section px-sm-0">
+      <Row className="projects-tag-row d-flex flex-column mx-0 p-lg-0">
+        <Col className="d-flex justify-content-center mb-3 px-0">
+          <Tag children={"Projects"} />
         </Col>
-        <Col xs={12}>
-          <h4 className="text-center">Things I&apos;ve built so far</h4>
+        <Col className="px-0 mb-4 mb-lg-5">
+          <p className="projects-subtitle text-center mb-0">
+            Things I&apos;ve built so far
+          </p>
         </Col>
       </Row>
-        <Row xs={1} sm={2} lg={3} className="pt-5">
-          {[
-            interiorThumbnail,
-            weatherThumbnail,
-            agencyThumbnail,
-            reactChatThumbnail,
-          ].map((thumbnail, index) => (
-            <Col key={index} className="py-2">
-              <Card>
-                <Card.Img variant="top" src={thumbnail} />
-                <Card.Body>
-                  <Card.Title>{cardTitleArray[index]}</Card.Title>
-                  <Card.Text>{cardTextArray[index]}</Card.Text>
-                  <Card.Text className="card-text-tech-stack">
-                    <span>Tech Stack:</span> {techStackArray[index]}
-                  </Card.Text>
-                  <Row>
-                    <Col>
-                      <Image className="card-footer-icon" src={chainIcon} />
-                      <Card.Link target={"blank"} href={projectPreviewLinks[index]} className="ps-2">
-                        Live Preview
-                      </Card.Link>
-                    </Col>
-                    <Col>
-                      <Image className="card-footer-icon" src={githubIcon} />
-                      <Card.Link target={"blank"} href={projectCodeLinks[index]} className="ps-2">
-                        View Code
-                      </Card.Link>
-                    </Col>
-                  </Row>
-                </Card.Body>
-              </Card>
+      <Row className="mx-0">
+        {[
+          interiorThumbnail,
+          weatherThumbnail,
+          agencyThumbnail,
+          reactChatThumbnail,
+        ].map((thumbnail, index) => (
+          <React.Fragment key={index}>
+            <Col className="projects-img-col px-0" xs={12}>
+              <Image src={thumbnail} className="w-100" />
             </Col>
-          ))}
-        </Row>
+            <Col className="projects-content-col px-0">
+              <p className="projects-subtitle mb-4">
+                {projectsTitleArray[index]}
+              </p>
+              <p className="projects-text mb-4">{projectsTextArray[index]}</p>
+              <Container fluid className="px-0">
+                {technologiesArray[index].map((technology, techIndex) => (
+                  <Tag key={techIndex} children={technology} />
+                ))}
+              </Container>
+            </Col>
+          </React.Fragment>
+        ))}
+      </Row>
     </Container>
   );
 }
 
-// export default Projects;
+export default Projects;
