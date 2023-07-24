@@ -5,6 +5,7 @@ import agencyThumbnail from "../assets/thumbnails/agency-thumbnail.jpg";
 import weatherThumbnail from "../assets/thumbnails/weather-thumbnail.jpg";
 import interiorThumbnail from "../assets/thumbnails/interior-thumbnail.jpg";
 import reactChatThumbnail from "../assets/thumbnails/react-chat-thumbnail.jpg";
+import linkIcon from "../assets/icons/linkIcon.svg";
 import "../styles/Projects/Projects.css";
 
 function Projects() {
@@ -23,12 +24,12 @@ function Projects() {
 
   const technologiesArray = [
     ["HTML", "SCSS", "JavaScript", "JQuery", "Bootstrap"],
-    ["React.js", "SCSS", "Moment.js", "React-Bootstrap"],
-    ["React.js", "SCSS", "Bootstrap"],
-    ["React.js", "Redux", "SCSS", "Firebase", "Moment.js"],
+    ["React", "SCSS", "Moment.js", "React-Bootstrap"],
+    ["React", "SCSS", "Bootstrap"],
+    ["React", "Redux", "SCSS", "Firebase", "Moment.js"],
   ];
 
-  const projectCodeLinks = [
+  const projectsCodeLinks = [
     "https://github.com/DmytroTruten/Interior-Design-Studio",
     "https://github.com/DmytroTruten/Weather-App",
     "https://github.com/DmytroTruten/Creative-Agency",
@@ -42,8 +43,8 @@ function Projects() {
           <Tag children={"Projects"} />
         </Col>
         <Col className="px-0 mb-4 mb-lg-5">
-          <p className="projects-subtitle text-center mb-0">
-            Things I&apos;ve built so far
+          <p className="projects-section-subtitle text-center mb-0">
+            Some of the noteworthy projects I have built:
           </p>
         </Col>
       </Row>
@@ -55,19 +56,31 @@ function Projects() {
           reactChatThumbnail,
         ].map((thumbnail, index) => (
           <React.Fragment key={index}>
-            <Col className="projects-img-col px-0" xs={12}>
+            <Col className="projects-img-col" xs={12}>
               <Image src={thumbnail} className="w-100" />
             </Col>
-            <Col className="projects-content-col px-0">
-              <p className="projects-subtitle mb-4">
+            <Col className="projects-content-col d-flex flex-column gap-4">
+              <p className="projects-subtitle mb-0">
                 {projectsTitleArray[index]}
               </p>
-              <p className="projects-text mb-4">{projectsTextArray[index]}</p>
-              <Container fluid className="px-0">
+              <p className="projects-text mb-0">{projectsTextArray[index]}</p>
+              <Row className="projects-technologies-row d-flex gap-2 mx-0">
                 {technologiesArray[index].map((technology, techIndex) => (
-                  <Tag key={techIndex} children={technology} />
+                  <Col
+                    key={techIndex}
+                    className="projects-technologies-col px-0"
+                  >
+                    <Tag children={technology} />
+                  </Col>
                 ))}
-              </Container>
+              </Row>
+              <Row className="mx-0">
+                <Col className="px-0">
+                  <a href={projectsCodeLinks[index]}>
+                    <Image className="projects-external-link" src={linkIcon} />
+                  </a>
+                </Col>
+              </Row>
             </Col>
           </React.Fragment>
         ))}

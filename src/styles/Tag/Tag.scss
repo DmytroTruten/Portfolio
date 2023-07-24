@@ -7,5 +7,6 @@
   border-radius: 12px;
   background-color: $gray-200;
   color: $gray-600;
-  @include typography(body3, all, 500)
+  @include typography(body3, all, 500);
+  white-space: nowrap;
 }
