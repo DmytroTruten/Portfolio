@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import Tag from "../components/Tag";
+import Tag from "./Tag";
 import trutenImg from "../assets/trutenImg.jpg";
 import "../styles/About/About.css";
 

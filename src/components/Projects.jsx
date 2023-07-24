@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import Tag from "../components/Tag";
+import Tag from "./Tag";
 import agencyThumbnail from "../assets/thumbnails/agency-thumbnail.jpg";
 import weatherThumbnail from "../assets/thumbnails/weather-thumbnail.jpg";
 import interiorThumbnail from "../assets/thumbnails/interior-thumbnail.jpg";

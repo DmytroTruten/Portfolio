@@ -1,5 +1,5 @@
 import { Row, Col, Container, Image } from "react-bootstrap";
-import Tag from "../components/Tag";
+import Tag from "./Tag";
 import htmlIcon from "../assets/icons/html-icon.svg";
 import cssIcon from "../assets/icons/css-icon.svg";
 import jsIcon from "../assets/icons/js-icon.svg";
