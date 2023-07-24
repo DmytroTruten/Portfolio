@@ -6,6 +6,10 @@
   padding: 32px !important;
 }
 
+.projects-img {
+  width: 100%;
+}
+
 .projects-technologies-col {
   flex: 0 !important;
 }
@@ -13,6 +17,16 @@
 .projects-external-link {
   padding: 6px;
   border-radius: 8px;
+  height: 36px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.projects-external-link:hover {
+  background-color: #f3f4f6;
+}
+.projects-external-link:active {
+  background-color: #e5e7eb;
 }
 
 .projects-section-subtitle {
@@ -34,4 +48,23 @@
   font-size: 16px;
   line-height: 24px;
   color: #4b5563;
+}
+
+@media (min-width: 992px) {
+  .projects-img {
+    max-width: 480px !important;
+  }
+  .projects-img-col, .projects-content-col {
+    padding: 48px !important;
+  }
+  .projects-subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .projects-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }/*# sourceMappingURL=Projects.css.map */

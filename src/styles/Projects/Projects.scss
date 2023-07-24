@@ -9,6 +9,10 @@
   padding: 32px !important;
 }
 
+.projects-img {
+  width: 100%;
+}
+
 .projects-technologies-col {
   flex: 0 !important;
 }
@@ -16,6 +20,14 @@
 .projects-external-link {
   padding: 6px;
   border-radius: 8px;
+  height: 36px;
+  width: min-content;
+  &:hover {
+    background-color: $gray-100;
+  }
+  &:active {
+    background-color: $gray-200;
+  }
 }
 
 .projects-section-subtitle {
@@ -31,4 +43,21 @@
 .projects-text {
   @include typography(body2, all, 400);
   color: $gray-600;
+}
+
+@media (min-width: 992px) {
+  .projects-img {
+    max-width: 480px !important;
+  }
+  .projects-img-col, .projects-content-col {
+    padding: 48px !important;
+  }
+
+  .projects-subtitle {
+    @include typography(subtitle, desktop, 600);
+  }
+  
+  .projects-text {
+    @include typography(body2, all, 400);
+  }
 }
