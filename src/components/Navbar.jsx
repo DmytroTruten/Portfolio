@@ -16,9 +16,14 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg" className="p-3 px-lg-0">
+    <Navbar expand="lg" className="p-3 px-lg-0" fixed="top">
       <Container className="navbar-inner-container p-0">
-        <Navbar.Brand className="mx-0 py-0">{`<Truten />`}</Navbar.Brand>
+        <Navbar.Brand
+          className="mx-0 py-0"
+          onClick={() => {
+            handleNavItemClick(document.querySelector(".home-section"));
+          }}
+        >{`<Truten />`}</Navbar.Brand>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"
           children={<Image src={menuIcon} />}
@@ -29,7 +34,11 @@ function NavBar() {
           placement="end"
         >
           <Offcanvas.Header>
-            <Offcanvas.Title>{`<Truten />`}</Offcanvas.Title>
+            <Offcanvas.Title
+              onClick={() => {
+                handleNavItemClick(document.querySelector(".home-section"));
+              }}
+            >{`<Truten />`}</Offcanvas.Title>
             <div className="close-btn">
               <Image src={closeIcon} />
             </div>
@@ -37,14 +46,6 @@ function NavBar() {
 
           <Offcanvas.Body className="p-0">
             <Nav className="d-flex justify-content-lg-end p-3 p-lg-0">
-              <Nav.Item
-                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
-                onClick={() => {
-                  handleNavItemClick(document.querySelector(".hero-section"));
-                }}
-              >
-                Home
-              </Nav.Item>
               <Nav.Item
                 className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
@@ -91,9 +92,9 @@ function NavBar() {
                   <Image src={lightModeIcon} />
                 </div>
               </Container>
-              <Button className="download-cv-btn mt-3 mt-lg-0 px-3 text-nowrap">
+              <button className="download-cv-btn mt-3 mt-lg-0 text-nowrap">
                 Download CV
-              </Button>
+              </button>
             </Container>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

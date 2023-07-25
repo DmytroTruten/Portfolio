@@ -27,10 +27,13 @@
   color: $gray-600;
 }
 
-.contacts-icon {
+.contacts-icon, .copy-icon {
   padding: 6px;
-  cursor: pointer;
   border-radius: 8px;
+}
+
+.copy-icon {
+  cursor: pointer;
   &:hover {
     background-color: $gray-100;
   }
@@ -48,7 +51,7 @@
   .contacts-phone {
     @include typography(heading-h2, desktop, 600);
   }
-  .contacts-icon {
+  .contacts-icon, .copy-icon {
     height: 44px;
     width: 44px;
     

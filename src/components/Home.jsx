@@ -25,10 +25,10 @@ function Home() {
           <div className="my-5 my-md-4">
             <div className="home-location d-flex mb-2">
               <Image src={locationIcon} className="me-2" />
-              <p className="locatiob-text mb-0">Kyiv, Ukraine</p>
+              <p className="location-text mb-0">Kyiv, Ukraine</p>
             </div>
             <div className="home-hire d-flex">
-              <div className="dot-emerald-container d-flex justify-content-center align-items-center">
+              <div className="dot-emerald-container d-flex justify-content-center align-items-center me-2">
                 <div className="dot-emerald"></div>
               </div>
               <p className="hire-text mb-0">Available for new projects</p>

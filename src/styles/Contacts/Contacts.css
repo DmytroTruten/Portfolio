@@ -33,15 +33,18 @@
   color: #4b5563;
 }
 
-.contacts-icon {
+.contacts-icon, .copy-icon {
   padding: 6px;
-  cursor: pointer;
   border-radius: 8px;
 }
-.contacts-icon:hover {
+
+.copy-icon {
+  cursor: pointer;
+}
+.copy-icon:hover {
   background-color: #f3f4f6;
 }
-.contacts-icon:active {
+.copy-icon:active {
   background-color: #e5e7eb;
 }
 
@@ -56,7 +59,7 @@
     line-height: 40px;
     letter-spacing: -0.72px;
   }
-  .contacts-icon {
+  .contacts-icon, .copy-icon {
     height: 44px;
     width: 44px;
   }
