@@ -5,8 +5,16 @@
   padding: 64px 16px !important;
 }
 
-.projects-img-col, .projects-content-col {
+.projects-row {
+  border-radius: 12px;
+  overflow: hidden;
+  @include box-shadow(mobile);
+}
+
+.projects-img-col,
+.projects-content-col {
   padding: 32px !important;
+  background-color: $gray-50;
 }
 
 .projects-img {
@@ -45,18 +53,40 @@
   color: $gray-600;
 }
 
+@media (min-width: 576px) and (max-width: 991px) {
+  .projects-row {
+    @include box-shadow(tablet);
+  }
+}
+
 @media (min-width: 992px) {
+  .projects-section {
+    padding: 96px 0px !important;
+  }
+
+  .projects-row {
+    transition: box-shadow .3s ease-in-out;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    &:hover {
+      @include box-shadow(desktop);
+    }
+  }
+
   .projects-img {
     max-width: 480px !important;
   }
-  .projects-img-col, .projects-content-col {
+
+  .projects-img-col,
+  .projects-content-col {
     padding: 48px !important;
   }
 
   .projects-subtitle {
     @include typography(subtitle, desktop, 600);
   }
-  
+
   .projects-text {
     @include typography(body2, all, 400);
   }

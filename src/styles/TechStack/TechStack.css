@@ -22,6 +22,9 @@
 }
 
 @media (min-width: 992px) {
+  .tech-stack-section {
+    padding: 96px 0px !important;
+  }
   .tech-stack-subtitle {
     font-weight: 400;
     font-size: 20px;

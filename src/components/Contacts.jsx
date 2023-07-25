@@ -15,7 +15,7 @@ function Contacts() {
         <Col className="d-flex justify-content-center mb-3 px-0">
           <Tag children={"Get in touch"} />
         </Col>
-        <Col className="px-0">
+        <Col className="px-0 d-flex justify-content-center">
           <p className="contacts-subtitle mb-0 text-center">
             What's next? Feel free to reach out to me if you're looking for a
             developer, have a query, or simply want to connect.
@@ -24,14 +24,14 @@ function Contacts() {
       </Row>
       <Row className="d-flex flex-column align-items-center mx-0">
         <Col className="contacts-email-col d-flex mb-1 mb-lg-3 px-0">
-          <Image src={mailIcon} />
+          <Image className="contacts-icon" src={mailIcon} />
           <p className="contacts-email mx-3 mb-0">dmitriy2503a@gmail.com</p>
-          <Image src={copyIcon} />
+          <Image className="contacts-icon" src={copyIcon} />
         </Col>
-        <Col className="contacts-phone-col d-flex flex-px-0">
-          <Image src={phoneIcon} />
+        <Col className="contacts-phone-col d-flex px-0">
+          <Image className="contacts-icon" src={phoneIcon} />
           <p className="contacts-phone mx-3 mb-0">+380687880623</p>
-          <Image src={copyIcon} />
+          <Image className="contacts-icon" src={copyIcon} />
         </Col>
       </Row>
       <Row className="d-flex flex-column mx-0">

@@ -10,6 +10,7 @@
 }
 
 .contacts-subtitle {
+  max-width: 576px;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -30,4 +31,33 @@
   font-size: 16px;
   line-height: 24px;
   color: #4b5563;
+}
+
+.contacts-icon {
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.contacts-icon:hover {
+  background-color: #f3f4f6;
+}
+.contacts-icon:active {
+  background-color: #e5e7eb;
+}
+
+@media (min-width: 992px) {
+  .contacts-section {
+    padding: 96px 0px !important;
+  }
+  .contacts-email,
+.contacts-phone {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -0.72px;
+  }
+  .contacts-icon {
+    height: 44px;
+    width: 44px;
+  }
 }/*# sourceMappingURL=Contacts.css.map */

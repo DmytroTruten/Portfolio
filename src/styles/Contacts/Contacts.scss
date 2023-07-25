@@ -11,6 +11,7 @@
 }
 
 .contacts-subtitle {
+  max-width: 576px;
   @include typography(subtitle, desktop, 400);
   color: $gray-600;
 }
@@ -24,4 +25,32 @@
 .contacts-body2 {
   @include typography(body2, all, 400);
   color: $gray-600;
+}
+
+.contacts-icon {
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+  &:hover {
+    background-color: $gray-100;
+  }
+  &:active {
+    background-color: $gray-200;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts-section {
+    padding: 96px 0px !important;
+  }
+
+  .contacts-email,
+  .contacts-phone {
+    @include typography(heading-h2, desktop, 600);
+  }
+  .contacts-icon {
+    height: 44px;
+    width: 44px;
+    
+  }
 }

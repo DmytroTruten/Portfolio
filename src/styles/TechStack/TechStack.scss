@@ -21,9 +21,14 @@
 }
 
 @media (min-width: 992px) {
+  .tech-stack-section {
+    padding: 96px 0px !important;
+  }
+
   .tech-stack-subtitle {
     @include typography(subtitle, desktop, 400);
   }
+  
   .tech-stack-text {
     @include typography(body1, desktop, 400);
   }

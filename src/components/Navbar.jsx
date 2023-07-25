@@ -73,7 +73,14 @@ function NavBar() {
               >
                 Projects
               </Nav.Item>
-              <Nav.Item className="me-lg-4 d-flex align-items-center">
+              <Nav.Item
+                className="me-lg-4 d-flex align-items-center"
+                onClick={() => {
+                  handleNavItemClick(
+                    document.querySelector(".contacts-section")
+                  );
+                }}
+              >
                 Contact
               </Nav.Item>
             </Nav>

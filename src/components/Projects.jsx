@@ -26,7 +26,7 @@ function Projects() {
     ["HTML", "SCSS", "JavaScript", "JQuery", "Bootstrap"],
     ["React", "SCSS", "Moment.js", "React-Bootstrap"],
     ["React", "SCSS", "Bootstrap"],
-    ["React", "Redux", "SCSS", "Firebase", "Moment.js"],
+    ["React", "React Router", "Redux", "SCSS", "Firebase", "Moment.js"],
   ];
 
   const projectsCodeLinks = [
@@ -59,12 +59,12 @@ function Projects() {
           reactChatThumbnail,
         ].map((thumbnail, index) => (
           <React.Fragment key={index}>
-            <Row
-              className={`d-flex mx-0 ${
-                index % 2 !== 0 ? "flex-row-reverse" : ""
-              }`}
-            >
-              <Col className="projects-img-col" xs={12} lg={6}>
+            <Row className="d-flex projects-row mx-0">
+              <Col
+                className="projects-img-col"
+                xs={12}
+                lg={6}
+              >
                 <Image src={thumbnail} className="projects-img" />
               </Col>
               <Col className="projects-content-col d-flex flex-column gap-4">

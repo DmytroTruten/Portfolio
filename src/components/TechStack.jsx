@@ -16,13 +16,13 @@ import "../styles/TechStack/TechStack.css";
 
 function TechStack() {
   return (
-    <Container fluid="sm" className="tech-stack-section px-sm-0">
+    <Container fluid="sm" className="tech-stack-section d-flex flex-column px-sm-0 gap-4 gap-lg-5">
       <Row className="tech-stack-tag-row d-flex flex-column mx-0 p-lg-0">
         <Col className="d-flex justify-content-center mb-3 px-0">
           <Tag children={"Tech Stack"} />
         </Col>
-        <Col className="px-0 mb-4 mb-lg-5">
-          <p className="tech-stack-subtitle text-center">
+        <Col className="px-0">
+          <p className="tech-stack-subtitle text-center mb-0">
             Tools, skills and technologies I&apos;ve been working with recently
           </p>
         </Col>
