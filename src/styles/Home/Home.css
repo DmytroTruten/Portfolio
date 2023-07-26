@@ -101,7 +101,7 @@
 }
 @media (min-width: 992px) {
   .home-section {
-    padding: 166px 0px !important;
+    padding: 166px 0px 80px !important;
   }
   .home-content-h1 {
     font-size: 60px;

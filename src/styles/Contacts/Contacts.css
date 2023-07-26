@@ -1,5 +1,5 @@
 .contacts-section {
-  padding: 64px 16px !important;
+  padding: 80px 16px !important;
 }
 
 .contacts-email-col,
@@ -19,10 +19,10 @@
 
 .contacts-email,
 .contacts-phone {
-  font-weight: 600;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.36px;
+  font-weight: 600;
   color: #111827;
 }
 
@@ -54,10 +54,10 @@
   }
   .contacts-email,
 .contacts-phone {
-    font-weight: 600;
     font-size: 36px;
     line-height: 40px;
     letter-spacing: -0.72px;
+    font-weight: 700;
   }
   .contacts-icon, .copy-icon {
     height: 44px;

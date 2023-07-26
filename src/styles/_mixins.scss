@@ -16,15 +16,16 @@
       letter-spacing: -1.2px;
     }
   } @else if $element == heading-h2 {
-    font-weight: 600;
     @if $device == mobile or $device == tablet {
       font-size: 18px;
       line-height: 28px;
       letter-spacing: -0.36px;
+      font-weight: $font-weight;
     } @else if $device == desktop {
       font-size: 36px;
       line-height: 40px;
       letter-spacing: -0.72px;
+      font-weight: $font-weight;
     }
   } @else if $element == heading-h3 {
     font-weight: $font-weight;

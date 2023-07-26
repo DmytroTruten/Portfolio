@@ -2,7 +2,7 @@
 @import "../variables";
 
 .contacts-section {
-  padding: 64px 16px !important;
+  padding: 80px 16px !important;
 }
 
 .contacts-email-col,
@@ -49,7 +49,7 @@
 
   .contacts-email,
   .contacts-phone {
-    @include typography(heading-h2, desktop, 600);
+    @include typography(heading-h2, desktop, 700);
   }
   .contacts-icon, .copy-icon {
     height: 44px;
