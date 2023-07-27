@@ -22,15 +22,15 @@ function Contacts() {
           </p>
         </Col>
       </Row>
-      <Row className="d-flex flex-column align-items-center mx-0">
-        <Col className="contacts-email-col d-flex mb-1 mb-lg-3 px-0">
+      <Row className="d-flex flex-column align-items-center mx-0 gap-1 gap-lg-3">
+        <Col className="contacts-email-col d-flex gap-3 px-0">
           <Image className="contacts-icon" src={mailIcon} />
-          <p className="contacts-email mx-3 mb-0">dmitriy2503a@gmail.com</p>
+          <p className="contacts-email mb-0">dmitriy2503a@gmail.com</p>
           <Image className="copy-icon" src={copyIcon} />
         </Col>
-        <Col className="contacts-phone-col d-flex px-0">
+        <Col className="contacts-phone-col d-flex gap-3 px-0">
           <Image className="contacts-icon" src={phoneIcon} />
-          <p className="contacts-phone mx-3 mb-0">+380687880623</p>
+          <p className="contacts-phone mb-0">+380687880623</p>
           <Image className="copy-icon" src={copyIcon} />
         </Col>
       </Row>

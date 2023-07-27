@@ -22,7 +22,7 @@ function Home() {
             commodi sapiente mollitia nihil? A ad porro doloremque harum quia,
             voluptates numquam accusamus reprehenderit!
           </p>
-          <div className="my-5 my-md-4">
+          <div className="my-4">
             <div className="home-location d-flex mb-2">
               <Image src={locationIcon} className="me-2" />
               <p className="location-text mb-0">Kyiv, Ukraine</p>

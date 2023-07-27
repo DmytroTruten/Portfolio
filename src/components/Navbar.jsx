@@ -21,6 +21,9 @@ function NavBar() {
     document
       .querySelector(element)
       .scrollIntoView({ behavior: "smooth", block: "start" });
+    if (element === ".home-section" && !show) {
+      return;
+    }
     handleToggleOffcanvas();
   };
 

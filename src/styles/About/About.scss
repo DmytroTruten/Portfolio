@@ -6,7 +6,8 @@
 }
 
 .about-img {
-  width: 280px;
+  width: auto;
+  max-width: 280px;
   height: 360px;
   border: 8px solid $white;
   object-fit: cover;
@@ -24,6 +25,7 @@
 
 .about-img-col {
   position: relative;
+  width: 100%;
 }
 
 .about-content-h1 {
