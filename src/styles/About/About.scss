@@ -6,8 +6,7 @@
 }
 
 .about-img {
-  width: auto;
-  max-width: 280px;
+  width: 280px;
   height: 360px;
   border: 8px solid $white;
   object-fit: cover;
@@ -30,17 +29,17 @@
 
 .about-content-h1 {
   margin-top: 66px !important;
-  @include typography(heading-h3, mobile, 600)
+  @include typography(heading-h3, mobile, 600);
 }
 
 .about-content-text {
-  @include typography(body2, all, 400)
+  @include typography(body2, all, 400);
 }
 
 @media (min-width: 768px) {
   .about-content-h1 {
     margin-top: 0px !important;
-    @include typography(heading-h3, tablet, 600)
+    @include typography(heading-h3, tablet, 600);
   }
 
   .about-img {
@@ -60,10 +59,11 @@
   }
   .about-content-h1 {
     margin-top: 0px !important;
-    @include typography(heading-h3, desktop, 600)
+    @include typography(heading-h3, desktop, 600);
   }
 
-  .about-img, .about-img-background {
+  .about-img,
+  .about-img-background {
     width: 400px;
     height: 480px;
   }

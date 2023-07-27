@@ -35,8 +35,15 @@ function Home() {
             </div>
           </div>
           <div className="d-flex">
-            <Image className="github-icon" src={githubIcon} />
-            <Image className="linkedin-icon mx-1" src={linkedinIcon} />
+            <a href="https://github.com/DmytroTruten" target={"_blank"}>
+              <Image className="github-icon" src={githubIcon} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
+              target={"_blank"}
+            >
+              <Image className="linkedin-icon mx-1" src={linkedinIcon} />
+            </a>
             <Image className="figma-icon" src={figmaIcon} />
           </div>
         </Col>

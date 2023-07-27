@@ -3,8 +3,7 @@
 }
 
 .about-img {
-  width: auto;
-  max-width: 280px;
+  width: 280px;
   height: 360px;
   border: 8px solid #ffffff;
   -o-object-fit: cover;
@@ -68,7 +67,8 @@
     line-height: 36px;
     letter-spacing: -0.6px;
   }
-  .about-img, .about-img-background {
+  .about-img,
+.about-img-background {
     width: 400px;
     height: 480px;
   }

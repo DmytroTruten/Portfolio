@@ -9,9 +9,11 @@ import lightModeIcon from "../assets/icons/lightModeIcon.svg";
 import closeIcon from "../assets/icons/closeIcon.svg";
 import "../styles/Navbar/Navbar.css";
 import { useState } from "react";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 function NavBar() {
   const [show, setShow] = useState(false);
+  const width = useWindowWidth();
 
   const handleToggleOffcanvas = () => {
     setShow((prevState) => !prevState);
@@ -24,7 +26,9 @@ function NavBar() {
     if (element === ".home-section" && !show) {
       return;
     }
-    handleToggleOffcanvas();
+    if (width < 992) {
+      handleToggleOffcanvas();
+    }
   };
 
   return (
