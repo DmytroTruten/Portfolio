@@ -18,7 +18,7 @@
 
 .contacts-email,
 .contacts-phone {
-  @include typography(heading-h2, mobile, 600);
+  @include typography(heading-h2, mobile, 700);
   color: $gray-900;
 }
 

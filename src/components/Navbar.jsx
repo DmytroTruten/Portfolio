@@ -2,17 +2,26 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
-import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import menuIcon from "../assets/icons/menuIcon.svg";
 import lightModeIcon from "../assets/icons/lightModeIcon.svg";
 import closeIcon from "../assets/icons/closeIcon.svg";
 import "../styles/Navbar/Navbar.css";
+import { useState } from "react";
 
 function NavBar() {
+  const [show, setShow] = useState(false);
+
+  const handleToggleOffcanvas = () => {
+    setShow((prevState) => !prevState);
+  };
+
   const handleNavItemClick = (element) => {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
+    document
+      .querySelector(element)
+      .scrollIntoView({ behavior: "smooth", block: "start" });
+    handleToggleOffcanvas();
   };
 
   return (
@@ -21,25 +30,30 @@ function NavBar() {
         <Navbar.Brand
           className="mx-0 py-0"
           onClick={() => {
-            handleNavItemClick(document.querySelector(".home-section"));
+            handleNavItemClick(".home-section");
           }}
         >{`<Truten />`}</Navbar.Brand>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"
           children={<Image src={menuIcon} />}
+          onClick={handleToggleOffcanvas}
         />
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-lg"
           aria-labelledby="offcanvasNavbarLabel-expand-lg"
           placement="end"
+          scroll={true}
+          restoreFocus={false}
+          show={show}
+          onHide={handleToggleOffcanvas}
         >
           <Offcanvas.Header>
             <Offcanvas.Title
               onClick={() => {
-                handleNavItemClick(document.querySelector(".home-section"));
+                handleNavItemClick(".home-section");
               }}
             >{`<Truten />`}</Offcanvas.Title>
-            <div className="close-btn">
+            <div className="close-btn" onClick={handleToggleOffcanvas}>
               <Image src={closeIcon} />
             </div>
           </Offcanvas.Header>
@@ -49,7 +63,7 @@ function NavBar() {
               <Nav.Item
                 className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
-                  handleNavItemClick(document.querySelector(".about-section"));
+                  handleNavItemClick(".about-section");
                 }}
               >
                 About
@@ -57,9 +71,7 @@ function NavBar() {
               <Nav.Item
                 className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
-                  handleNavItemClick(
-                    document.querySelector(".tech-stack-section")
-                  );
+                  handleNavItemClick(".tech-stack-section");
                 }}
               >
                 Tech Stack
@@ -67,9 +79,7 @@ function NavBar() {
               <Nav.Item
                 className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
-                  handleNavItemClick(
-                    document.querySelector(".projects-section")
-                  );
+                  handleNavItemClick(".projects-section");
                 }}
               >
                 Projects
@@ -77,9 +87,7 @@ function NavBar() {
               <Nav.Item
                 className="me-lg-4 d-flex align-items-center"
                 onClick={() => {
-                  handleNavItemClick(
-                    document.querySelector(".contacts-section")
-                  );
+                  handleNavItemClick(".contacts-section");
                 }}
               >
                 Contact
