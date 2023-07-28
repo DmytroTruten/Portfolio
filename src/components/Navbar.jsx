@@ -4,16 +4,32 @@ import Navbar from "react-bootstrap/Navbar";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
 import Image from "react-bootstrap/Image";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import menuIcon from "../assets/icons/menuIcon.svg";
-import lightModeIcon from "../assets/icons/lightModeIcon.svg";
-import closeIcon from "../assets/icons/closeIcon.svg";
+import menuIconLightVersion from "../assets/icons/lightMode/menuIcon.svg";
+import menuIconDarkVersion from "../assets/icons/darkMode/menuIcon.svg";
+import lightModeIcon from "../assets/icons/lightMode/lightModeIcon.svg";
+import darkModeIconDarkVersion from "../assets/icons/darkMode/darkModeIcon.svg";
+import closeIconLightVersion from "../assets/icons/lightMode/closeIcon.svg";
+import closeIconDarkVersion from "../assets/icons/darkMode/closeIcon.svg";
 import "../styles/Navbar/Navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
 
 function NavBar() {
   const [show, setShow] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? JSON.parse(savedTheme) : false;
+  });
   const width = useWindowWidth();
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(darkTheme));
+    if (darkTheme) {
+      document.documentElement.classList.add("dark-theme");
+    } else {
+      document.documentElement.classList.remove("dark-theme");
+    }
+  }, [darkTheme]);
 
   const handleToggleOffcanvas = () => {
     setShow((prevState) => !prevState);
@@ -42,7 +58,11 @@ function NavBar() {
         >{`<Truten />`}</Navbar.Brand>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"
-          children={<Image src={menuIcon} />}
+          children={
+            <Image
+              src={darkTheme ? menuIconDarkVersion : menuIconLightVersion}
+            />
+          }
           onClick={handleToggleOffcanvas}
         />
         <Navbar.Offcanvas
@@ -61,7 +81,9 @@ function NavBar() {
               }}
             >{`<Truten />`}</Offcanvas.Title>
             <div className="close-btn" onClick={handleToggleOffcanvas}>
-              <Image src={closeIcon} />
+              <Image
+                src={darkTheme ? closeIconDarkVersion : closeIconLightVersion}
+              />
             </div>
           </Offcanvas.Header>
 
@@ -100,14 +122,19 @@ function NavBar() {
                 Contact
               </Nav.Item>
             </Nav>
-            {width >= 992 && (
-              <span className="navbar-divider"></span>
-            )}
+            {width >= 992 && <span className="navbar-divider"></span>}
             <Container className="navbar-action-container d-flex flex-column flex-lg-row justify-content-lg-end p-3 p-lg-0">
               <Container className="switch-theme-container d-flex justify-content-between justify-content-lg-end align-items-center px-0 mx-lg-0 me-lg-3 ms-lg-4">
                 <p className="switch-theme-text m-0">Switch theme</p>
-                <div className="switch-theme-btn">
-                  <Image src={lightModeIcon} />
+                <div
+                  className="switch-theme-btn"
+                  onClick={() => {
+                    setDarkTheme((prevTheme) => !prevTheme);
+                  }}
+                >
+                  <Image
+                    src={darkTheme ? darkModeIconDarkVersion : lightModeIcon}
+                  />
                 </div>
               </Container>
               <button className="download-cv-btn mt-3 mt-lg-0 text-nowrap">

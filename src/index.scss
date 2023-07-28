@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./styles/variables";
+#root,
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+}
+
+.dark-theme {
+  ::-webkit-scrollbar {
+    background-color: $gray-600;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $gray-500;
+  }
+  .navbar {
+    background: rgba(3, 7, 18, 0.5);
+  }
+  .navbar-divider {
+    background-color: $gray-800;
+  }
+  .navbar-brand, .offcanvas-title, .home-content-h1 {
+    color: $gray-50 !important;
+  }
+  .home-content-text, .location-text, .hire-text {
+    color: $gray-300;
+  }
+  .download-cv-btn {
+    background-color: $gray-50;
+    color: $gray-950;
+  }
+  .nav-item, .switch-theme-text {
+    color: $gray-300;
+  }
+  .home-section,
+  .tech-stack-section,
+  .contacts-section, .offcanvas {
+    background-color: $gray-950;
+  }
+  .about-section,
+  .projects-section,
+  .footer {
+    background-color: $gray-900;
+  }
+  .projects-content-col {
+    background-color: $gray-800;
+  }
+  .projects-img-col {
+    background-color: $gray-700;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+div {
+  font-family: "Inter";
+}
