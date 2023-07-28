@@ -65,7 +65,7 @@ function NavBar() {
             </div>
           </Offcanvas.Header>
 
-          <Offcanvas.Body className="p-0">
+          <Offcanvas.Body className="align-items-center p-0">
             <Nav className="d-flex justify-content-lg-end p-3 p-lg-0">
               <Nav.Item
                 className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
@@ -100,6 +100,9 @@ function NavBar() {
                 Contact
               </Nav.Item>
             </Nav>
+            {width >= 992 && (
+              <span className="navbar-divider"></span>
+            )}
             <Container className="navbar-action-container d-flex flex-column flex-lg-row justify-content-lg-end p-3 p-lg-0">
               <Container className="switch-theme-container d-flex justify-content-between justify-content-lg-end align-items-center px-0 mx-lg-0 me-lg-3 ms-lg-4">
                 <p className="switch-theme-text m-0">Switch theme</p>

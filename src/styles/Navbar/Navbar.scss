@@ -27,6 +27,12 @@
   padding: 6px;
 }
 
+.navbar-divider {
+  height: 24px;
+  width: 1px;
+  background-color: $gray-100;
+}
+
 .nav-item {
   @include typography(body2, all, 500);
   color: $gray-600;

@@ -1,4 +1,7 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+import { useState } from "react";
 import Tag from "./Tag";
 import mailIcon from "../assets/icons/mailIcon.svg";
 import phoneIcon from "../assets/icons/phoneIcon.svg";
@@ -9,13 +12,26 @@ import figmaIcon from "../assets/icons/figmaIcon.svg";
 import "../styles/Contacts/Contacts.css";
 
 function Contacts() {
+  const [showEmailTooltip, setShowEmailTooltip] = useState(false);
+  const [showPhoneTooltip, setShowPhoneTooltip] = useState(false);
   const email = "dmitriy2503a@gmail.com";
   const phone = "+380687880623";
 
-  const copyToClipboard = (element) => {
-    element === "email"
-      ? navigator.clipboard.writeText(email)
-      : navigator.clipboard.writeText(phone);
+  const handleCopyClick = (element) => {
+    let textToCopy = element === "email" ? email : phone;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      if (textToCopy === email) {
+        setShowEmailTooltip(true);
+        setTimeout(() => {
+          setShowEmailTooltip(false);
+        }, 1000);
+      } else {
+        setShowPhoneTooltip(true);
+        setTimeout(() => {
+          setShowPhoneTooltip(false);
+        }, 1000);
+      }
+    });
   };
 
   return (
@@ -38,24 +54,38 @@ function Contacts() {
         <Col className="contacts-email-col d-flex gap-3 px-0">
           <Image className="contacts-icon" src={mailIcon} />
           <p className="contacts-email mb-0">{email}</p>
-          <Image
-            className="copy-icon"
-            src={copyIcon}
-            onClick={() => {
-              copyToClipboard("email");
-            }}
-          />
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip id="copy-tooltip">Copied</Tooltip>}
+            trigger="click"
+            show={showEmailTooltip}
+          >
+            <Image
+              className="copy-icon"
+              src={copyIcon}
+              onClick={() => {
+                handleCopyClick("email");
+              }}
+            />
+          </OverlayTrigger>
         </Col>
         <Col className="contacts-phone-col d-flex gap-3 px-0">
           <Image className="contacts-icon" src={phoneIcon} />
           <p className="contacts-phone mb-0">{phone}</p>
-          <Image
-            className="copy-icon"
-            src={copyIcon}
-            onClick={() => {
-              copyToClipboard("phone");
-            }}
-          />
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip id="copy-tooltip">Copied</Tooltip>}
+            trigger="click"
+            show={showPhoneTooltip}
+          >
+            <Image
+              className="copy-icon"
+              src={copyIcon}
+              onClick={() => {
+                handleCopyClick("phone");
+              }}
+            />
+          </OverlayTrigger>
         </Col>
       </Row>
       <Row className="d-flex flex-column mx-0">
