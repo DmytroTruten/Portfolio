@@ -5,6 +5,10 @@
   padding: 80px 16px !important;
 }
 
+.vite-icon-container {
+  position: relative;
+}
+
 .tech-stack-subtitle {
   @include typography(subtitle, mobile, 400);
   color: $gray-600;
@@ -20,6 +24,126 @@
   color: $gray-600;
 }
 
+.html-icon,
+.css-icon,
+.js-icon,
+.react-icon,
+.redux-icon,
+.bootstrap-icon,
+.sass-icon,
+.git-icon,
+.jquery-icon,
+.mocha-icon,
+.react-bootstrap-icon{
+  transition: filter .2s ease-in-out;
+}
+
+.html-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #e34c26);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.css-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #264de4);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.js-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #f0db4f);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.react-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #087ea4);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.redux-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 10px #764abc);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.bootstrap-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #59287a);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.sass-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #cc6699);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.git-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #f34f29);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.jquery-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #0769ad);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.mocha-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #986c56);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.react-bootstrap-icon {
+  &:hover {
+    filter: drop-shadow(0px 0px 20px #61dafb);
+    animation: floating 2s ease-in-out infinite;
+  }
+}
+
+.vite-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.vite-icon-background {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.vite-icon-container {
+  &:hover {
+    .vite-icon {
+      animation: floating 2s ease-in-out infinite;
+    }
+    .vite-icon-background {
+      opacity: 0.75;
+      animation: floating 2s ease-in-out infinite;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .tech-stack-section {
     padding: 96px 0px !important;
@@ -28,8 +152,14 @@
   .tech-stack-subtitle {
     @include typography(subtitle, desktop, 400);
   }
-  
+
   .tech-stack-text {
     @include typography(body1, desktop, 400);
   }
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, -10px); }
+  100%   { transform: translate(0, 0px); }   
 }

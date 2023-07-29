@@ -9,17 +9,14 @@ import bootstrapIcon from "../assets/icons/lightMode/bootstrap-icon.svg";
 import sassIcon from "../assets/icons/lightMode/sass-icon.svg";
 import gitIcon from "../assets/icons/lightMode/git-icon.svg";
 import jqueryIcon from "../assets/icons/lightMode/jqueryIcon.svg";
-import mochajsIcon from "../assets/icons/lightMode/mochajs-icon.svg";
+import mochaIcon from "../assets/icons/lightMode/mochajs-icon.svg";
 import viteIcon from "../assets/icons/lightMode/vite-icon.svg";
 import reactBootstrapIcon from "../assets/icons/lightMode/react-bootstrap-icon.svg";
 import "../styles/TechStack/TechStack.css";
 
 function TechStack() {
   return (
-    <Container
-      fluid
-      className="tech-stack-section px-sm-0"
-    >
+    <Container fluid className="tech-stack-section px-sm-0">
       <Container className="d-flex flex-column px-0 gap-4 gap-lg-5">
         <Row className="tech-stack-tag-row d-flex flex-column mx-0 p-lg-0">
           <Col className="d-flex justify-content-center mb-3 px-0">
@@ -40,7 +37,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={htmlIcon} />
+              <Image
+                className="tech-stack-icon html-icon mb-2"
+                src={htmlIcon}
+              />
               <p className="tech-stack-text mb-0">HTML</p>
             </Col>
             <Col
@@ -49,7 +49,7 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={cssIcon} />
+              <Image className="tech-stack-icon css-icon mb-2" src={cssIcon} />
               <p className="tech-stack-text mb-0">CSS</p>
             </Col>
             <Col
@@ -58,7 +58,7 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={jsIcon} />
+              <Image className="tech-stack-icon js-icon mb-2" src={jsIcon} />
               <p className="tech-stack-text mb-0">JavaScript</p>
             </Col>
             <Col
@@ -67,7 +67,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={reactIcon} />
+              <Image
+                className="tech-stack-icon react-icon mb-2"
+                src={reactIcon}
+              />
               <p className="tech-stack-text mb-0">React</p>
             </Col>
             <Col
@@ -76,7 +79,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={reduxIcon} />
+              <Image
+                className="tech-stack-icon redux-icon mb-2"
+                src={reduxIcon}
+              />
               <p className="tech-stack-text mb-0">Redux</p>
             </Col>
             <Col
@@ -85,7 +91,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={bootstrapIcon} />
+              <Image
+                className="tech-stack-icon bootstrap-icon mb-2"
+                src={bootstrapIcon}
+              />
               <p className="tech-stack-text mb-0">Bootstrap</p>
             </Col>
             <Col
@@ -94,7 +103,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={sassIcon} />
+              <Image
+                className="tech-stack-icon sass-icon mb-2"
+                src={sassIcon}
+              />
               <p className="tech-stack-text mb-0">Sass/SCSS</p>
             </Col>
             <Col
@@ -103,7 +115,7 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={gitIcon} />
+              <Image className="tech-stack-icon git-icon mb-2" src={gitIcon} />
               <p className="tech-stack-text mb-0">Git</p>
             </Col>
 
@@ -113,7 +125,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={jqueryIcon} />
+              <Image
+                className="tech-stack-icon jquery-icon mb-2"
+                src={jqueryIcon}
+              />
               <p className="tech-stack-text mb-0">jQuery</p>
             </Col>
             <Col
@@ -122,7 +137,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={mochajsIcon} />
+              <Image
+                className="tech-stack-icon mocha-icon mb-2"
+                src={mochaIcon}
+              />
               <p className="tech-stack-text mb-0">Mocha.js</p>
             </Col>
             <Col
@@ -131,7 +149,13 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon mb-2" src={viteIcon} />
+              <div className="vite-icon-container">
+                <Image
+                  className="tech-stack-icon vite-icon mb-2"
+                  src={viteIcon}
+                />
+                <div className="vite-icon-background"></div>
+              </div>
               <p className="tech-stack-text mb-0">Vite</p>
             </Col>
             <Col
@@ -141,7 +165,7 @@ function TechStack() {
               md={2}
             >
               <Image
-                className="tech-stack-icon mb-2"
+                className="tech-stack-icon react-bootstrap-icon mb-2"
                 src={reactBootstrapIcon}
               />
               <p className="tech-stack-text mb-0">React Bootstrap</p>
