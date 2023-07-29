@@ -22,15 +22,22 @@ html {
 .dark-theme .navbar-brand, .dark-theme .offcanvas-title, .dark-theme .home-content-h1 {
   color: #f9fafb !important;
 }
+.dark-theme .nav-item, .dark-theme .switch-theme-text {
+  color: #d1d5db;
+}
+.dark-theme .home-img {
+  border: 8px solid #030712;
+}
+.dark-theme .home-img-background {
+  background-color: #374151;
+  border: 8px solid #030712;
+}
 .dark-theme .home-content-text, .dark-theme .location-text, .dark-theme .hire-text {
   color: #d1d5db;
 }
 .dark-theme .download-cv-btn {
   background-color: #f9fafb;
   color: #030712;
-}
-.dark-theme .nav-item, .dark-theme .switch-theme-text {
-  color: #d1d5db;
 }
 .dark-theme .home-section,
 .dark-theme .tech-stack-section,

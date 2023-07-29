@@ -24,15 +24,22 @@ html {
   .navbar-brand, .offcanvas-title, .home-content-h1 {
     color: $gray-50 !important;
   }
+  .nav-item, .switch-theme-text {
+    color: $gray-300;
+  }
+  .home-img {
+    border: 8px solid $gray-950;
+  }
+  .home-img-background {
+    background-color: $gray-700;
+    border: 8px solid $gray-950;
+  }
   .home-content-text, .location-text, .hire-text {
     color: $gray-300;
   }
   .download-cv-btn {
     background-color: $gray-50;
     color: $gray-950;
-  }
-  .nav-item, .switch-theme-text {
-    color: $gray-300;
   }
   .home-section,
   .tech-stack-section,

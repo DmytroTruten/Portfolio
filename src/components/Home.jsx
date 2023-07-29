@@ -1,12 +1,20 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import trutenImg from "../assets/trutenImg.jpg";
-import locationIcon from "../assets/icons/lightMode/locationIcon.svg";
-import githubIcon from "../assets/icons/lightMode/githubIcon.svg";
-import linkedinIcon from "../assets/icons/lightMode/linkedinIcon.svg";
-import figmaIcon from "../assets/icons/lightMode/figmaIcon.svg";
+import locationIconLightVersion from "../assets/icons/lightMode/locationIcon.svg";
+import locationIconDarkVersion from "../assets/icons/darkMode/locationIcon.svg";
+import githubIconLightVersion from "../assets/icons/lightMode/githubIcon.svg";
+import githubIconDarkVersion from "../assets/icons/darkMode/githubIcon.svg";
+import linkedinIconLightVersion from "../assets/icons/lightMode/linkedinIcon.svg";
+import linkedinIconDarkVersion from "../assets/icons/darkMode/linkedinIcon.svg";
+import figmaIconLightVersion from "../assets/icons/lightMode/figmaIcon.svg";
+import figmaIconDarkVersion from "../assets/icons/darkMode/figmaIcon.svg";
 import "../styles/Home/Home.css";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 function Home() {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <Container fluid className="home-section px-sm-0">
       <Container className="px-0">
@@ -25,7 +33,14 @@ function Home() {
             </p>
             <div className="my-4">
               <div className="home-location d-flex mb-2">
-                <Image src={locationIcon} className="me-2" />
+                <Image
+                  src={
+                    theme === "dark"
+                      ? locationIconDarkVersion
+                      : locationIconLightVersion
+                  }
+                  className="me-2"
+                />
                 <p className="location-text mb-0">Kyiv, Ukraine</p>
               </div>
               <div className="home-hire d-flex">
@@ -37,15 +52,36 @@ function Home() {
             </div>
             <div className="d-flex">
               <a href="https://github.com/DmytroTruten" target={"_blank"}>
-                <Image className="github-icon" src={githubIcon} />
+                <Image
+                  className="github-icon"
+                  src={
+                    theme === "dark"
+                      ? githubIconDarkVersion
+                      : githubIconLightVersion
+                  }
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
                 target={"_blank"}
               >
-                <Image className="linkedin-icon mx-1" src={linkedinIcon} />
+                <Image
+                  className="linkedin-icon mx-1"
+                  src={
+                    theme === "dark"
+                      ? linkedinIconDarkVersion
+                      : linkedinIconLightVersion
+                  }
+                />
               </a>
-              <Image className="figma-icon" src={figmaIcon} />
+              <Image
+                className="figma-icon"
+                src={
+                  theme === "dark"
+                    ? figmaIconDarkVersion
+                    : figmaIconLightVersion
+                }
+              />
             </div>
           </Col>
         </Row>

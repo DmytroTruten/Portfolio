@@ -10,26 +10,24 @@ import lightModeIcon from "../assets/icons/lightMode/lightModeIcon.svg";
 import darkModeIconDarkVersion from "../assets/icons/darkMode/darkModeIcon.svg";
 import closeIconLightVersion from "../assets/icons/lightMode/closeIcon.svg";
 import closeIconDarkVersion from "../assets/icons/darkMode/closeIcon.svg";
-import "../styles/Navbar/Navbar.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
+import { ThemeContext } from "../context/ThemeContext";
+import "../styles/Navbar/Navbar.css";
 
 function NavBar() {
+  const { theme, setTheme } = useContext(ThemeContext);
   const [show, setShow] = useState(false);
-  const [darkTheme, setDarkTheme] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    return savedTheme ? JSON.parse(savedTheme) : false;
-  });
   const width = useWindowWidth();
 
   useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(darkTheme));
-    if (darkTheme) {
+    localStorage.setItem("theme", JSON.stringify(theme));
+    if (theme === "dark") {
       document.documentElement.classList.add("dark-theme");
     } else {
       document.documentElement.classList.remove("dark-theme");
     }
-  }, [darkTheme]);
+  }, [theme]);
 
   const handleToggleOffcanvas = () => {
     setShow((prevState) => !prevState);
@@ -60,7 +58,9 @@ function NavBar() {
           aria-controls="offcanvasNavbar-expand-lg"
           children={
             <Image
-              src={darkTheme ? menuIconDarkVersion : menuIconLightVersion}
+              src={
+                theme === "dark" ? menuIconDarkVersion : menuIconLightVersion
+              }
             />
           }
           onClick={handleToggleOffcanvas}
@@ -82,7 +82,11 @@ function NavBar() {
             >{`<Truten />`}</Offcanvas.Title>
             <div className="close-btn" onClick={handleToggleOffcanvas}>
               <Image
-                src={darkTheme ? closeIconDarkVersion : closeIconLightVersion}
+                src={
+                  theme === "dark"
+                    ? closeIconDarkVersion
+                    : closeIconLightVersion
+                }
               />
             </div>
           </Offcanvas.Header>
@@ -129,11 +133,14 @@ function NavBar() {
                 <div
                   className="switch-theme-btn"
                   onClick={() => {
-                    setDarkTheme((prevTheme) => !prevTheme);
+                    const savedTheme = theme === "dark" ? "light" : "dark";
+                    setTheme(savedTheme);
                   }}
                 >
                   <Image
-                    src={darkTheme ? darkModeIconDarkVersion : lightModeIcon}
+                    src={
+                      theme === "dark" ? darkModeIconDarkVersion : lightModeIcon
+                    }
                   />
                 </div>
               </Container>
