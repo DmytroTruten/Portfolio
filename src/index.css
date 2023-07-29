@@ -7,6 +7,14 @@ html {
   min-width: 100%;
 }
 
+* {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.offcanvas {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
 .dark-theme ::-webkit-scrollbar {
   background-color: #4b5563;
 }
@@ -85,19 +93,37 @@ html {
 .dark-theme .projects-img-col {
   background-color: #374151;
 }
+.dark-theme .github-icon,
+.dark-theme .linkedin-icon,
+.dark-theme .figma-icon,
+.dark-theme .projects-external-link,
+.dark-theme .copy-icon,
+.dark-theme .close-icon,
+.dark-theme .menu-icon {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(66%) hue-rotate(177deg) brightness(95%) contrast(88%);
+}
 .dark-theme .github-icon:hover,
 .dark-theme .linkedin-icon:hover,
 .dark-theme .figma-icon:hover,
 .dark-theme .projects-external-link:hover,
-.dark-theme .copy-icon:hover {
+.dark-theme .copy-icon:hover,
+.dark-theme .close-icon:hover,
+.dark-theme .menu-icon:hover {
   background-color: #1f2937;
 }
 .dark-theme .github-icon:active,
 .dark-theme .linkedin-icon:active,
 .dark-theme .figma-icon:active,
 .dark-theme .projects-external-link:active,
-.dark-theme .copy-icon:active {
+.dark-theme .copy-icon:active,
+.dark-theme .close-icon:active,
+.dark-theme .menu-icon:active {
   background-color: #374151;
+}
+.dark-theme .location-icon,
+.dark-theme .contacts-icon,
+.dark-theme .copyright-icon {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(66%) hue-rotate(177deg) brightness(95%) contrast(88%);
 }
 
 ::-webkit-scrollbar {

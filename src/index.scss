@@ -8,6 +8,15 @@ html {
   min-width: 100%;
 }
 
+* {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.offcanvas {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
 .dark-theme {
   ::-webkit-scrollbar {
     background-color: $gray-600;
@@ -91,13 +100,23 @@ html {
   .linkedin-icon,
   .figma-icon,
   .projects-external-link,
-  .copy-icon {
+  .copy-icon,
+  .close-icon,
+  .menu-icon {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(66%)
+      hue-rotate(177deg) brightness(95%) contrast(88%);
     &:hover {
       background-color: $gray-800;
     }
-    &:active{
+    &:active {
       background-color: $gray-700;
     }
+  }
+  .location-icon,
+  .contacts-icon,
+  .copyright-icon {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(66%)
+      hue-rotate(177deg) brightness(95%) contrast(88%);
   }
 }
 

@@ -6,8 +6,7 @@ import agencyThumbnail from "../assets/thumbnails/agency-thumbnail.jpg";
 import weatherThumbnail from "../assets/thumbnails/weather-thumbnail.jpg";
 import interiorThumbnail from "../assets/thumbnails/interior-thumbnail.jpg";
 import reactChatThumbnail from "../assets/thumbnails/react-chat-thumbnail.jpg";
-import linkIconLightVersion from "../assets/icons/lightMode/linkIcon.svg";
-import linkIconDarkVersion from "../assets/icons/darkMode/linkIcon.svg";
+import linkIcon from "../assets/icons/lightMode/linkIcon.svg";
 import "../styles/Projects/Projects.css";
 
 function Projects() {
@@ -87,13 +86,7 @@ function Projects() {
                         href={projectsCodeLinks[index]}
                         className="projects-external-link d-flex"
                       >
-                        <Image
-                          src={
-                            theme === "dark"
-                              ? linkIconDarkVersion
-                              : linkIconLightVersion
-                          }
-                        />
+                        <Image src={linkIcon} />
                       </a>
                     </Col>
                   </Row>

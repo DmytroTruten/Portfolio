@@ -4,12 +4,10 @@ import Navbar from "react-bootstrap/Navbar";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
 import Image from "react-bootstrap/Image";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import menuIconLightVersion from "../assets/icons/lightMode/menuIcon.svg";
-import menuIconDarkVersion from "../assets/icons/darkMode/menuIcon.svg";
+import menuIcon from "../assets/icons/lightMode/menuIcon.svg";
 import lightModeIcon from "../assets/icons/lightMode/lightModeIcon.svg";
-import darkModeIconDarkVersion from "../assets/icons/darkMode/darkModeIcon.svg";
-import closeIconLightVersion from "../assets/icons/lightMode/closeIcon.svg";
-import closeIconDarkVersion from "../assets/icons/darkMode/closeIcon.svg";
+import darkModeIcon from "../assets/icons/lightMode/darkModeIcon.svg";
+import closeIcon from "../assets/icons/lightMode/closeIcon.svg";
 import { useContext, useEffect, useState } from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
 import { ThemeContext } from "../context/ThemeContext";
@@ -58,9 +56,8 @@ function NavBar() {
           aria-controls="offcanvasNavbar-expand-lg"
           children={
             <Image
-              src={
-                theme === "dark" ? menuIconDarkVersion : menuIconLightVersion
-              }
+            className="menu-icon"
+              src={menuIcon}
             />
           }
           onClick={handleToggleOffcanvas}
@@ -82,16 +79,13 @@ function NavBar() {
             >{`<Truten />`}</Offcanvas.Title>
             <div className="close-btn" onClick={handleToggleOffcanvas}>
               <Image
-                src={
-                  theme === "dark"
-                    ? closeIconDarkVersion
-                    : closeIconLightVersion
-                }
+              className="close-icon"
+                src={closeIcon}
               />
             </div>
           </Offcanvas.Header>
 
-          <Offcanvas.Body className="align-items-center p-0">
+          <Offcanvas.Body className="align-items-lg-center p-0">
             <Nav className="d-flex justify-content-lg-end p-3 p-lg-0">
               <Nav.Item
                 className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
@@ -139,7 +133,7 @@ function NavBar() {
                 >
                   <Image
                     src={
-                      theme === "dark" ? darkModeIconDarkVersion : lightModeIcon
+                      theme === "dark" ? darkModeIcon : lightModeIcon
                     }
                   />
                 </div>

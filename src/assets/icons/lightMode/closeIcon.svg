@@ -1,9 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="24" height="24" fill="#F5F5F5"/>
+<rect width="24" height="24" fill="none"/>
 <g id="Styles &#38; Components">
 <g id="Components">
 <g id="Icons" filter="url(#filter0_dd_114_2)">
-<rect x="-814" y="-285" width="1210" height="1100" fill="white" shape-rendering="crispEdges"/>
+<rect x="-814" y="-285" width="1210" height="1100" fill="none" shape-rendering="crispEdges"/>
 <g id="Row" clip-path="url(#clip0_114_2)">
 <g id="Icon">
 <g id="Name=icon-close, Size=24, Theme Mode=Light">
@@ -35,7 +35,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_114_2" result="shape"/>
 </filter>
 <clipPath id="clip0_114_2">
-<rect width="1050" height="348" fill="white" transform="translate(-734 -29)"/>
+<rect width="1050" height="348" fill="none" transform="translate(-734 -29)"/>
 </clipPath>
 </defs>
 </svg>
