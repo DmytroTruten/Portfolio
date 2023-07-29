@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Tag from "./Tag";
 import agencyThumbnail from "../assets/thumbnails/agency-thumbnail.jpg";
 import weatherThumbnail from "../assets/thumbnails/weather-thumbnail.jpg";
 import interiorThumbnail from "../assets/thumbnails/interior-thumbnail.jpg";
 import reactChatThumbnail from "../assets/thumbnails/react-chat-thumbnail.jpg";
-import linkIcon from "../assets/icons/lightMode/linkIcon.svg";
+import linkIconLightVersion from "../assets/icons/lightMode/linkIcon.svg";
+import linkIconDarkVersion from "../assets/icons/darkMode/linkIcon.svg";
 import "../styles/Projects/Projects.css";
 
 function Projects() {
+  const { theme } = useContext(ThemeContext);
   const projectsTitleArray = [
     "Interior Design Studio",
     "Weather App",
@@ -84,7 +87,13 @@ function Projects() {
                         href={projectsCodeLinks[index]}
                         className="projects-external-link d-flex"
                       >
-                        <Image src={linkIcon} />
+                        <Image
+                          src={
+                            theme === "dark"
+                              ? linkIconDarkVersion
+                              : linkIconLightVersion
+                          }
+                        />
                       </a>
                     </Col>
                   </Row>

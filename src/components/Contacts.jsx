@@ -1,17 +1,25 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Tag from "./Tag";
-import mailIcon from "../assets/icons/lightMode/mailIcon.svg";
-import phoneIcon from "../assets/icons/lightMode/phoneIcon.svg";
-import copyIcon from "../assets/icons/lightMode/copyIcon.svg";
-import githubIcon from "../assets/icons/lightMode/githubIcon.svg";
-import linkedinIcon from "../assets/icons/lightMode/linkedinIcon.svg";
-import figmaIcon from "../assets/icons/lightMode/figmaIcon.svg";
+import mailIconLightVersion from "../assets/icons/lightMode/mailIcon.svg";
+import mailIconDarkVersion from "../assets/icons/darkMode/mailIcon.svg";
+import phoneIconLightVersion from "../assets/icons/lightMode/phoneIcon.svg";
+import phoneIconDarkVersion from "../assets/icons/darkMode/phoneIcon.svg";
+import copyIconLightVersion from "../assets/icons/lightMode/copyIcon.svg";
+import copyIconDarkVersion from "../assets/icons/darkMode/copyIcon.svg";
+import githubIconLightVersion from "../assets/icons/lightMode/githubIcon.svg";
+import githubIconDarkVersion from "../assets/icons/darkMode/githubIcon.svg";
+import linkedinIconLightVersion from "../assets/icons/lightMode/linkedinIcon.svg";
+import linkedinIconDarkVersion from "../assets/icons/darkMode/linkedinIcon.svg";
+import figmaIconLightVersion from "../assets/icons/lightMode/figmaIcon.svg";
+import figmaIconDarkVersion from "../assets/icons/darkMode/figmaIcon.svg";
 import "../styles/Contacts/Contacts.css";
+import { ThemeContext } from "../context/ThemeContext";
 
 function Contacts() {
+  const { theme } = useContext(ThemeContext);
   const [showEmailTooltip, setShowEmailTooltip] = useState(false);
   const [showPhoneTooltip, setShowPhoneTooltip] = useState(false);
   const email = "dmitriy2503a@gmail.com";
@@ -50,7 +58,12 @@ function Contacts() {
         </Row>
         <Row className="d-flex flex-column align-items-center mx-0 gap-1 gap-lg-3">
           <Col className="contacts-email-col d-flex gap-3 px-0">
-            <Image className="contacts-icon" src={mailIcon} />
+            <Image
+              className="contacts-icon"
+              src={
+                theme === "dark" ? mailIconDarkVersion : mailIconLightVersion
+              }
+            />
             <p className="contacts-email mb-0">{email}</p>
             <OverlayTrigger
               placement="bottom"
@@ -60,7 +73,9 @@ function Contacts() {
             >
               <Image
                 className="copy-icon"
-                src={copyIcon}
+                src={
+                  theme === "dark" ? copyIconDarkVersion : copyIconLightVersion
+                }
                 onClick={() => {
                   handleCopyClick("email");
                 }}
@@ -68,7 +83,12 @@ function Contacts() {
             </OverlayTrigger>
           </Col>
           <Col className="contacts-phone-col d-flex gap-3 px-0">
-            <Image className="contacts-icon" src={phoneIcon} />
+            <Image
+              className="contacts-icon"
+              src={
+                theme === "dark" ? phoneIconDarkVersion : phoneIconLightVersion
+              }
+            />
             <p className="contacts-phone mb-0">{phone}</p>
             <OverlayTrigger
               placement="bottom"
@@ -78,7 +98,9 @@ function Contacts() {
             >
               <Image
                 className="copy-icon"
-                src={copyIcon}
+                src={
+                  theme === "dark" ? copyIconDarkVersion : copyIconLightVersion
+                }
                 onClick={() => {
                   handleCopyClick("phone");
                 }}
@@ -94,15 +116,34 @@ function Contacts() {
           </Col>
           <Col className="d-flex justify-content-center px-0">
             <a href="https://github.com/DmytroTruten" target={"_blank"}>
-              <Image className="github-icon" src={githubIcon} />
+              <Image
+                className="github-icon"
+                src={
+                  theme === "dark"
+                    ? githubIconDarkVersion
+                    : githubIconLightVersion
+                }
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
               target={"_blank"}
             >
-              <Image className="linkedin-icon mx-1" src={linkedinIcon} />
+              <Image
+                className="linkedin-icon mx-1"
+                src={
+                  theme === "dark"
+                    ? linkedinIconDarkVersion
+                    : linkedinIconLightVersion
+                }
+              />
             </a>
-            <Image className="figma-icon" src={figmaIcon} />
+            <Image
+              className="figma-icon"
+              src={
+                theme === "dark" ? figmaIconDarkVersion : figmaIconLightVersion
+              }
+            />
           </Col>
         </Row>
       </Container>

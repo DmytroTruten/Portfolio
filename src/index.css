@@ -11,7 +11,7 @@ html {
   background-color: #4b5563;
 }
 .dark-theme ::-webkit-scrollbar-thumb {
-  background: #6b7280;
+  background: #f9fafb;
 }
 .dark-theme .navbar {
   background: rgba(3, 7, 18, 0.5);
@@ -19,10 +19,17 @@ html {
 .dark-theme .navbar-divider {
   background-color: #1f2937;
 }
-.dark-theme .navbar-brand, .dark-theme .offcanvas-title, .dark-theme .home-content-h1 {
+.dark-theme .navbar-brand,
+.dark-theme .offcanvas-title,
+.dark-theme .home-content-h1,
+.dark-theme .about-content-h1,
+.dark-theme .projects-subtitle,
+.dark-theme .contacts-email,
+.dark-theme .contacts-phone {
   color: #f9fafb !important;
 }
-.dark-theme .nav-item, .dark-theme .switch-theme-text {
+.dark-theme .nav-item,
+.dark-theme .switch-theme-text {
   color: #d1d5db;
 }
 .dark-theme .home-img {
@@ -32,7 +39,25 @@ html {
   background-color: #374151;
   border: 8px solid #030712;
 }
-.dark-theme .home-content-text, .dark-theme .location-text, .dark-theme .hire-text {
+.dark-theme .about-img {
+  border: 8px solid #111827;
+}
+.dark-theme .about-img-background {
+  background-color: #374151;
+  border: 8px solid #111827;
+}
+.dark-theme .home-content-text,
+.dark-theme .location-text,
+.dark-theme .hire-text,
+.dark-theme .about-content-text,
+.dark-theme .tech-stack-text,
+.dark-theme .tech-stack-subtitle,
+.dark-theme .projects-section-subtitle,
+.dark-theme .projects-text,
+.dark-theme .contacts-subtitle,
+.dark-theme .contacts-body2,
+.dark-theme .footer-text,
+.dark-theme .footer-text-underline {
   color: #d1d5db;
 }
 .dark-theme .download-cv-btn {
@@ -41,8 +66,13 @@ html {
 }
 .dark-theme .home-section,
 .dark-theme .tech-stack-section,
-.dark-theme .contacts-section, .dark-theme .offcanvas {
+.dark-theme .contacts-section,
+.dark-theme .offcanvas {
   background-color: #030712;
+}
+.dark-theme .tag {
+  background-color: #374151;
+  color: #f9fafb;
 }
 .dark-theme .about-section,
 .dark-theme .projects-section,
@@ -53,6 +83,20 @@ html {
   background-color: #1f2937;
 }
 .dark-theme .projects-img-col {
+  background-color: #374151;
+}
+.dark-theme .github-icon:hover,
+.dark-theme .linkedin-icon:hover,
+.dark-theme .figma-icon:hover,
+.dark-theme .projects-external-link:hover,
+.dark-theme .copy-icon:hover {
+  background-color: #1f2937;
+}
+.dark-theme .github-icon:active,
+.dark-theme .linkedin-icon:active,
+.dark-theme .figma-icon:active,
+.dark-theme .projects-external-link:active,
+.dark-theme .copy-icon:active {
   background-color: #374151;
 }
 

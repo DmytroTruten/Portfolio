@@ -8,7 +8,7 @@ import reduxIcon from "../assets/icons/lightMode/redux-icon.svg";
 import bootstrapIcon from "../assets/icons/lightMode/bootstrap-icon.svg";
 import sassIcon from "../assets/icons/lightMode/sass-icon.svg";
 import gitIcon from "../assets/icons/lightMode/git-icon.svg";
-import jqueryIcon from "../assets/icons/lightMode/jquery-icon.svg";
+import jqueryIcon from "../assets/icons/lightMode/jqueryIcon.svg";
 import mochajsIcon from "../assets/icons/lightMode/mochajs-icon.svg";
 import viteIcon from "../assets/icons/lightMode/vite-icon.svg";
 import reactBootstrapIcon from "../assets/icons/lightMode/react-bootstrap-icon.svg";

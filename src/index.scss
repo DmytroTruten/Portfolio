@@ -13,7 +13,7 @@ html {
     background-color: $gray-600;
   }
   ::-webkit-scrollbar-thumb {
-    background: $gray-500;
+    background: $gray-50;
   }
   .navbar {
     background: rgba(3, 7, 18, 0.5);
@@ -21,10 +21,17 @@ html {
   .navbar-divider {
     background-color: $gray-800;
   }
-  .navbar-brand, .offcanvas-title, .home-content-h1 {
+  .navbar-brand,
+  .offcanvas-title,
+  .home-content-h1,
+  .about-content-h1,
+  .projects-subtitle,
+  .contacts-email,
+  .contacts-phone {
     color: $gray-50 !important;
   }
-  .nav-item, .switch-theme-text {
+  .nav-item,
+  .switch-theme-text {
     color: $gray-300;
   }
   .home-img {
@@ -34,7 +41,25 @@ html {
     background-color: $gray-700;
     border: 8px solid $gray-950;
   }
-  .home-content-text, .location-text, .hire-text {
+  .about-img {
+    border: 8px solid $gray-900;
+  }
+  .about-img-background {
+    background-color: $gray-700;
+    border: 8px solid $gray-900;
+  }
+  .home-content-text,
+  .location-text,
+  .hire-text,
+  .about-content-text,
+  .tech-stack-text,
+  .tech-stack-subtitle,
+  .projects-section-subtitle,
+  .projects-text,
+  .contacts-subtitle,
+  .contacts-body2,
+  .footer-text,
+  .footer-text-underline {
     color: $gray-300;
   }
   .download-cv-btn {
@@ -43,8 +68,13 @@ html {
   }
   .home-section,
   .tech-stack-section,
-  .contacts-section, .offcanvas {
+  .contacts-section,
+  .offcanvas {
     background-color: $gray-950;
+  }
+  .tag {
+    background-color: $gray-700;
+    color: $gray-50;
   }
   .about-section,
   .projects-section,
@@ -56,6 +86,18 @@ html {
   }
   .projects-img-col {
     background-color: $gray-700;
+  }
+  .github-icon,
+  .linkedin-icon,
+  .figma-icon,
+  .projects-external-link,
+  .copy-icon {
+    &:hover {
+      background-color: $gray-800;
+    }
+    &:active{
+      background-color: $gray-700;
+    }
   }
 }
 
