@@ -5,11 +5,6 @@
   padding: 80px 16px !important;
 }
 
-.contacts-email-col,
-.contacts-phone-col {
-  max-width: min-content !important;
-}
-
 .contacts-subtitle {
   max-width: 576px;
   @include typography(subtitle, desktop, 400);
@@ -20,6 +15,7 @@
 .contacts-phone {
   @include typography(heading-h2, mobile, 700);
   color: $gray-900;
+  word-break: break-all;
 }
 
 .contacts-body2 {
@@ -34,6 +30,7 @@
 .copy-icon-wrapper {
   border-radius: 8px;
   cursor: pointer;
+  transition: none;
   &:hover {
     background-color: $gray-100;
   }

@@ -32,6 +32,7 @@
   height: 36px;
   width: min-content;
   cursor: pointer;
+  transition: none;
   &:hover {
     background-color: $gray-100;
   }
@@ -67,11 +68,12 @@
   }
 
   .projects-row {
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
     &:hover {
+      transform: translate(0px, -20px);
       @include box-shadow(desktop);
     }
   }

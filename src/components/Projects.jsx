@@ -10,7 +10,6 @@ import linkIcon from "../assets/icons/lightMode/linkIcon.svg";
 import "../styles/Projects/Projects.css";
 
 function Projects() {
-  const { theme } = useContext(ThemeContext);
   const projectsTitleArray = [
     "Interior Design Studio",
     "Weather App",
@@ -38,6 +37,13 @@ function Projects() {
     "https://github.com/DmytroTruten/React-Chat",
   ];
 
+  const projectsLinks = [
+    "https://dmytrotruten.github.io/Interior-Design-Studio/",
+    "https://dmytrotruten.github.io/Weather-App/",
+    "https://dmytrotruten.github.io/Creative-Agency/",
+    "https://dmytrotruten.github.io/React-Chat/",
+  ]
+
   return (
     <Container fluid className="projects-section px-sm-0">
       <Container className="d-flex flex-column gap-4 gap-lg-5">
@@ -61,7 +67,9 @@ function Projects() {
             <React.Fragment key={index}>
               <Row className="d-flex projects-row mx-0">
                 <Col className="projects-img-col" xs={12} lg={6}>
-                  <Image src={thumbnail} className="projects-img" />
+                  <a href={projectsLinks[index]}>
+                    <Image src={thumbnail} className="projects-img" />
+                  </a>
                 </Col>
                 <Col className="projects-content-col d-flex flex-column gap-4">
                   <p className="projects-subtitle mb-0">

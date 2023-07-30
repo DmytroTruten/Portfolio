@@ -31,6 +31,11 @@ function NavBar() {
     setShow((prevState) => !prevState);
   };
 
+  const handleSwitchTheme = () => {
+    const savedTheme = theme === "dark" ? "light" : "dark";
+    setTheme(savedTheme);
+  };
+  
   const handleNavItemClick = (element) => {
     document
       .querySelector(element)
@@ -54,12 +59,7 @@ function NavBar() {
         >{`<Truten />`}</Navbar.Brand>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"
-          children={
-            <Image
-            className="menu-icon"
-              src={menuIcon}
-            />
-          }
+          children={<Image className="menu-icon" src={menuIcon} />}
           onClick={handleToggleOffcanvas}
         />
         <Navbar.Offcanvas
@@ -78,10 +78,7 @@ function NavBar() {
               }}
             >{`<Truten />`}</Offcanvas.Title>
             <div className="close-btn" onClick={handleToggleOffcanvas}>
-              <Image
-              className="close-icon"
-                src={closeIcon}
-              />
+              <Image className="close-icon" src={closeIcon} />
             </div>
           </Offcanvas.Header>
 
@@ -123,18 +120,15 @@ function NavBar() {
             {width >= 992 && <span className="navbar-divider"></span>}
             <Container className="navbar-action-container d-flex flex-column flex-lg-row justify-content-lg-end p-3 p-lg-0">
               <Container className="switch-theme-container d-flex justify-content-between justify-content-lg-end align-items-center px-0 mx-lg-0 me-lg-3 ms-lg-4">
-                <p className="switch-theme-text m-0">Switch theme</p>
-                <div
-                  className="switch-theme-btn"
-                  onClick={() => {
-                    const savedTheme = theme === "dark" ? "light" : "dark";
-                    setTheme(savedTheme);
-                  }}
+                <p
+                  onClick={handleSwitchTheme}
+                  className="switch-theme-text m-0"
                 >
+                  Switch theme
+                </p>
+                <div className="switch-theme-btn" onClick={handleSwitchTheme}>
                   <Image
-                    src={
-                      theme === "dark" ? darkModeIcon : lightModeIcon
-                    }
+                    src={theme === "dark" ? darkModeIcon : lightModeIcon}
                   />
                 </div>
               </Container>

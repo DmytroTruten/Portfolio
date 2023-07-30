@@ -13,7 +13,7 @@
 }
 
 .home-img {
-  width: 240px;
+  width: clamp(0px, 100% - 40px, 240px);
   height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -22,7 +22,7 @@
 }
 
 .home-img-background {
-  width: 280px;
+  width: clamp(0px, 100%, 280px);
   height: 280px;
   background-color: #e5e7eb;
   position: absolute;
@@ -57,6 +57,7 @@
   padding: 6px;
   cursor: pointer;
   border-radius: 8px;
+  transition: none;
 }
 .github-link:hover,
 .linkedin-link:hover,

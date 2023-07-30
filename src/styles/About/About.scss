@@ -6,7 +6,7 @@
 }
 
 .about-img {
-  width: 280px;
+  width: clamp(0px, calc(100% - 40px), 280px);
   height: 360px;
   border: 8px solid $white;
   object-fit: cover;
@@ -14,7 +14,7 @@
 }
 
 .about-img-background {
-  width: 320px;
+  width: clamp(0px, 100%, 320px);
   height: 360px;
   background-color: $gray-200;
   position: absolute;

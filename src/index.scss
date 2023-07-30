@@ -14,7 +14,7 @@ html {
 }
 
 .offcanvas {
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .dark-theme {

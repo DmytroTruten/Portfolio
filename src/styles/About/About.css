@@ -3,7 +3,7 @@
 }
 
 .about-img {
-  width: 280px;
+  width: clamp(0px, 100% - 40px, 280px);
   height: 360px;
   border: 8px solid #ffffff;
   -o-object-fit: cover;
@@ -12,7 +12,7 @@
 }
 
 .about-img-background {
-  width: 320px;
+  width: clamp(0px, 100%, 320px);
   height: 360px;
   background-color: #e5e7eb;
   position: absolute;

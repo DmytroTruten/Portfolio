@@ -36,7 +36,7 @@ function Contacts() {
 
   return (
     <Container fluid className="contacts-section px-sm-0">
-      <Container className="d-flex flex-column gap-4 gap-lg-5">
+      <Container className="d-flex flex-column gap-4 gap-lg-5 px-0">
         <Row className="d-flex flex-column mx-0">
           <Col className="d-flex justify-content-center mb-3 px-0">
             <Tag children={"Get in touch"} />
@@ -49,7 +49,7 @@ function Contacts() {
           </Col>
         </Row>
         <Row className="d-flex flex-column align-items-center mx-0 gap-1 gap-lg-3">
-          <Col className="contacts-email-col d-flex align-items-center gap-3 px-0">
+          <Col className="contacts-email-col d-flex justify-content-center align-items-center gap-3 px-0">
             <Image className="contacts-icon" src={mailIcon} />
             <p className="contacts-email mb-0">{email}</p>
             <OverlayTrigger
@@ -69,7 +69,7 @@ function Contacts() {
               </span>
             </OverlayTrigger>
           </Col>
-          <Col className="contacts-phone-col d-flex align-items-center gap-3 px-0">
+          <Col className="contacts-phone-col d-flex justify-content-center align-items-center gap-3 px-0">
             <Image className="contacts-icon" src={phoneIcon} />
             <p className="contacts-phone mb-0">{phone}</p>
             <OverlayTrigger
@@ -97,23 +97,23 @@ function Contacts() {
             </p>
           </Col>
           <Col className="d-flex justify-content-center px-0">
-          <a
-                className="github-link"
-                href="https://github.com/DmytroTruten"
-                target={"_blank"}
-              >
-                <Image className="github-icon" src={githubIcon} />
-              </a>
-              <a
-                className="linkedin-link mx-1"
-                href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
-                target={"_blank"}
-              >
-                <Image className="linkedin-icon" src={linkedinIcon} />
-              </a>
-              <a className="figma-link">
-                <Image className="figma-icon" src={figmaIcon} />
-              </a>
+            <a
+              className="github-link"
+              href="https://github.com/DmytroTruten"
+              target={"_blank"}
+            >
+              <Image className="github-icon" src={githubIcon} />
+            </a>
+            <a
+              className="linkedin-link mx-1"
+              href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
+              target={"_blank"}
+            >
+              <Image className="linkedin-icon" src={linkedinIcon} />
+            </a>
+            <a className="figma-link">
+              <Image className="figma-icon" src={figmaIcon} />
+            </a>
           </Col>
         </Row>
       </Container>

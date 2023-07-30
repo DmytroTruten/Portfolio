@@ -2,13 +2,6 @@
   padding: 80px 16px !important;
 }
 
-.contacts-email-col,
-.contacts-phone-col {
-  max-width: -webkit-min-content !important;
-  max-width: -moz-min-content !important;
-  max-width: min-content !important;
-}
-
 .contacts-subtitle {
   max-width: 576px;
   font-weight: 400;
@@ -24,6 +17,7 @@
   letter-spacing: -0.36px;
   font-weight: 700;
   color: #111827;
+  word-break: break-all;
 }
 
 .contacts-body2 {
@@ -40,6 +34,7 @@
 .copy-icon-wrapper {
   border-radius: 8px;
   cursor: pointer;
+  transition: none;
 }
 .copy-icon-wrapper:hover {
   background-color: #f3f4f6;
