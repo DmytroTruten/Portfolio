@@ -49,9 +49,10 @@
   animation: pulse 1.5s infinite;
 }
 
-.github-icon,
-.linkedin-icon,
-.figma-icon {
+.github-link,
+.linkedin-link,
+.figma-link {
+  height: 36px;
   padding: 6px;
   cursor: pointer;
   border-radius: 8px;

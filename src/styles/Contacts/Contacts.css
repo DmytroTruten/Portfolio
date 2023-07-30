@@ -35,16 +35,16 @@
 
 .contacts-icon, .copy-icon {
   padding: 6px;
-  border-radius: 8px;
 }
 
-.copy-icon {
+.copy-icon-wrapper {
+  border-radius: 8px;
   cursor: pointer;
 }
-.copy-icon:hover {
+.copy-icon-wrapper:hover {
   background-color: #f3f4f6;
 }
-.copy-icon:active {
+.copy-icon-wrapper:active {
   background-color: #e5e7eb;
 }
 

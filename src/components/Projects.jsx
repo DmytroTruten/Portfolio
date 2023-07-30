@@ -84,9 +84,9 @@ function Projects() {
                     <Col className="px-0">
                       <a
                         href={projectsCodeLinks[index]}
-                        className="projects-external-link d-flex"
+                        className="projects-link"
                       >
-                        <Image src={linkIcon} />
+                        <Image className="projects-icon" src={linkIcon} />
                       </a>
                     </Col>
                   </Row>

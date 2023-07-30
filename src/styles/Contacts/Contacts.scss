@@ -29,10 +29,10 @@
 
 .contacts-icon, .copy-icon {
   padding: 6px;
-  border-radius: 8px;
 }
 
-.copy-icon {
+.copy-icon-wrapper {
+  border-radius: 8px;
   cursor: pointer;
   &:hover {
     background-color: $gray-100;

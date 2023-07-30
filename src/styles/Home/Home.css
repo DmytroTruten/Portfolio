@@ -50,21 +50,22 @@
           animation: pulse 1.5s infinite;
 }
 
-.github-icon,
-.linkedin-icon,
-.figma-icon {
+.github-link,
+.linkedin-link,
+.figma-link {
+  height: 36px;
   padding: 6px;
   cursor: pointer;
   border-radius: 8px;
 }
-.github-icon:hover,
-.linkedin-icon:hover,
-.figma-icon:hover {
+.github-link:hover,
+.linkedin-link:hover,
+.figma-link:hover {
   background-color: #f3f4f6;
 }
-.github-icon:active,
-.linkedin-icon:active,
-.figma-icon:active {
+.github-link:active,
+.linkedin-link:active,
+.figma-link:active {
   background-color: #e5e7eb;
 }
 

@@ -25,11 +25,13 @@
   flex: 0 !important;
 }
 
-.projects-external-link {
+.projects-link {
+  display: block;
   padding: 6px;
   border-radius: 8px;
   height: 36px;
   width: min-content;
+  cursor: pointer;
   &:hover {
     background-color: $gray-100;
   }
@@ -65,7 +67,7 @@
   }
 
   .projects-row {
-    transition: box-shadow .3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
     &:nth-child(even) {
       flex-direction: row-reverse;
     }

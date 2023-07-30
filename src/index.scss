@@ -14,7 +14,7 @@ html {
 }
 
 .offcanvas {
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .dark-theme {
@@ -99,12 +99,21 @@ html {
   .github-icon,
   .linkedin-icon,
   .figma-icon,
-  .projects-external-link,
+  .projects-icon,
   .copy-icon,
   .close-icon,
-  .menu-icon {
+  .menu-icon,
+  .location-icon,
+  .contacts-icon,
+  .copyright-icon {
     filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(66%)
       hue-rotate(177deg) brightness(95%) contrast(88%);
+  }
+
+  .github-link,
+  .linkedin-link,
+  .figma-link,
+  .copy-icon-wrapper {
     &:hover {
       background-color: $gray-800;
     }
@@ -112,11 +121,13 @@ html {
       background-color: $gray-700;
     }
   }
-  .location-icon,
-  .contacts-icon,
-  .copyright-icon {
-    filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(66%)
-      hue-rotate(177deg) brightness(95%) contrast(88%);
+  .projects-link {
+    &:hover {
+      background-color: $gray-700;
+    }
+    &:active {
+      background-color: $gray-600;
+    }
   }
 }
 

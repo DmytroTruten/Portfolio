@@ -22,18 +22,20 @@
   flex: 0 !important;
 }
 
-.projects-external-link {
+.projects-link {
+  display: block;
   padding: 6px;
   border-radius: 8px;
   height: 36px;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  cursor: pointer;
 }
-.projects-external-link:hover {
+.projects-link:hover {
   background-color: #f3f4f6;
 }
-.projects-external-link:active {
+.projects-link:active {
   background-color: #e5e7eb;
 }
 

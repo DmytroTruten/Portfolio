@@ -49,11 +49,8 @@ function Contacts() {
           </Col>
         </Row>
         <Row className="d-flex flex-column align-items-center mx-0 gap-1 gap-lg-3">
-          <Col className="contacts-email-col d-flex gap-3 px-0">
-            <Image
-              className="contacts-icon"
-              src={mailIcon}
-            />
+          <Col className="contacts-email-col d-flex align-items-center gap-3 px-0">
+            <Image className="contacts-icon" src={mailIcon} />
             <p className="contacts-email mb-0">{email}</p>
             <OverlayTrigger
               placement="bottom"
@@ -61,20 +58,19 @@ function Contacts() {
               trigger="click"
               show={showEmailTooltip}
             >
-              <Image
-                className="copy-icon"
-                src={copyIcon}
-                onClick={() => {
-                  handleCopyClick("email");
-                }}
-              />
+              <span className="copy-icon-wrapper">
+                <Image
+                  className="copy-icon"
+                  src={copyIcon}
+                  onClick={() => {
+                    handleCopyClick("email");
+                  }}
+                />
+              </span>
             </OverlayTrigger>
           </Col>
-          <Col className="contacts-phone-col d-flex gap-3 px-0">
-            <Image
-              className="contacts-icon"
-              src={phoneIcon}
-            />
+          <Col className="contacts-phone-col d-flex align-items-center gap-3 px-0">
+            <Image className="contacts-icon" src={phoneIcon} />
             <p className="contacts-phone mb-0">{phone}</p>
             <OverlayTrigger
               placement="bottom"
@@ -82,42 +78,42 @@ function Contacts() {
               trigger="click"
               show={showPhoneTooltip}
             >
-              <Image
-                className="copy-icon"
-                src={copyIcon}
-                onClick={() => {
-                  handleCopyClick("phone");
-                }}
-              />
+              <span className="copy-icon-wrapper">
+                <Image
+                  className="copy-icon"
+                  src={copyIcon}
+                  onClick={() => {
+                    handleCopyClick("phone");
+                  }}
+                />
+              </span>
             </OverlayTrigger>
           </Col>
         </Row>
         <Row className="d-flex flex-column mx-0">
-          <Col className="mb-lg-3 px-0">
+          <Col className="mb-3 px-0">
             <p className="contacts-body2 mb-0 text-center">
               You may also find me on these platforms!
             </p>
           </Col>
           <Col className="d-flex justify-content-center px-0">
-            <a href="https://github.com/DmytroTruten" target={"_blank"}>
-              <Image
-                className="github-icon"
-                src={githubIcon}
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
-              target={"_blank"}
-            >
-              <Image
-                className="linkedin-icon mx-1"
-                src={linkedinIcon}
-              />
-            </a>
-            <Image
-              className="figma-icon"
-              src={figmaIcon}
-            />
+          <a
+                className="github-link"
+                href="https://github.com/DmytroTruten"
+                target={"_blank"}
+              >
+                <Image className="github-icon" src={githubIcon} />
+              </a>
+              <a
+                className="linkedin-link mx-1"
+                href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
+                target={"_blank"}
+              >
+                <Image className="linkedin-icon" src={linkedinIcon} />
+              </a>
+              <a className="figma-link">
+                <Image className="figma-icon" src={figmaIcon} />
+              </a>
           </Col>
         </Row>
       </Container>
