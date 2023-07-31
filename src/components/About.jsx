@@ -22,31 +22,40 @@ function About() {
               Curious about me? Here you have it:
             </h1>
             <p className="about-content-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Asperiores doloremque repellendus ipsa nam delectus suscipit saepe
-              porro veniam quis. Rerum officia incidunt magni optio dignissimos
-              eligendi distinctio possimus laborum itaque!
+              I'm a passionate and creative frontend developer with a year of
+              hands-on experience. Welcome to my portfolio website, where I
+              showcase my journey in the world of web development.
             </p>
             <p className="about-content-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-              atque harum eius. Asperiores, tempora eligendi ullam aperiam quos
-              saepe, deleniti omnis dolor sed cumque alias voluptatibus illum
-              cupiditate? Ad, architecto! Perspiciatis error dolor earum ea
-              molestias eos. Ab quis unde fugit. Enim delectus quidem obcaecati
-              optio deserunt. Odio quas debitis labore, soluta, placeat id
-              dolore obcaecati magni deleniti ut in?
+              I started getting into coding about 3 years ago, it evolved into a
+              deep interest in web development. I spent countless hours working
+              with HTML, CSS, and JavaScript, eager to bring my imagination to
+              life on the digital canvas. My passion for frontend development
+              led me to explore modern frameworks and libraries such as React,
+              Redux, empowering me to craft intuitive, responsive, and visually
+              appealing user interfaces.
             </p>
             <p className="about-content-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Asperiores doloremque repellendus ipsa nam delectus suscipit saepe
-              porro veniam quis.
+              In the past year, I embarked on a remarkable journey of honing my
+              skills as a frontend developer. Though my experience may be
+              non-commercial, it has been rich with personal projects, coding
+              challenges, and collaborating with like-minded enthusiasts. This
+              exposure has allowed me to grasp the intricacies of web
+              development and adopt best practices to create seamless user
+              experiences.
             </p>
-            <p className="about-content-text mb-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-              enim, accusantium perferendis eum, facere laboriosam aperiam
-              commodi eveniet distinctio fuga assumenda corrupti, dolorum omnis
-              sed sint eos culpa dolores consequuntur?
+            <p className="about-content-text">
+              The ever-evolving nature of frontend development excites me. Every
+              day, there's something new to learn, a creative challenge to
+              overcome, or a cutting-edge technology to explore. I thrive on
+              staying updated with the latest trends and emerging tools,
+              enabling me to push the boundaries of what's possible in the
+              digital realm.
             </p>
+            <q className="fst-italic">
+              Doing what you love is freedom, And loving what you do is
+              happiness.
+            </q>
           </Col>
         </Row>
       </Container>

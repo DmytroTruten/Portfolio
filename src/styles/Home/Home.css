@@ -36,6 +36,13 @@
   margin-top: 66px !important;
 }
 
+.location-icon {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .dot-emerald-container {
   width: 24px;
   height: 24px;
@@ -59,6 +66,10 @@
   cursor: pointer;
   border-radius: 8px;
   transition: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .github-link:hover,
 .linkedin-link:hover,

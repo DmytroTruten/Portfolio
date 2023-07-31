@@ -18,6 +18,10 @@
 .navbar-toggler {
   padding: 6px !important;
   border: none !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .close-btn {
@@ -67,6 +71,10 @@
   padding: 6px;
   cursor: pointer;
   height: 36px !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .download-cv-btn {

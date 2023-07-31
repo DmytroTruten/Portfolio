@@ -21,6 +21,7 @@
 .navbar-toggler {
   padding: 6px !important;
   border: none !important;
+  user-select: none;
 }
 
 .close-btn {
@@ -62,6 +63,7 @@
   padding: 6px;
   cursor: pointer;
   height: 36px !important;
+  user-select: none;
 }
 
 .download-cv-btn {

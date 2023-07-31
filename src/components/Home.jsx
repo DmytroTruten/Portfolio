@@ -18,10 +18,10 @@ function Home() {
           <Col className="home-content-col mt-md-0 px-0">
             <h1 className="home-content-h1">Hi, I'm Dmytro</h1>
             <p className="home-content-text mb-0">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
-              officia iusto reprehenderit praesentium optio, velit
-              necessitatibus commodi sapiente mollitia nihil? A ad porro
-              doloremque harum quia, voluptates numquam accusamus reprehenderit!
+              I'm an enthusiastic and detail-oriented Frontend Developer
+              seeking an entry-level position to use my skills in coding,
+              troubleshooting complex problems, and assisting in the timely
+              completion of projects.
             </p>
             <div className="my-4">
               <div className="home-location d-flex mb-2">
@@ -32,7 +32,7 @@ function Home() {
                 <div className="dot-emerald-container d-flex justify-content-center align-items-center me-2">
                   <div className="dot-emerald"></div>
                 </div>
-                <p className="hire-text mb-0">Available for new projects</p>
+                <p className="hire-text mb-0">Available for hiring</p>
               </div>
             </div>
             <div className="d-flex">

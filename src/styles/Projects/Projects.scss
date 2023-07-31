@@ -33,6 +33,7 @@
   width: min-content;
   cursor: pointer;
   transition: none;
+  user-select: none;
   &:hover {
     background-color: $gray-100;
   }
