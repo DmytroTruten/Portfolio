@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import {Fragment} from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Tag from "./Tag";
-import agencyThumbnail from "../assets/thumbnails/agency-thumbnail.jpg";
-import weatherThumbnail from "../assets/thumbnails/weather-thumbnail.jpg";
-import interiorThumbnail from "../assets/thumbnails/interior-thumbnail.jpg";
-import reactChatThumbnail from "../assets/thumbnails/react-chat-thumbnail.jpg";
-import linkIcon from "../assets/icons/lightMode/linkIcon.svg";
+import agencyThumbnail from "../assets/thumbnails/agencyThumbnail.jpg";
+import weatherThumbnail from "../assets/thumbnails/weatherThumbnail.jpg";
+import interiorThumbnail from "../assets/thumbnails/interiorThumbnail.jpg";
+import reactChatThumbnail from "../assets/thumbnails/reactChatThumbnail.jpg";
+import linkIcon from "../assets/icons/linkIcon.svg";
 import "../styles/Projects/Projects.css";
 
 function Projects() {
@@ -64,7 +63,7 @@ function Projects() {
             agencyThumbnail,
             reactChatThumbnail,
           ].map((thumbnail, index) => (
-            <React.Fragment key={index}>
+            <Fragment key={index}>
               <Row className="d-flex projects-row mx-0">
                 <Col className="projects-img-col" xs={12} lg={6}>
                   <a href={projectsLinks[index]}>
@@ -100,7 +99,7 @@ function Projects() {
                   </Row>
                 </Col>
               </Row>
-            </React.Fragment>
+            </Fragment>
           ))}
         </Container>
       </Container>

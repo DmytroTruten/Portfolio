@@ -1,17 +1,17 @@
 import { Row, Col, Container, Image } from "react-bootstrap";
 import Tag from "./Tag";
-import htmlIcon from "../assets/icons/lightMode/html-icon.svg";
-import cssIcon from "../assets/icons/lightMode/css-icon.svg";
-import jsIcon from "../assets/icons/lightMode/js-icon.svg";
-import reactIcon from "../assets/icons/lightMode/reactIcon.svg";
-import reduxIcon from "../assets/icons/lightMode/redux-icon.svg";
-import bootstrapIcon from "../assets/icons/lightMode/bootstrap-icon.svg";
-import sassIcon from "../assets/icons/lightMode/sass-icon.svg";
-import gitIcon from "../assets/icons/lightMode/git-icon.svg";
-import jqueryIcon from "../assets/icons/lightMode/jqueryIcon.svg";
-import mochaIcon from "../assets/icons/lightMode/mochajs-icon.svg";
-import viteIcon from "../assets/icons/lightMode/vite-icon.svg";
-import reactBootstrapIcon from "../assets/icons/lightMode/react-bootstrap-icon.svg";
+import htmlIcon from "../assets/icons/htmlIcon.svg";
+import cssIcon from "../assets/icons/cssIcon.svg";
+import jsIcon from "../assets/icons/jsIcon.svg";
+import reactIcon from "../assets/icons/reactIcon.svg";
+import reduxIcon from "../assets/icons/reduxIcon.svg";
+import bootstrapIcon from "../assets/icons/bootstrapIcon.svg";
+import sassIcon from "../assets/icons/sassIcon.svg";
+import gitIcon from "../assets/icons/gitIcon.svg";
+import jqueryIcon from "../assets/icons/jqueryIcon.svg";
+import mochaIcon from "../assets/icons/mochaIcon.svg";
+import viteIcon from "../assets/icons/viteIcon.svg";
+import reactBootstrapIcon from "../assets/icons/reactBootstrapIcon.svg";
 import "../styles/TechStack/TechStack.css";
 
 function TechStack() {
@@ -37,10 +37,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image
-                className="tech-stack-icon html-icon mb-2"
-                src={htmlIcon}
-              />
+              <a target={"_blank"} href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                <Image
+                  className="tech-stack-icon html-icon mb-2"
+                  src={htmlIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">HTML</p>
             </Col>
             <Col
@@ -49,7 +51,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon css-icon mb-2" src={cssIcon} />
+              <a target={"_blank"} href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                <Image
+                  className="tech-stack-icon css-icon mb-2"
+                  src={cssIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">CSS</p>
             </Col>
             <Col
@@ -58,7 +65,9 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon js-icon mb-2" src={jsIcon} />
+              <a target={"_blank"} href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                <Image className="tech-stack-icon js-icon mb-2" src={jsIcon} />
+              </a>
               <p className="tech-stack-text mb-0">JavaScript</p>
             </Col>
             <Col
@@ -67,10 +76,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image
-                className="tech-stack-icon react-icon mb-2"
-                src={reactIcon}
-              />
+              <a target={"_blank"} href="https://react.dev/">
+                <Image
+                  className="tech-stack-icon react-icon mb-2"
+                  src={reactIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">React</p>
             </Col>
             <Col
@@ -79,10 +90,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image
-                className="tech-stack-icon redux-icon mb-2"
-                src={reduxIcon}
-              />
+              <a target={"_blank"} href="https://redux.js.org/">
+                <Image
+                  className="tech-stack-icon redux-icon mb-2"
+                  src={reduxIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">Redux</p>
             </Col>
             <Col
@@ -91,10 +104,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image
-                className="tech-stack-icon bootstrap-icon mb-2"
-                src={bootstrapIcon}
-              />
+              <a target={"_blank"} href="https://getbootstrap.com/">
+                <Image
+                  className="tech-stack-icon bootstrap-icon mb-2"
+                  src={bootstrapIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">Bootstrap</p>
             </Col>
             <Col
@@ -103,10 +118,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image
-                className="tech-stack-icon sass-icon mb-2"
-                src={sassIcon}
-              />
+              <a target={"_blank"} href="https://sass-lang.com/">
+                <Image
+                  className="tech-stack-icon sass-icon mb-2"
+                  src={sassIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">Sass/SCSS</p>
             </Col>
             <Col
@@ -115,7 +132,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image className="tech-stack-icon git-icon mb-2" src={gitIcon} />
+              <a target={"_blank"} href="https://git-scm.com/">
+                <Image
+                  className="tech-stack-icon git-icon mb-2"
+                  src={gitIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">Git</p>
             </Col>
 
@@ -125,10 +147,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image
-                className="tech-stack-icon jquery-icon mb-2"
-                src={jqueryIcon}
-              />
+              <a target={"_blank"} href="https://jquery.com/">
+                <Image
+                  className="tech-stack-icon jquery-icon mb-2"
+                  src={jqueryIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">jQuery</p>
             </Col>
             <Col
@@ -137,11 +161,13 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image
-                className="tech-stack-icon mocha-icon mb-2"
-                src={mochaIcon}
-              />
-              <p className="tech-stack-text mb-0">Mocha.js</p>
+              <a target={"_blank"} href="https://mochajs.org/">
+                <Image
+                  className="tech-stack-icon mocha-icon mb-2"
+                  src={mochaIcon}
+                />
+              </a>
+              <p className="tech-stack-text mb-0">Mocha</p>
             </Col>
             <Col
               className="tech-stack-col d-flex align-items-center flex-column px-0"
@@ -150,10 +176,12 @@ function TechStack() {
               md={2}
             >
               <div className="vite-icon-container">
-                <Image
-                  className="tech-stack-icon vite-icon mb-2"
-                  src={viteIcon}
-                />
+                <a target={"_blank"} href="https://vitejs.dev/">
+                  <Image
+                    className="tech-stack-icon vite-icon mb-2"
+                    src={viteIcon}
+                  />
+                </a>
                 <div className="vite-icon-background"></div>
               </div>
               <p className="tech-stack-text mb-0">Vite</p>
@@ -164,10 +192,12 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <Image
-                className="tech-stack-icon react-bootstrap-icon mb-2"
-                src={reactBootstrapIcon}
-              />
+              <a target={"_blank"} href="https://react-bootstrap.netlify.app/">
+                <Image
+                  className="tech-stack-icon react-bootstrap-icon mb-2"
+                  src={reactBootstrapIcon}
+                />
+              </a>
               <p className="tech-stack-text mb-0">React Bootstrap</p>
             </Col>
           </Row>

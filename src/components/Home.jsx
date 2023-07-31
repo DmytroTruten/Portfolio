@@ -1,9 +1,9 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import trutenImg from "../assets/trutenImg.jpg";
-import locationIcon from "../assets/icons/lightMode/locationIcon.svg";
-import githubIcon from "../assets/icons/lightMode/githubIcon.svg";
-import linkedinIcon from "../assets/icons/lightMode/linkedinIcon.svg";
-import figmaIcon from "../assets/icons/lightMode/figmaIcon.svg";
+import locationIcon from "../assets/icons/locationIcon.svg";
+import githubIcon from "../assets/icons/githubIcon.svg";
+import linkedinIcon from "../assets/icons/linkedinIcon.svg";
+import figmaIcon from "../assets/icons/figmaIcon.svg";
 import "../styles/Home/Home.css";
 
 function Home() {

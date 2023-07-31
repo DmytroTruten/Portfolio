@@ -3,12 +3,12 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Tag from "./Tag";
-import mailIcon from "../assets/icons/lightMode/mailIcon.svg";
-import phoneIcon from "../assets/icons/lightMode/phoneIcon.svg";
-import copyIcon from "../assets/icons/lightMode/copyIcon.svg";
-import githubIcon from "../assets/icons/lightMode/githubIcon.svg";
-import linkedinIcon from "../assets/icons/lightMode/linkedinIcon.svg";
-import figmaIcon from "../assets/icons/lightMode/figmaIcon.svg";
+import mailIcon from "../assets/icons/mailIcon.svg";
+import phoneIcon from "../assets/icons/phoneIcon.svg";
+import copyIcon from "../assets/icons/copyIcon.svg";
+import githubIcon from "../assets/icons/githubIcon.svg";
+import linkedinIcon from "../assets/icons/linkedinIcon.svg";
+import figmaIcon from "../assets/icons/figmaIcon.svg";
 import "../styles/Contacts/Contacts.css";
 
 function Contacts() {

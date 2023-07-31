@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import copyrightIcon from "../assets/icons/lightMode/copyrightIcon.svg";
+import copyrightIcon from "../assets/icons/copyrightIcon.svg";
 import "../styles/Footer/Footer.css";
 
 function Footer() {
