@@ -75,6 +75,7 @@
 .location-text,
 .hire-text {
   @include typography(body2, all, 400);
+  color: $gray-600;
 }
 
 @media (min-width: 768px) {

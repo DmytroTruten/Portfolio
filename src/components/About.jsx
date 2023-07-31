@@ -23,15 +23,14 @@ function About() {
             </h1>
             <p className="about-content-text">
               I'm a passionate and creative frontend developer with a year of
-              hands-on experience. Welcome to my portfolio website, where I
-              showcase my journey in the world of web development.
+              hands-on experience and flashing eyes. 
             </p>
             <p className="about-content-text">
               I started getting into coding about 3 years ago, it evolved into a
               deep interest in web development. I spent countless hours working
               with HTML, CSS, and JavaScript, eager to bring my imagination to
               life on the digital canvas. My passion for frontend development
-              led me to explore modern frameworks and libraries such as React,
+              led me to explore modern frameworks and libraries such as React and
               Redux, empowering me to craft intuitive, responsive, and visually
               appealing user interfaces.
             </p>
@@ -52,8 +51,8 @@ function About() {
               enabling me to push the boundaries of what's possible in the
               digital realm.
             </p>
-            <q className="fst-italic">
-              Doing what you love is freedom, And loving what you do is
+            <q className="about-content-quote fst-italic">
+              Doing what you love is freedom, and loving what you do is
               happiness.
             </q>
           </Col>

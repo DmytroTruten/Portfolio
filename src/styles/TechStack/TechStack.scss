@@ -34,90 +34,91 @@
 .git-icon,
 .jquery-icon,
 .mocha-icon,
-.react-bootstrap-icon{
-  transition: filter .2s ease-in-out;
+.react-bootstrap-icon {
+  transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .html-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #e34c26);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .css-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #264de4);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .js-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #f0db4f);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .react-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #087ea4);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .redux-icon {
   &:hover {
     filter: drop-shadow(0px 0px 10px #764abc);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .bootstrap-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #59287a);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .sass-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #cc6699);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .git-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #f34f29);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .jquery-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #0769ad);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .mocha-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #986c56);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .react-bootstrap-icon {
   &:hover {
     filter: drop-shadow(0px 0px 20px #61dafb);
-    animation: floating 2s ease-in-out infinite;
+    transform: scale(1.1);
   }
 }
 
 .vite-icon {
   position: relative;
   z-index: 2;
+  transition: transform 0.2s ease-in-out;
 }
 
 .vite-icon-background {
@@ -129,17 +130,16 @@
   background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
   filter: blur(20px);
   opacity: 0;
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .vite-icon-container {
   &:hover {
     .vite-icon {
-      animation: floating 2s ease-in-out infinite;
+      transform: scale(1.1);
     }
     .vite-icon-background {
       opacity: 0.75;
-      animation: floating 2s ease-in-out infinite;
     }
   }
 }
@@ -156,10 +156,4 @@
   .tech-stack-text {
     @include typography(body1, desktop, 400);
   }
-}
-
-@keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, -10px); }
-  100%   { transform: translate(0, 0px); }   
 }

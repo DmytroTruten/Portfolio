@@ -36,78 +36,68 @@
 .jquery-icon,
 .mocha-icon,
 .react-bootstrap-icon {
-  transition: filter 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .html-icon:hover {
   filter: drop-shadow(0px 0px 20px #e34c26);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .css-icon:hover {
   filter: drop-shadow(0px 0px 20px #264de4);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .js-icon:hover {
   filter: drop-shadow(0px 0px 20px #f0db4f);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .react-icon:hover {
   filter: drop-shadow(0px 0px 20px #087ea4);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .redux-icon:hover {
   filter: drop-shadow(0px 0px 10px #764abc);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .bootstrap-icon:hover {
   filter: drop-shadow(0px 0px 20px #59287a);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .sass-icon:hover {
   filter: drop-shadow(0px 0px 20px #cc6699);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .git-icon:hover {
   filter: drop-shadow(0px 0px 20px #f34f29);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .jquery-icon:hover {
   filter: drop-shadow(0px 0px 20px #0769ad);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .mocha-icon:hover {
   filter: drop-shadow(0px 0px 20px #986c56);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .react-bootstrap-icon:hover {
   filter: drop-shadow(0px 0px 20px #61dafb);
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 
 .vite-icon {
   position: relative;
   z-index: 2;
+  transition: transform 0.2s ease-in-out;
 }
 
 .vite-icon-background {
@@ -123,13 +113,10 @@
 }
 
 .vite-icon-container:hover .vite-icon {
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
+  transform: scale(1.1);
 }
 .vite-icon-container:hover .vite-icon-background {
   opacity: 0.75;
-  -webkit-animation: floating 2s ease-in-out infinite;
-          animation: floating 2s ease-in-out infinite;
 }
 
 @media (min-width: 992px) {
@@ -145,27 +132,5 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-  }
-}
-@-webkit-keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(0, -10px);
-  }
-  100% {
-    transform: translate(0, 0px);
-  }
-}
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(0, -10px);
-  }
-  100% {
-    transform: translate(0, 0px);
   }
 }/*# sourceMappingURL=TechStack.css.map */

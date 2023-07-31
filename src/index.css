@@ -58,6 +58,7 @@ html {
 .dark-theme .location-text,
 .dark-theme .hire-text,
 .dark-theme .about-content-text,
+.dark-theme .about-content-quote,
 .dark-theme .tech-stack-text,
 .dark-theme .tech-stack-subtitle,
 .dark-theme .projects-section-subtitle,
@@ -90,7 +91,7 @@ html {
 .dark-theme .projects-content-col {
   background-color: #1f2937;
 }
-.dark-theme .projects-img-col {
+.dark-theme .projects-img-col, .dark-theme .about-content-quote {
   background-color: #374151;
 }
 .dark-theme .github-icon,

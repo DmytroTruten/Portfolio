@@ -33,8 +33,14 @@
   @include typography(heading-h3, mobile, 600);
 }
 
-.about-content-text {
+.about-content-quote {
+  padding: 4px 6px;
+  background-color: $gray-200;
+}
+
+.about-content-text, .about-content-quote {
   @include typography(body2, all, 400);
+  color: $gray-600;
 }
 
 @media (min-width: 768px) {
