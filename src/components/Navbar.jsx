@@ -10,6 +10,7 @@ import darkModeIcon from "../assets/icons/darkModeIcon.svg";
 import closeIcon from "../assets/icons/closeIcon.svg";
 import { useContext, useEffect, useState } from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
+import useScrollTop from "../hooks/useScrollTop";
 import { ThemeContext } from "../context/ThemeContext";
 import "../styles/Navbar/Navbar.css";
 
@@ -17,6 +18,7 @@ function NavBar() {
   const { theme, setTheme } = useContext(ThemeContext);
   const [show, setShow] = useState(false);
   const width = useWindowWidth();
+  const scrollTop = useScrollTop();
 
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(theme));
@@ -35,7 +37,7 @@ function NavBar() {
     const savedTheme = theme === "dark" ? "light" : "dark";
     setTheme(savedTheme);
   };
-  
+
   const handleNavItemClick = (element) => {
     document
       .querySelector(element)
@@ -49,7 +51,13 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg" className="p-3 px-lg-0" fixed="top">
+    <Navbar
+      expand="lg"
+      className={`p-3 px-lg-0 ${
+        scrollTop > 50 ? "border-bottom-reveal" : ""
+      }`}
+      fixed="top"
+    >
       <Container className="navbar-inner-container p-0">
         <Navbar.Brand
           className="mx-0 py-0"
