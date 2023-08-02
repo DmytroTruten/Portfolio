@@ -8,7 +8,6 @@ import phoneIcon from "../assets/icons/phoneIcon.svg";
 import copyIcon from "../assets/icons/copyIcon.svg";
 import githubIcon from "../assets/icons/githubIcon.svg";
 import linkedinIcon from "../assets/icons/linkedinIcon.svg";
-import figmaIcon from "../assets/icons/figmaIcon.svg";
 import "../styles/Contacts/Contacts.css";
 
 function Contacts() {
@@ -19,19 +18,18 @@ function Contacts() {
 
   const handleCopyClick = (element) => {
     let textToCopy = element === "email" ? email : phone;
-    navigator.clipboard.writeText(textToCopy).then(() => {
-      if (textToCopy === email) {
-        setShowEmailTooltip(true);
-        setTimeout(() => {
-          setShowEmailTooltip(false);
-        }, 1000);
-      } else {
-        setShowPhoneTooltip(true);
-        setTimeout(() => {
-          setShowPhoneTooltip(false);
-        }, 1000);
-      }
-    });
+    navigator.clipboard.writeText(textToCopy);
+    if (textToCopy === email) {
+      setShowEmailTooltip(true);
+      setTimeout(() => {
+        setShowEmailTooltip(false);
+      }, 1000);
+    } else {
+      setShowPhoneTooltip(true);
+      setTimeout(() => {
+        setShowPhoneTooltip(false);
+      }, 1000);
+    }
   };
 
   return (
@@ -53,19 +51,16 @@ function Contacts() {
             <Image className="contacts-icon" src={mailIcon} />
             <p className="contacts-email mb-0">{email}</p>
             <OverlayTrigger
-              placement="bottom"
-              overlay={<Tooltip id="copy-tooltip">Copied</Tooltip>}
+              placement="top"
+              overlay={<Tooltip>Copied</Tooltip>}
               trigger="click"
               show={showEmailTooltip}
+              onToggle={() => {
+                handleCopyClick("email");
+              }}
             >
               <span className="copy-icon-wrapper">
-                <Image
-                  className="copy-icon"
-                  src={copyIcon}
-                  onClick={() => {
-                    handleCopyClick("email");
-                  }}
-                />
+                <Image className="copy-icon" src={copyIcon} />
               </span>
             </OverlayTrigger>
           </Col>
@@ -74,18 +69,15 @@ function Contacts() {
             <p className="contacts-phone mb-0">{phone}</p>
             <OverlayTrigger
               placement="bottom"
-              overlay={<Tooltip id="copy-tooltip">Copied</Tooltip>}
+              overlay={<Tooltip>Copied</Tooltip>}
               trigger="click"
               show={showPhoneTooltip}
+              onToggle={() => {
+                handleCopyClick("phone");
+              }}
             >
               <span className="copy-icon-wrapper">
-                <Image
-                  className="copy-icon"
-                  src={copyIcon}
-                  onClick={() => {
-                    handleCopyClick("phone");
-                  }}
-                />
+                <Image className="copy-icon" src={copyIcon} />
               </span>
             </OverlayTrigger>
           </Col>
@@ -110,9 +102,6 @@ function Contacts() {
               target={"_blank"}
             >
               <Image className="linkedin-icon" src={linkedinIcon} />
-            </a>
-            <a className="figma-link">
-              <Image className="figma-icon" src={figmaIcon} />
             </a>
           </Col>
         </Row>

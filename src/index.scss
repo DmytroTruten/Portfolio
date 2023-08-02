@@ -99,7 +99,6 @@ html {
   }
   .github-icon,
   .linkedin-icon,
-  .figma-icon,
   .projects-icon,
   .copy-icon,
   .close-icon,
@@ -113,7 +112,6 @@ html {
 
   .github-link,
   .linkedin-link,
-  .figma-link,
   .copy-icon-wrapper {
     &:hover {
       background-color: $gray-800;
@@ -128,6 +126,15 @@ html {
     }
     &:active {
       background-color: $gray-600;
+    }
+  }
+  .tooltip-inner {
+    background-color: $gray-50;
+    color: $gray-600;
+  }
+  .tooltip-arrow {
+    &::before {
+      border-top-color: $gray-50;
     }
   }
 }

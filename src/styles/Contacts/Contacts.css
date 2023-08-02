@@ -27,7 +27,8 @@
   color: #4b5563;
 }
 
-.contacts-icon, .copy-icon {
+.contacts-icon,
+.copy-icon {
   padding: 6px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -47,6 +48,14 @@
   background-color: #e5e7eb;
 }
 
+.tooltip-inner {
+  font-weight: 500;
+}
+
+.tooltip-arrow::before {
+  transition: border-top-color 0.3s ease-in-out;
+}
+
 @media (min-width: 992px) {
   .contacts-section {
     padding: 96px 0px !important;
@@ -58,7 +67,8 @@
     letter-spacing: -0.72px;
     font-weight: 700;
   }
-  .contacts-icon, .copy-icon {
+  .contacts-icon,
+.copy-icon {
     height: 44px;
     width: 44px;
   }

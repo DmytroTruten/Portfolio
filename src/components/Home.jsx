@@ -3,7 +3,6 @@ import trutenImg from "../assets/trutenImg.jpg";
 import locationIcon from "../assets/icons/locationIcon.svg";
 import githubIcon from "../assets/icons/githubIcon.svg";
 import linkedinIcon from "../assets/icons/linkedinIcon.svg";
-import figmaIcon from "../assets/icons/figmaIcon.svg";
 import "../styles/Home/Home.css";
 
 function Home() {
@@ -49,9 +48,6 @@ function Home() {
                 target={"_blank"}
               >
                 <Image className="linkedin-icon" src={linkedinIcon} />
-              </a>
-              <a className="figma-link">
-                <Image className="figma-icon" src={figmaIcon} />
               </a>
             </div>
           </Col>

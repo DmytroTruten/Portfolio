@@ -96,7 +96,6 @@ html {
 }
 .dark-theme .github-icon,
 .dark-theme .linkedin-icon,
-.dark-theme .figma-icon,
 .dark-theme .projects-icon,
 .dark-theme .copy-icon,
 .dark-theme .close-icon,
@@ -108,13 +107,11 @@ html {
 }
 .dark-theme .github-link:hover,
 .dark-theme .linkedin-link:hover,
-.dark-theme .figma-link:hover,
 .dark-theme .copy-icon-wrapper:hover {
   background-color: #1f2937;
 }
 .dark-theme .github-link:active,
 .dark-theme .linkedin-link:active,
-.dark-theme .figma-link:active,
 .dark-theme .copy-icon-wrapper:active {
   background-color: #374151;
 }
@@ -123,6 +120,13 @@ html {
 }
 .dark-theme .projects-link:active {
   background-color: #4b5563;
+}
+.dark-theme .tooltip-inner {
+  background-color: #f9fafb;
+  color: #4b5563;
+}
+.dark-theme .tooltip-arrow::before {
+  border-top-color: #f9fafb;
 }
 
 ::-webkit-scrollbar {

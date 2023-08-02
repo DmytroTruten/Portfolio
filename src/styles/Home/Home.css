@@ -59,8 +59,7 @@
 }
 
 .github-link,
-.linkedin-link,
-.figma-link {
+.linkedin-link {
   height: 36px;
   padding: 6px;
   cursor: pointer;
@@ -72,13 +71,11 @@
           user-select: none;
 }
 .github-link:hover,
-.linkedin-link:hover,
-.figma-link:hover {
+.linkedin-link:hover {
   background-color: #f3f4f6;
 }
 .github-link:active,
-.linkedin-link:active,
-.figma-link:active {
+.linkedin-link:active {
   background-color: #e5e7eb;
 }
 
