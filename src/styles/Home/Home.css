@@ -59,7 +59,8 @@
 }
 
 .github-link,
-.linkedin-link {
+.linkedin-link,
+.telegram-link {
   height: 36px;
   padding: 6px;
   cursor: pointer;
@@ -71,11 +72,13 @@
           user-select: none;
 }
 .github-link:hover,
-.linkedin-link:hover {
+.linkedin-link:hover,
+.telegram-link:hover {
   background-color: #f3f4f6;
 }
 .github-link:active,
-.linkedin-link:active {
+.linkedin-link:active,
+.telegram-link:active {
   background-color: #e5e7eb;
 }
 

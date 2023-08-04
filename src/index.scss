@@ -99,6 +99,7 @@ html {
   }
   .github-icon,
   .linkedin-icon,
+  .telegram-icon,
   .projects-icon,
   .copy-icon,
   .close-icon,
@@ -112,6 +113,7 @@ html {
 
   .github-link,
   .linkedin-link,
+  .telegram-link,
   .copy-icon-wrapper {
     &:hover {
       background-color: $gray-800;

@@ -96,6 +96,7 @@ html {
 }
 .dark-theme .github-icon,
 .dark-theme .linkedin-icon,
+.dark-theme .telegram-icon,
 .dark-theme .projects-icon,
 .dark-theme .copy-icon,
 .dark-theme .close-icon,
@@ -107,11 +108,13 @@ html {
 }
 .dark-theme .github-link:hover,
 .dark-theme .linkedin-link:hover,
+.dark-theme .telegram-link:hover,
 .dark-theme .copy-icon-wrapper:hover {
   background-color: #1f2937;
 }
 .dark-theme .github-link:active,
 .dark-theme .linkedin-link:active,
+.dark-theme .telegram-link:active,
 .dark-theme .copy-icon-wrapper:active {
   background-color: #374151;
 }
