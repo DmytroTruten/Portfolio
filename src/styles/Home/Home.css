@@ -43,7 +43,7 @@
           user-select: none;
 }
 
-.dot-emerald-container, .linkedin-icon {
+.dot-emerald-container {
   width: 24px;
   height: 24px;
 }
@@ -61,6 +61,7 @@
 .github-link,
 .linkedin-link,
 .telegram-link {
+  height: 36px;
   padding: 6px;
   cursor: pointer;
   border-radius: 8px;
