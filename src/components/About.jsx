@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Tag from "./Tag";
-import trutenImg from "../assets/trutenImg.jpg";
+import trutenAboutImg from "../assets/trutenAboutImg.jpg";
 import "../styles/About/About.css";
 
 function About() {
@@ -14,7 +14,7 @@ function About() {
         </Row>
         <Row className="about-content-row d-flex flex-column flex-md-row mx-0 p-lg-0">
           <Col className="about-img-col d-flex align-items-center align-items-md-start flex-column flex-md-row px-0">
-            <Image src={trutenImg} className="about-img" />
+            <Image src={trutenAboutImg} className="about-img" />
             <div className="about-img-background"></div>
           </Col>
           <Col className="about-text-col px-0">

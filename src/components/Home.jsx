@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import trutenImg from "../assets/trutenImg.jpg";
+import trutenHeroImg from "../assets/trutenHeroImg.jpg";
 import locationIcon from "../assets/icons/locationIcon.svg";
 import githubIcon from "../assets/icons/githubIcon.svg";
 import linkedinIcon from "../assets/icons/linkedinIcon.svg";
@@ -12,7 +12,7 @@ function Home() {
       <Container className="px-0">
         <Row className="home-row d-flex flex-column flex-md-row-reverse mx-0 p-lg-0">
           <Col className="home-img-col d-flex justify-content-center justify-content-md-end align-items-md-end px-0">
-            <Image src={trutenImg} className="home-img" />
+            <Image src={trutenHeroImg} className="home-img" />
             <div className="home-img-background"></div>
           </Col>
           <Col className="home-content-col mt-md-0 px-0">
