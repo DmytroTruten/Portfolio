@@ -130,6 +130,7 @@ html {
 }
 .dark-theme .tooltip-arrow::before {
   border-top-color: #f9fafb;
+  border-bottom-color: #f9fafb;
 }
 
 ::-webkit-scrollbar {

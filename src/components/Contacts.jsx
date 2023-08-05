@@ -8,6 +8,7 @@ import phoneIcon from "../assets/icons/phoneIcon.svg";
 import copyIcon from "../assets/icons/copyIcon.svg";
 import githubIcon from "../assets/icons/githubIcon.svg";
 import linkedinIcon from "../assets/icons/linkedinIcon.svg";
+import tgIcon from "../assets/icons/tgIcon.svg";
 import "../styles/Contacts/Contacts.css";
 
 function Contacts() {
@@ -89,20 +90,27 @@ function Contacts() {
             </p>
           </Col>
           <Col className="d-flex justify-content-center px-0">
-            <a
-              className="github-link"
-              href="https://github.com/DmytroTruten"
-              target={"_blank"}
-            >
-              <Image className="github-icon" src={githubIcon} />
-            </a>
-            <a
-              className="linkedin-link mx-1"
-              href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
-              target={"_blank"}
-            >
-              <Image className="linkedin-icon" src={linkedinIcon} />
-            </a>
+          <a
+                className="github-link"
+                href="https://github.com/DmytroTruten"
+                target={"_blank"}
+              >
+                <Image className="github-icon" src={githubIcon} />
+              </a>
+              <a
+                className="linkedin-link mx-1"
+                href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
+                target={"_blank"}
+              >
+                <Image className="linkedin-icon" src={linkedinIcon} />
+              </a>
+              <a
+                className="telegram-link"
+                href="https://t.me/scratch_ed"
+                target={"_blank"}
+              >
+                <Image className="telegram-icon" src={tgIcon} />
+              </a>
           </Col>
         </Row>
       </Container>

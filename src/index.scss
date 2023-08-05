@@ -137,6 +137,7 @@ html {
   .tooltip-arrow {
     &::before {
       border-top-color: $gray-50;
+      border-bottom-color: $gray-50;
     }
   }
 }

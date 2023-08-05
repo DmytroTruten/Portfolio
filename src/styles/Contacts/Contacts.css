@@ -53,7 +53,7 @@
 }
 
 .tooltip-arrow::before {
-  transition: border-top-color 0.3s ease-in-out;
+  transition: border-top-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
 }
 
 @media (min-width: 992px) {
