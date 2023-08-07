@@ -2,6 +2,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import Tag from "./Tag";
 import trutenAboutImg from "../assets/trutenAboutImg.jpg";
 import "../styles/About/About.css";
+import TypeIt from "typeit-react";
 
 function About() {
   return (
@@ -18,21 +19,25 @@ function About() {
             <div className="about-img-background"></div>
           </Col>
           <Col className="about-text-col px-0">
-            <h1 className="about-content-h1 mb-4">
+            <TypeIt
+              className="about-content-h1 mb-4"
+              as="h1"
+              options={{ waitUntilVisible: true, speed: 50, lifeLike: true }}
+            >
               Curious about me? Here you have it:
-            </h1>
+            </TypeIt>
             <p className="about-content-text">
               I'm a passionate and creative frontend developer with a year of
-              hands-on experience and flashing eyes. 
+              hands-on experience and flashing eyes.
             </p>
             <p className="about-content-text">
               I started getting into coding about 3 years ago, it evolved into a
               deep interest in web development. I spent countless hours working
               with HTML, CSS, and JavaScript, eager to bring my imagination to
               life on the digital canvas. My passion for frontend development
-              led me to explore modern frameworks and libraries such as React and
-              Redux, empowering me to craft intuitive, responsive, and visually
-              appealing user interfaces.
+              led me to explore modern frameworks and libraries such as React
+              and Redux, empowering me to craft intuitive, responsive, and
+              visually appealing user interfaces.
             </p>
             <p className="about-content-text">
               In the past year, I embarked on a remarkable journey of honing my

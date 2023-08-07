@@ -5,6 +5,7 @@ import githubIcon from "../assets/icons/githubIcon.svg";
 import linkedinIcon from "../assets/icons/linkedinIcon.svg";
 import tgIcon from "../assets/icons/tgIcon.svg";
 import "../styles/Home/Home.css";
+import TypeIt from "typeit-react";
 
 function Home() {
   return (
@@ -16,10 +17,16 @@ function Home() {
             <div className="home-img-background"></div>
           </Col>
           <Col className="home-content-col mt-md-0 px-0">
-            <h1 className="home-content-h1">Hi, I'm Dmytro</h1>
+            <TypeIt
+              options={{ lifeLike: true, speed: 50 }}
+              className="home-content-h1"
+              as="h1"
+            >
+              Hi, I'm Dmytro
+            </TypeIt>
             <p className="home-content-text mb-0">
-              I'm an enthusiastic and detail-oriented Frontend Developer
-              seeking an entry-level position to use my skills in coding,
+              I'm an enthusiastic and detail-oriented Frontend Developer seeking
+              an entry-level position to use my skills in coding,
               troubleshooting complex problems, and assisting in the timely
               completion of projects.
             </p>
