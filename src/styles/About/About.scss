@@ -11,6 +11,7 @@
   border: 8px solid $white;
   object-fit: cover;
   z-index: 2;
+  animation: about-img-reveal 1.5s ease-in-out;
 }
 
 .about-img-background {
@@ -21,6 +22,7 @@
   z-index: 1;
   border: 8px solid $white;
   top: 20px;
+  animation: about-img-background-reveal 1.5s ease-in-out;
 }
 
 .about-img-col {
@@ -73,5 +75,23 @@
   .about-img-background {
     width: 400px;
     height: 480px;
+  }
+}
+
+@keyframes about-img-reveal {
+  0% {
+    transform: translate(-20px, 20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes about-img-background-reveal {
+  0% {
+    transform: translate(20px, -20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }
