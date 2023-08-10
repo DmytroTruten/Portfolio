@@ -53,9 +53,7 @@ function NavBar() {
   return (
     <Navbar
       expand="lg"
-      className={`p-3 px-lg-0 ${
-        scrollTop > 50 ? "border-bottom-reveal" : ""
-      }`}
+      className={`p-3 px-lg-0 ${scrollTop > 50 ? "border-bottom-reveal" : ""}`}
       fixed="top"
     >
       <Container className="navbar-inner-container p-0">
@@ -140,9 +138,11 @@ function NavBar() {
                   />
                 </div>
               </Container>
-              <button className="download-cv-btn mt-3 mt-lg-0 text-nowrap">
-                Download CV
-              </button>
+              <a href="/DmytroTrutenResume.pdf" download>
+                <button className="download-cv-btn mt-3 mt-lg-0 text-nowrap">
+                  Download CV
+                </button>
+              </a>
             </Container>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
