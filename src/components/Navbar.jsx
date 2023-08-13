@@ -138,7 +138,7 @@ function NavBar() {
                   />
                 </div>
               </Container>
-              <a href="/DmytroTrutenResume.pdf" download>
+              <a href="/DmytroTrutenResumeEN.pdf" download>
                 <button className="download-cv-btn mt-3 mt-lg-0 text-nowrap">
                   Download CV
                 </button>
