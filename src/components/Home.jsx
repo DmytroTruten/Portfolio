@@ -6,8 +6,11 @@ import linkedinIcon from "../assets/icons/linkedinIcon.svg";
 import tgIcon from "../assets/icons/tgIcon.svg";
 import "../styles/Home/Home.css";
 import TypeIt from "typeit-react";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 
 function Home() {
+  const { languageData } = useContext(LanguageContext);
   return (
     <Container fluid className="home-section px-sm-0">
       <Container className="px-0">
@@ -22,24 +25,23 @@ function Home() {
               className="home-content-h1"
               as="h1"
             >
-              Hi, I'm Dmytro
+              {languageData["home_content_h1"]}
             </TypeIt>
             <p className="home-content-text mb-0">
-              I'm an enthusiastic and detail-oriented Frontend Developer seeking
-              an entry-level position to use my skills in coding,
-              troubleshooting complex problems, and assisting in the timely
-              completion of projects.
+              {languageData["home_content_text"]}
             </p>
             <div className="my-4">
               <div className="home-location d-flex mb-2">
                 <Image src={locationIcon} className="location-icon me-2" />
-                <p className="location-text mb-0">Kyiv, Ukraine</p>
+                <p className="location-text mb-0">
+                  {languageData["location_text"]}
+                </p>
               </div>
               <div className="home-hire d-flex">
                 <div className="dot-emerald-container d-flex justify-content-center align-items-center me-2">
                   <div className="dot-emerald"></div>
                 </div>
-                <p className="hire-text mb-0">Available for hiring</p>
+                <p className="hire-text mb-0">{languageData["hire_text"]}</p>
               </div>
             </div>
             <div className="d-flex">

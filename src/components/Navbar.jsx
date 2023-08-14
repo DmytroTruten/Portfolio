@@ -12,11 +12,15 @@ import { useContext, useEffect, useState } from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
 import useScrollTop from "../hooks/useScrollTop";
 import { ThemeContext } from "../context/ThemeContext";
+import { LanguageContext } from "../context/LanguageContext";
+import enLanguageJSON from "../helpers/en.json";
+import uaLanguageJSON from "../helpers/ua.json";
 import "../styles/Navbar/Navbar.css";
 
 function NavBar() {
   const { theme, setTheme } = useContext(ThemeContext);
   const [show, setShow] = useState(false);
+  const { languageData, setLanguageData } = useContext(LanguageContext);
   const width = useWindowWidth();
   const scrollTop = useScrollTop();
 
@@ -28,6 +32,10 @@ function NavBar() {
       document.documentElement.classList.remove("dark-theme");
     }
   }, [theme]);
+
+  useEffect(() => {
+    width >= 991 ? setShow(false) : null;
+  }, [width]);
 
   const handleToggleOffcanvas = () => {
     setShow((prevState) => !prevState);
@@ -91,46 +99,46 @@ function NavBar() {
           <Offcanvas.Body className="align-items-lg-center p-0">
             <Nav className="d-flex justify-content-lg-end p-3 p-lg-0">
               <Nav.Item
-                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
+                className="translate-text mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(".about-section");
                 }}
               >
-                About
+                {languageData["about"]}
               </Nav.Item>
               <Nav.Item
-                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
+                className="translate-text mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(".tech-stack-section");
                 }}
               >
-                Tech Stack
+                {languageData["tech_stack"]}
               </Nav.Item>
               <Nav.Item
-                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
+                className="translate-text mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(".projects-section");
                 }}
               >
-                Projects
+                {languageData["projects"]}
               </Nav.Item>
               <Nav.Item
-                className="me-lg-4 d-flex align-items-center"
+                className="translate-text me-lg-4 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(".contacts-section");
                 }}
               >
-                Contact
+                {languageData["contact"]}
               </Nav.Item>
             </Nav>
             {width >= 992 && <span className="navbar-divider"></span>}
             <Container className="navbar-action-container d-flex flex-column flex-lg-row justify-content-lg-end p-3 p-lg-0">
-              <Container className="switch-theme-container d-flex justify-content-between justify-content-lg-end align-items-center px-0 mx-lg-0 me-lg-3 ms-lg-4">
+              <Container className="switch-theme-container d-flex justify-content-between justify-content-lg-end align-items-center px-0 mx-lg-0 ms-lg-4">
                 <p
                   onClick={handleSwitchTheme}
                   className="switch-theme-text m-0"
                 >
-                  Switch theme
+                  {languageData["switch_theme"]}
                 </p>
                 <div className="switch-theme-btn" onClick={handleSwitchTheme}>
                   <Image
@@ -138,11 +146,36 @@ function NavBar() {
                   />
                 </div>
               </Container>
-              <a href="/DmytroTrutenResumeEN.pdf" download>
-                <button className="download-cv-btn mt-3 mt-lg-0 text-nowrap">
-                  Download CV
-                </button>
-              </a>
+              <div className="d-flex flex-column flex-lg-row-reverse">
+                <a
+                  href="/DmytroTrutenResumeEN.pdf"
+                  download
+                  className="mt-3 mt-lg-0"
+                >
+                  <button className="download-cv-btn w-100 text-nowrap">
+                    {languageData["download_cv"]}
+                  </button>
+                </a>
+                <div className="d-flex justify-content-center align-items-center mt-3 mx-lg-3 mt-lg-0">
+                  <p
+                    className="nav-item mb-0"
+                    onClick={() => {
+                      setLanguageData(enLanguageJSON);
+                    }}
+                  >
+                    EN
+                  </p>
+                  <span className="mx-2">|</span>
+                  <p
+                    className="nav-item mb-0"
+                    onClick={() => {
+                      setLanguageData(uaLanguageJSON);
+                    }}
+                  >
+                    UA
+                  </p>
+                </div>
+              </div>
             </Container>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

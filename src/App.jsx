@@ -6,17 +6,20 @@ import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import Contacts from "./components/Contacts";
 import { ThemeArea } from "./context/ThemeContext";
+import { LanguageArea } from "./context/LanguageContext";
 
 function App() {
   return (
     <ThemeArea>
-      <Navbar />
-      <Home />
-      <About />
-      <TechStack />
-      <Projects />
-      <Contacts />
-      <Footer />
+      <LanguageArea>
+        <Navbar />
+        <Home />
+        <About />
+        <TechStack />
+        <Projects />
+        <Contacts />
+        <Footer />
+      </LanguageArea>
     </ThemeArea>
   );
 }
