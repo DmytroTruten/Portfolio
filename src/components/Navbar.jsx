@@ -20,7 +20,8 @@ import "../styles/Navbar/Navbar.css";
 function NavBar() {
   const { theme, setTheme } = useContext(ThemeContext);
   const [show, setShow] = useState(false);
-  const { languageData, setLanguageData } = useContext(LanguageContext);
+  const { languageData, setLanguageData } =
+    useContext(LanguageContext);
   const width = useWindowWidth();
   const scrollTop = useScrollTop();
 

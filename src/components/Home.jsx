@@ -6,11 +6,19 @@ import linkedinIcon from "../assets/icons/linkedinIcon.svg";
 import tgIcon from "../assets/icons/tgIcon.svg";
 import "../styles/Home/Home.css";
 import TypeIt from "typeit-react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 
 function Home() {
-  const { languageData } = useContext(LanguageContext);
+  const { languageData, typeItInstance, setTypeItInstance } =
+    useContext(LanguageContext);
+
+  useEffect(() => {
+    if (typeItInstance) {
+      typeItInstance.empty().type(languageData["home_content_h1"]).flush();
+    }
+  }, [languageData]);
+
   return (
     <Container fluid className="home-section px-sm-0">
       <Container className="px-0">
@@ -24,9 +32,12 @@ function Home() {
               options={{ lifeLike: true, speed: 50 }}
               className="home-content-h1"
               as="h1"
-            >
-              {languageData["home_content_h1"]}
-            </TypeIt>
+              getBeforeInit={(typeItInstance) => {
+                setTypeItInstance(typeItInstance);
+                typeItInstance.type(languageData["home_content_h1"]);
+                return typeItInstance;
+              }}
+            />
             <p className="home-content-text mb-0">
               {languageData["home_content_text"]}
             </p>
