@@ -3,14 +3,28 @@ import Tag from "./Tag";
 import trutenAboutImg from "../assets/trutenAboutImg.jpg";
 import "../styles/About/About.css";
 import TypeIt from "typeit-react";
+import { useContext, useEffect } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 
 function About() {
+  const { languageData, aboutTypeItInstance, setAboutTypeItInstance } =
+    useContext(LanguageContext);
+
+  useEffect(() => {
+    if (aboutTypeItInstance) {
+      aboutTypeItInstance
+        .empty()
+        .type(languageData["about_content_h1"])
+        .flush();
+    }
+  }, [languageData]);
+
   return (
     <Container fluid className="about-section px-sm-0">
       <Container className="px-0">
         <Row className="about-tag-row mb-4 mb-md-5 mx-0 p-lg-0">
           <Col className="d-flex justify-content-center px-0">
-            <Tag children={"About me"} />
+            <Tag children={languageData["about_me"]} />
           </Col>
         </Row>
         <Row className="about-content-row d-flex flex-column flex-md-row mx-0 p-lg-0">
@@ -23,42 +37,26 @@ function About() {
               className="about-content-h1 mb-4"
               as="h1"
               options={{ waitUntilVisible: true, speed: 50, lifeLike: true }}
-            >
-              Curious about me? Here you have it:
-            </TypeIt>
+              getBeforeInit={(aboutTypeItInstance) => {
+                setAboutTypeItInstance(aboutTypeItInstance);
+                aboutTypeItInstance.type(languageData["about_content_h1"]);
+                return aboutTypeItInstance;
+              }}
+            />
             <p className="about-content-text">
-              I'm a passionate and creative frontend developer with a year of
-              hands-on experience and flashing eyes.
+              {languageData["about_content_text_1"]}
             </p>
             <p className="about-content-text">
-              I started getting into coding about 3 years ago, it evolved into a
-              deep interest in web development. I spent countless hours working
-              with HTML, CSS, and JavaScript, eager to bring my imagination to
-              life on the digital canvas. My passion for frontend development
-              led me to explore modern frameworks and libraries such as React
-              and Redux, empowering me to craft intuitive, responsive, and
-              visually appealing user interfaces.
+              {languageData["about_content_text_2"]}
             </p>
             <p className="about-content-text">
-              In the past year, I embarked on a remarkable journey of honing my
-              skills as a frontend developer. Though my experience may be
-              non-commercial, it has been rich with personal projects, coding
-              challenges, and collaborating with like-minded enthusiasts. This
-              exposure has allowed me to grasp the intricacies of web
-              development and adopt best practices to create seamless user
-              experiences.
+              {languageData["about_content_text_3"]}
             </p>
             <p className="about-content-text">
-              The ever-evolving nature of frontend development excites me. Every
-              day, there's something new to learn, a creative challenge to
-              overcome, or a cutting-edge technology to explore. I thrive on
-              staying updated with the latest trends and emerging tools,
-              enabling me to push the boundaries of what's possible in the
-              digital realm.
+              {languageData["about_content_text_4"]}
             </p>
             <q className="about-content-quote fst-italic">
-              Doing what you love is freedom, and loving what you do is
-              happiness.
+              {languageData["about_content_quote"]}
             </q>
           </Col>
         </Row>

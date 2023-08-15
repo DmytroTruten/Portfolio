@@ -10,12 +10,12 @@ import { useContext, useEffect } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 
 function Home() {
-  const { languageData, typeItInstance, setTypeItInstance } =
+  const { languageData, homeTypeItInstance, setHomeTypeItInstance } =
     useContext(LanguageContext);
 
   useEffect(() => {
-    if (typeItInstance) {
-      typeItInstance.empty().type(languageData["home_content_h1"]).flush();
+    if (homeTypeItInstance) {
+      homeTypeItInstance.empty().type(languageData["home_content_h1"]).flush();
     }
   }, [languageData]);
 
@@ -32,10 +32,10 @@ function Home() {
               options={{ lifeLike: true, speed: 50 }}
               className="home-content-h1"
               as="h1"
-              getBeforeInit={(typeItInstance) => {
-                setTypeItInstance(typeItInstance);
-                typeItInstance.type(languageData["home_content_h1"]);
-                return typeItInstance;
+              getBeforeInit={(homeTypeItInstance) => {
+                setHomeTypeItInstance(homeTypeItInstance);
+                homeTypeItInstance.type(languageData["home_content_h1"]);
+                return homeTypeItInstance;
               }}
             />
             <p className="home-content-text mb-0">

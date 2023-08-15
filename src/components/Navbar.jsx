@@ -129,7 +129,7 @@ function NavBar() {
                   handleNavItemClick(".contacts-section");
                 }}
               >
-                {languageData["contact"]}
+                {languageData["contacts"]}
               </Nav.Item>
             </Nav>
             {width >= 992 && <span className="navbar-divider"></span>}

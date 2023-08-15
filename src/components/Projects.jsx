@@ -1,4 +1,4 @@
-import {Fragment} from "react";
+import { Fragment, useContext } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Tag from "./Tag";
 import agencyThumbnail from "../assets/thumbnails/agencyThumbnail.jpg";
@@ -6,20 +6,16 @@ import weatherThumbnail from "../assets/thumbnails/weatherThumbnail.jpg";
 import interiorThumbnail from "../assets/thumbnails/interiorThumbnail.jpg";
 import reactChatThumbnail from "../assets/thumbnails/reactChatThumbnail.jpg";
 import linkIcon from "../assets/icons/linkIcon.svg";
+import { LanguageContext } from "../context/LanguageContext";
 import "../styles/Projects/Projects.css";
 
 function Projects() {
+  const { languageData } = useContext(LanguageContext);
   const projectsTitleArray = [
     "Interior Design Studio",
     "Weather App",
     "Creative Agency",
     "React Chat",
-  ];
-  const projectsTextArray = [
-    "Landing page of an imaginary company that provides services in: interior design, decorative services, space planning and project management.",
-    "Simple app that allows users to search for weather information by city name. It uses the OpenWeather API to retrieve weather data, displays the current weather conditions.",
-    "The Creative Agency is a landing page of an imaginary company that offers a creative strategy to achieve business goals, create engaging content for your brand.",
-    "Real-time chat application, allows users to communicate instantly, without the need to refresh the page. This creates an interactive experience with the app.",
   ];
 
   const technologiesArray = [
@@ -41,18 +37,18 @@ function Projects() {
     "https://dmytrotruten.github.io/Weather-App/",
     "https://dmytrotruten.github.io/Creative-Agency/",
     "https://dmytrotruten.github.io/React-Chat/",
-  ]
+  ];
 
   return (
     <Container fluid className="projects-section px-sm-0">
       <Container className="d-flex flex-column gap-4 gap-lg-5">
         <Row className="projects-tag-row d-flex flex-column mx-0 p-lg-0">
           <Col className="d-flex justify-content-center mb-3 px-0">
-            <Tag children={"Projects"} />
+            <Tag children={languageData["projects"]} />
           </Col>
           <Col className="px-0">
             <p className="projects-section-subtitle text-center mb-0">
-              Some of the noteworthy projects I have built:
+            {languageData["projects_section_subtitle"]}
             </p>
           </Col>
         </Row>
@@ -75,7 +71,7 @@ function Projects() {
                     {projectsTitleArray[index]}
                   </p>
                   <p className="projects-text mb-0">
-                    {projectsTextArray[index]}
+                    {languageData["projects_text_array"][index]}
                   </p>
                   <Row className="projects-technologies-row d-flex gap-2 mx-0">
                     {technologiesArray[index].map((technology, techIndex) => (

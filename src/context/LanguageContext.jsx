@@ -5,10 +5,19 @@ export const LanguageContext = createContext();
 
 export function LanguageArea({ children }) {
   const [languageData, setLanguageData] = useState(enLanguageJSON);
-  const [typeItInstance, setTypeItInstance] = useState(null);
+  const [homeTypeItInstance, setHomeTypeItInstance] = useState(null);
+  const [aboutTypeItInstance, setAboutTypeItInstance] = useState(null);
+
   return (
     <LanguageContext.Provider
-      value={{ languageData, setLanguageData, typeItInstance, setTypeItInstance }}
+      value={{
+        languageData,
+        setLanguageData,
+        homeTypeItInstance,
+        setHomeTypeItInstance,
+        aboutTypeItInstance,
+        setAboutTypeItInstance,
+      }}
     >
       {children}
     </LanguageContext.Provider>

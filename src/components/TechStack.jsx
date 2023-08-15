@@ -13,19 +13,21 @@ import mochaIcon from "../assets/icons/mochaIcon.svg";
 import viteIcon from "../assets/icons/viteIcon.svg";
 import reactBootstrapIcon from "../assets/icons/reactBootstrapIcon.svg";
 import "../styles/TechStack/TechStack.css";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 
 function TechStack() {
+  const { languageData } = useContext(LanguageContext);
   return (
     <Container fluid className="tech-stack-section px-sm-0">
       <Container className="d-flex flex-column px-0 gap-4 gap-lg-5">
         <Row className="tech-stack-tag-row d-flex flex-column mx-0 p-lg-0">
           <Col className="d-flex justify-content-center mb-3 px-0">
-            <Tag children={"Tech Stack"} />
+            <Tag children={languageData["tech_stack"]} />
           </Col>
           <Col className="px-0">
             <p className="tech-stack-subtitle text-center mb-0">
-              Tools, skills and technologies I&apos;ve been working with
-              recently
+              {languageData["tech_stack_subtitle"]}
             </p>
           </Col>
         </Row>
@@ -37,7 +39,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <a target={"_blank"} href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+              <a
+                target={"_blank"}
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              >
                 <Image
                   className="tech-stack-icon html-icon mb-2"
                   src={htmlIcon}
@@ -51,7 +56,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <a target={"_blank"} href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+              <a
+                target={"_blank"}
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              >
                 <Image
                   className="tech-stack-icon css-icon mb-2"
                   src={cssIcon}
@@ -65,7 +73,10 @@ function TechStack() {
               sm={3}
               md={2}
             >
-              <a target={"_blank"} href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+              <a
+                target={"_blank"}
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              >
                 <Image className="tech-stack-icon js-icon mb-2" src={jsIcon} />
               </a>
               <p className="tech-stack-text mb-0">JavaScript</p>

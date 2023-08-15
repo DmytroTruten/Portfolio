@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
@@ -9,9 +9,11 @@ import copyIcon from "../assets/icons/copyIcon.svg";
 import githubIcon from "../assets/icons/githubIcon.svg";
 import linkedinIcon from "../assets/icons/linkedinIcon.svg";
 import tgIcon from "../assets/icons/tgIcon.svg";
+import { LanguageContext } from "../context/LanguageContext";
 import "../styles/Contacts/Contacts.css";
 
 function Contacts() {
+  const { languageData } = useContext(LanguageContext);
   const [showEmailTooltip, setShowEmailTooltip] = useState(false);
   const [showPhoneTooltip, setShowPhoneTooltip] = useState(false);
   const email = "dmitriy2503a@gmail.com";
@@ -38,12 +40,11 @@ function Contacts() {
       <Container className="d-flex flex-column gap-4 gap-lg-5 px-0">
         <Row className="d-flex flex-column mx-0">
           <Col className="d-flex justify-content-center mb-3 px-0">
-            <Tag children={"Get in touch"} />
+            <Tag children={languageData["contacts"]} />
           </Col>
           <Col className="px-0 d-flex justify-content-center">
             <p className="contacts-subtitle mb-0 text-center">
-              What's next? Feel free to reach out to me if you're looking for a
-              developer, have a query, or simply want to connect.
+            {languageData["contacts_subtitle"]}
             </p>
           </Col>
         </Row>
@@ -86,31 +87,31 @@ function Contacts() {
         <Row className="d-flex flex-column mx-0">
           <Col className="mb-3 px-0">
             <p className="contacts-body2 mb-0 text-center">
-              You may also find me on these platforms!
+            {languageData["contacts_body2"]}
             </p>
           </Col>
           <Col className="d-flex justify-content-center px-0">
-          <a
-                className="github-link"
-                href="https://github.com/DmytroTruten"
-                target={"_blank"}
-              >
-                <Image className="github-icon" src={githubIcon} />
-              </a>
-              <a
-                className="linkedin-link mx-1"
-                href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
-                target={"_blank"}
-              >
-                <Image className="linkedin-icon" src={linkedinIcon} />
-              </a>
-              <a
-                className="telegram-link"
-                href="https://t.me/scratch_ed"
-                target={"_blank"}
-              >
-                <Image className="telegram-icon" src={tgIcon} />
-              </a>
+            <a
+              className="github-link"
+              href="https://github.com/DmytroTruten"
+              target={"_blank"}
+            >
+              <Image className="github-icon" src={githubIcon} />
+            </a>
+            <a
+              className="linkedin-link mx-1"
+              href="https://www.linkedin.com/in/dmytro-truten-950b2826a/"
+              target={"_blank"}
+            >
+              <Image className="linkedin-icon" src={linkedinIcon} />
+            </a>
+            <a
+              className="telegram-link"
+              href="https://t.me/scratch_ed"
+              target={"_blank"}
+            >
+              <Image className="telegram-icon" src={tgIcon} />
+            </a>
           </Col>
         </Row>
       </Container>
