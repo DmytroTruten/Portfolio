@@ -36,7 +36,7 @@ function Contacts() {
   };
 
   return (
-    <Container fluid className="contacts-section px-sm-0">
+    <Container fluid className="contacts-section px-sm-0 d-flex align-items-center">
       <Container className="d-flex flex-column gap-4 gap-lg-5 px-0">
         <Row className="d-flex flex-column mx-0">
           <Col className="d-flex justify-content-center mb-3 px-0">
@@ -54,7 +54,7 @@ function Contacts() {
             <p className="contacts-email mb-0">{email}</p>
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>Copied</Tooltip>}
+              overlay={<Tooltip>{languageData["copied"]}</Tooltip>}
               trigger="click"
               show={showEmailTooltip}
               onToggle={() => {
@@ -71,7 +71,7 @@ function Contacts() {
             <p className="contacts-phone mb-0">{phone}</p>
             <OverlayTrigger
               placement="bottom"
-              overlay={<Tooltip>Copied</Tooltip>}
+              overlay={<Tooltip>{languageData["copied"]}</Tooltip>}
               trigger="click"
               show={showPhoneTooltip}
               onToggle={() => {

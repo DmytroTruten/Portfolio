@@ -2,7 +2,8 @@
 @import "../variables";
 
 .contacts-section {
-  padding: 80px 16px !important;
+  padding: 0px 16px !important;
+  min-height: calc(100vh - 68px);
 }
 
 .contacts-subtitle {
@@ -54,7 +55,7 @@
 
 @media (min-width: 992px) {
   .contacts-section {
-    padding: 96px 0px !important;
+    padding: 0px !important;
   }
 
   .contacts-email,

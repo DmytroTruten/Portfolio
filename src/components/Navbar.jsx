@@ -20,8 +20,7 @@ import "../styles/Navbar/Navbar.css";
 function NavBar() {
   const { theme, setTheme } = useContext(ThemeContext);
   const [show, setShow] = useState(false);
-  const { languageData, setLanguageData } =
-    useContext(LanguageContext);
+  const { languageData, setLanguageData } = useContext(LanguageContext);
   const width = useWindowWidth();
   const scrollTop = useScrollTop();
 
@@ -100,7 +99,7 @@ function NavBar() {
           <Offcanvas.Body className="align-items-lg-center p-0">
             <Nav className="d-flex justify-content-lg-end p-3 p-lg-0">
               <Nav.Item
-                className="translate-text mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
+                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(".about-section");
                 }}
@@ -108,7 +107,7 @@ function NavBar() {
                 {languageData["about"]}
               </Nav.Item>
               <Nav.Item
-                className="translate-text mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
+                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(".tech-stack-section");
                 }}
@@ -116,7 +115,7 @@ function NavBar() {
                 {languageData["tech_stack"]}
               </Nav.Item>
               <Nav.Item
-                className="translate-text mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
+                className="mb-3 me-lg-4 mb-lg-0 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(".projects-section");
                 }}
@@ -124,7 +123,7 @@ function NavBar() {
                 {languageData["projects"]}
               </Nav.Item>
               <Nav.Item
-                className="translate-text me-lg-4 d-flex align-items-center"
+                className="me-lg-4 d-flex align-items-center"
                 onClick={() => {
                   handleNavItemClick(".contacts-section");
                 }}
@@ -149,7 +148,11 @@ function NavBar() {
               </Container>
               <div className="d-flex flex-column flex-lg-row-reverse">
                 <a
-                  href="/DmytroTrutenResumeEN.pdf"
+                  href={
+                    languageData === enLanguageJSON
+                      ? "/DmytroTrutenResumeEN.pdf"
+                      : "/DmytroTrutenResumeUA.pdf"
+                  }
                   download
                   className="mt-3 mt-lg-0"
                 >

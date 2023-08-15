@@ -209,7 +209,7 @@ function TechStack() {
                   src={reactBootstrapIcon}
                 />
               </a>
-              <p className="tech-stack-text mb-0">React Bootstrap</p>
+              <p className="tech-stack-text mb-0 text-center">React Bootstrap</p>
             </Col>
           </Row>
         </Container>

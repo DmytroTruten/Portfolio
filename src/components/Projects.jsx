@@ -41,7 +41,7 @@ function Projects() {
 
   return (
     <Container fluid className="projects-section px-sm-0">
-      <Container className="d-flex flex-column gap-4 gap-lg-5">
+      <Container className="d-flex flex-column gap-4 gap-lg-5 px-0">
         <Row className="projects-tag-row d-flex flex-column mx-0 p-lg-0">
           <Col className="d-flex justify-content-center mb-3 px-0">
             <Tag children={languageData["projects"]} />

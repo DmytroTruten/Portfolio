@@ -20,7 +20,7 @@ function Home() {
   }, [languageData]);
 
   return (
-    <Container fluid className="home-section px-sm-0">
+    <Container fluid className="home-section px-sm-0 d-flex align-items-lg-center py-lg-0">
       <Container className="px-0">
         <Row className="home-row d-flex flex-column flex-md-row-reverse mx-0 p-lg-0">
           <Col className="home-img-col d-flex justify-content-center justify-content-md-end align-items-md-end px-0">
