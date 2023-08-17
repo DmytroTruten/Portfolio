@@ -57,6 +57,12 @@
   transition: border-top-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
 }
 
+@media (min-width: 576px) and (max-width: 991px) {
+  .contacts-section {
+    padding: 80px 0px !important;
+    min-height: auto;
+  }
+}
 @media (min-width: 992px) {
   .contacts-section {
     padding: 0px !important;

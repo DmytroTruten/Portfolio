@@ -16,7 +16,7 @@ function Contacts() {
   const { languageData } = useContext(LanguageContext);
   const [showEmailTooltip, setShowEmailTooltip] = useState(false);
   const [showPhoneTooltip, setShowPhoneTooltip] = useState(false);
-  const email = "dmitriy2503a@gmail.com";
+  const email = "dmytrotruten@gmail.com";
   const phone = "+380687880623";
 
   const handleCopyClick = (element) => {
