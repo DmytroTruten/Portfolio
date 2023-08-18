@@ -22,7 +22,7 @@ function Projects() {
     ["HTML", "SCSS", "JavaScript", "JQuery", "Bootstrap"],
     ["React", "SCSS", "Moment.js", "React-Bootstrap"],
     ["React", "SCSS", "Bootstrap"],
-    ["React", "React Router", "Redux", "SCSS", "Firebase", "Moment.js"],
+    ["React", "React Router", "Redux Toolkit", "SCSS", "Firebase", "Moment.js"],
   ];
 
   const projectsCodeLinks = [
