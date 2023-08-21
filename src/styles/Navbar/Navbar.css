@@ -23,7 +23,6 @@
   border: none !important;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -61,14 +60,12 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   color: #4b5563;
 }
 
 .switch-theme-btn {
-  height: -webkit-min-content !important;
   height: -moz-min-content !important;
   height: min-content !important;
   padding: 6px;
@@ -76,7 +73,6 @@
   height: 36px !important;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -102,7 +98,7 @@
     flex: 1;
   }
   .switch-theme-container,
-.navbar-action-container {
+  .navbar-action-container {
     flex: 0;
   }
   .switch-theme-text {

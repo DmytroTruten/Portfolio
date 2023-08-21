@@ -2,7 +2,7 @@
 @import "../variables";
 
 .projects-section {
-  padding: 80px 16px 0px !important;
+  padding: 80px 16px !important;
 }
 
 .projects-row {
@@ -65,7 +65,7 @@
 
 @media (min-width: 992px) {
   .projects-section {
-    padding: 96px 0px 0px !important;
+    padding: 96px 0px !important;
   }
 
   .projects-row {

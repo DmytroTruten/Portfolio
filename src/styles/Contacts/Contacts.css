@@ -33,7 +33,6 @@
   padding: 6px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -68,14 +67,14 @@
     padding: 0px !important;
   }
   .contacts-email,
-.contacts-phone {
+  .contacts-phone {
     font-size: 36px;
     line-height: 40px;
     letter-spacing: -0.72px;
     font-weight: 700;
   }
   .contacts-icon,
-.copy-icon {
+  .copy-icon {
     height: 44px;
     width: 44px;
   }
