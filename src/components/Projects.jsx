@@ -33,10 +33,10 @@ function Projects() {
   ];
 
   const projectsLinks = [
-    "https://dmytrotruten.github.io/Interior-Design-Studio/",
-    "https://dmytrotruten.github.io/Weather-App/",
-    "https://dmytrotruten.github.io/Creative-Agency/",
-    "https://dmytrotruten.github.io/React-Chat/",
+    "https://interior-design-studio-dmytrotruten.vercel.app/",
+    "https://weather-app-dmytrotruten.vercel.app/",
+    "https://creative-agency-dmytrotruten.vercel.app/",
+    "https://react-chat-dmytrotruten.vercel.app/",
   ];
 
   return (
