@@ -5,6 +5,7 @@ import agencyThumbnail from "../assets/thumbnails/agencyThumbnail.jpg";
 import weatherThumbnail from "../assets/thumbnails/weatherThumbnail.jpg";
 import interiorThumbnail from "../assets/thumbnails/interiorThumbnail.jpg";
 import reactChatThumbnail from "../assets/thumbnails/reactChatThumbnail.jpg";
+import toDoNowThumbnail from "../assets/thumbnails/toDoNowThumbnail.jpg";
 import linkIcon from "../assets/icons/linkIcon.svg";
 import { LanguageContext } from "../context/LanguageContext";
 import "../styles/Projects/Projects.css";
@@ -13,29 +14,33 @@ function Projects() {
   const { languageData } = useContext(LanguageContext);
   const projectsTitleArray = [
     "Interior Design Studio",
-    "Weather App",
     "Creative Agency",
+    "To-Do Now",
+    "Weather App",
     "React Chat",
   ];
 
   const technologiesArray = [
     ["HTML", "SCSS", "JavaScript", "JQuery", "Bootstrap"],
-    ["React", "SCSS", "Moment.js", "React-Bootstrap"],
     ["React", "SCSS", "Bootstrap"],
+    ["React", "SCSS", "Redux Toolkit", "React-Bootstrap"],
+    ["React", "SCSS", "Moment.js", "React-Bootstrap"],
     ["React", "React Router", "Redux Toolkit", "SCSS", "Firebase", "Moment.js"],
   ];
 
   const projectsCodeLinks = [
     "https://github.com/DmytroTruten/Interior-Design-Studio",
-    "https://github.com/DmytroTruten/Weather-App",
     "https://github.com/DmytroTruten/Creative-Agency",
+    "https://github.com/DmytroTruten/To-Do-Now",
+    "https://github.com/DmytroTruten/Weather-App",
     "https://github.com/DmytroTruten/React-Chat",
   ];
 
   const projectsLinks = [
     "https://interior-design-studio-dmytrotruten.vercel.app/",
-    "https://weather-app-dmytrotruten.vercel.app/",
     "https://creative-agency-dmytrotruten.vercel.app/",
+    "https://to-do-now-dmytrotruten.vercel.app/",
+    "https://weather-app-dmytrotruten.vercel.app/",
     "https://react-chat-dmytrotruten.vercel.app/",
   ];
 
@@ -48,15 +53,16 @@ function Projects() {
           </Col>
           <Col className="px-0">
             <p className="projects-section-subtitle text-center mb-0">
-            {languageData["projects_section_subtitle"]}
+              {languageData["projects_section_subtitle"]}
             </p>
           </Col>
         </Row>
         <Container fluid className="d-flex flex-column px-0 gap-4 gap-lg-5">
           {[
             interiorThumbnail,
-            weatherThumbnail,
             agencyThumbnail,
+            toDoNowThumbnail,
+            weatherThumbnail,
             reactChatThumbnail,
           ].map((thumbnail, index) => (
             <Fragment key={index}>

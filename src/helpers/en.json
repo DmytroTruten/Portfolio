@@ -20,8 +20,9 @@
   "projects_section_subtitle": "Some of the noteworthy projects I have built:",
   "projects_text_array": [
     "Landing page of an imaginary company that provides services in: interior design, decorative services, space planning and project management.",
-    "Simple app that allows users to search for weather information by city name or current location. It uses the OpenWeather API to retrieve weather data, displays the current weather conditions.",
     "The Creative Agency is a landing page of an imaginary company that offers a creative strategy to achieve business goals, create engaging content for your brand.",
+    "This project is a web application that serves as a ToDo List, helping you manage your tasks. You can add new tasks, mark them as done, and delete unnecessary ones. ",
+    "Simple app that allows users to search for weather information by city name or current location. It uses the OpenWeather API to retrieve weather data, displays the current weather conditions.",
     "Real-time chat application, allows users to communicate instantly, without the need to refresh the page. This creates an interactive experience with the app."
   ],
   "contacts_subtitle": "What's next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.",
