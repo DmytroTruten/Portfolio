@@ -1,4 +1,4 @@
-## Portfolio
+# Portfolio
 Welcome to my portfolio website! This is the place where I want to share with you my journey in the world of Front-End development. Here you will find not only a list of my skills and achievements, but also a deeper insight into the feelings that go into each project and solution.
 
 ### What you will find here
