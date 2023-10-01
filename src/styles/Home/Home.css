@@ -52,8 +52,8 @@
   width: 12px;
   height: 12px;
   border-radius: 20px;
-  background-color: #10b981;
-  box-shadow: 0 0 0 rgb(16, 185, 129);
+  background-color: #ffbf00;
+  box-shadow: 0 0 0 #10b981;
   animation: pulse 1.5s infinite;
 }
 
@@ -126,7 +126,7 @@
 }
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgb(16, 185, 129);
+    box-shadow: 0 0 0 0 #ffbf00;
   }
   70% {
     box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
